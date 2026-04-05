@@ -4,7 +4,6 @@
 (function () {
   'use strict';
 
-  /* --- State --- */
   let data = null;
   let selectedDocId = null;
   const activeFilters = new Set(['all']);
@@ -47,13 +46,9 @@
     $('#main').style.display = '';
     render();
 
-    // small delay so paint happens first
     requestAnimationFrame(() => {
-      setTimeout(() => $('#loader').classList.add('hidden'), 300);
+      setTimeout(() => $('#loader').classList.add('hidden'), 250);
     });
-
-    // methodology
-    loadMethodology();
   }
 
   /* ============================================================
@@ -74,21 +69,17 @@
     Object.values(data.promise_counts || {}).forEach((v) => (totalPromises += v));
 
     const orgs = new Set();
-    (data.documents || []).forEach((d) => orgs.add(d.org));
-    const totalOrgs = orgs.size;
+    (data.documents || []).forEach((d) => { if (d.org) orgs.add(d.org); });
 
     animate($('#counter-docs'), totalDocs);
     animate($('#counter-promises'), totalPromises);
-    animate($('#counter-orgs'), totalOrgs);
+    animate($('#counter-orgs'), orgs.size);
   }
 
   function animate(el, target) {
     if (!el) return;
-    if (target === 0 || reducedMotion) {
-      el.textContent = target;
-      return;
-    }
-    const dur = 1800;
+    if (target === 0 || reducedMotion) { el.textContent = target; return; }
+    const dur = 1600;
     const t0 = performance.now();
     (function tick(now) {
       const p = Math.min((now - t0) / dur, 1);
@@ -106,8 +97,6 @@
 
     CATS.forEach((cat) => {
       const count = (data.promise_counts || {})[cat] || 0;
-
-      // gather example quotes
       const quotes = [];
       for (const doc of data.documents || []) {
         for (const p of doc.promises || []) {
@@ -137,7 +126,6 @@
       grid.appendChild(card);
     });
 
-    // count-up on scroll
     const obs = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         if (!e.isIntersecting) return;
@@ -149,7 +137,6 @@
         obs.unobserve(e.target);
       });
     }, { threshold: 0.25 });
-
     $$('.promise-card').forEach((c) => obs.observe(c));
   }
 
@@ -200,7 +187,7 @@
 
     const docs = data.documents || [];
     if (!docs.length) {
-      track.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-muted);font-size:14px;">No documents in the archive yet.</div>';
+      track.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-muted);font-size:13px;">No documents in the archive yet. Run the data collection to populate.</div>';
       return;
     }
 
@@ -260,7 +247,6 @@
       }
     });
 
-    // decade marks
     [1990, 2000, 2010, 2020, 2026].forEach((yr) => {
       if (track.querySelector(`.timeline__decade[data-year="${yr}"]`)) return;
       const x = ((yr - minY) / (maxY - minY)) * (W - 100) + 50;
@@ -349,7 +335,6 @@
     if (!el) return;
 
     let h = '';
-
     if (doc.auto_added && !doc.reviewed)
       h += '<div class="panel__review-badge">Pending editorial review</div>';
 
@@ -387,7 +372,6 @@
 
     el.innerHTML = h;
 
-    // load visual
     const pv = document.getElementById('pv');
     if (pv) {
       if (doc.visual_type === 'illustration' && doc.visual_path) loadSVG(doc.visual_path, pv);
@@ -413,8 +397,10 @@
   }
 
   function setupPanel() {
-    $('#panel-close').addEventListener('click', closePanel);
-    $('#overlay').addEventListener('click', closePanel);
+    const closeBtn = $('#panel-close');
+    const overlay = $('#overlay');
+    if (closeBtn) closeBtn.addEventListener('click', closePanel);
+    if (overlay) overlay.addEventListener('click', closePanel);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePanel(); });
   }
 
@@ -450,7 +436,7 @@
   }
 
   /* ============================================================
-     NAV SCROLL
+     NAV
      ============================================================ */
   function setupNav() {
     const nav = $('#nav');
@@ -475,31 +461,10 @@
     }
     const obs = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          obs.unobserve(e.target);
-        }
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
     $$('.reveal').forEach((el) => obs.observe(el));
-  }
-
-  /* ============================================================
-     METHODOLOGY
-     ============================================================ */
-  async function loadMethodology() {
-    try {
-      const res = await fetch('methodology.md');
-      if (!res.ok) return;
-      let text = await res.text();
-      // strip markdown heading
-      text = text.replace(/^#\s+.*\n+/, '');
-      const el = $('#methodology-text');
-      if (!el) return;
-      // split into paragraphs
-      const paragraphs = text.split(/\n\n+/).filter((p) => p.trim());
-      el.innerHTML = paragraphs.map((p) => `<p>${esc(p.trim())}</p>`).join('');
-    } catch { /* non-critical */ }
   }
 
   /* ============================================================

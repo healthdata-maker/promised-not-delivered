@@ -17,14 +17,8 @@
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <a href="#" class="nav__logo">Promised, Not Delivered</a>
-    <ul class="nav__links">
-      <li><a href="#promise-wall" class="nav__link">Promises</a></li>
-      <li><a href="#timeline-section" class="nav__link">Timeline</a></li>
-      <li><a href="#index-section" class="nav__link">Index</a></li>
-      <li><a href="#methodology" class="nav__link">Methodology</a></li>
-    </ul>
-    <div class="nav__filters">
+    <a href="#hero" class="nav__logo">Promised, Not Delivered</a>
+    <div class="nav__filters" id="nav-filters">
       <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
       <button class="filter-btn" data-filter="strategy" id="filter-strategy">Strategy</button>
       <button class="filter-btn" data-filter="evaluation" id="filter-evaluation">Evaluation</button>
@@ -43,7 +37,7 @@
     <section class="hero" id="hero">
       <div class="reveal">
         <div class="hero__overline">Research Archive</div>
-        <h1 class="hero__title" id="hero-title">Thirty years of promises.<br>The same five commitments.</h1>
+        <h1 class="hero__title">Thirty years of promises.<br>The same five commitments.</h1>
         <p class="hero__subtitle">What global health organisations wrote in strategy documents — and what independent evaluations actually found.</p>
       </div>
       <div class="hero__stats reveal reveal-delay-2">
@@ -164,15 +158,69 @@
       </div>
     </section>
 
-    <!-- METHODOLOGY -->
-    <section class="methodology" id="methodology">
-      <div class="methodology__inner reveal">
-        <div class="section-label">About this project</div>
-        <h2 class="methodology__title">How this archive is built</h2>
-        <div class="methodology__text" id="methodology-text">
-          <p>Loading…</p>
+    <!-- HOW IT WORKS — FLOWCHART -->
+    <section class="flowchart-section" id="how-it-works">
+      <div class="flowchart__inner reveal">
+        <div class="section-label">Process</div>
+        <h2 class="section-title">How this archive is built</h2>
+        <p class="flowchart__intro">Every night, new documents are found, read, and examined. Here is the process, start to finish.</p>
+      </div>
+
+      <div class="flowchart reveal reveal-delay-1">
+        <div class="flow-step">
+          <div class="flow-step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="flow-step__label">Search</div>
+          <div class="flow-step__desc">8 open-access databases scanned for new strategy documents and evaluation reports.</div>
+        </div>
+        <div class="flow-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="flow-step__label">Extract</div>
+          <div class="flow-step__desc">Full text extracted from PDFs and web pages. Up to 30 pages per document.</div>
+        </div>
+        <div class="flow-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+          </div>
+          <div class="flow-step__label">Identify</div>
+          <div class="flow-step__desc">Direct quotes are identified where organisations make commitments across five categories.</div>
+        </div>
+        <div class="flow-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div class="flow-step__label">Review</div>
+          <div class="flow-step__desc">Each quote is challenged: is it a real commitment or aspirational language? Scored 1–5. Below 3 is removed.</div>
+        </div>
+        <div class="flow-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 6 15 12 9 18"/></svg>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-step__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+          </div>
+          <div class="flow-step__label">Archive</div>
+          <div class="flow-step__desc">Surviving quotes, summaries, and visualisations enter the archive. Flagged for editorial review.</div>
         </div>
       </div>
+
+      <p class="flowchart__footnote reveal reveal-delay-2">All quotes are exact extracts from source documents, not paraphrases. If something looks wrong, the source link is there.</p>
     </section>
 
     <!-- FOOTER -->
