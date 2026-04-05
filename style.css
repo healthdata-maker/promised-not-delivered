@@ -136,8 +136,11 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   color: var(--text-secondary); border-radius: 4px;
   cursor: pointer; transition: all 0.2s ease;
 }
-.filter-btn:hover { color: var(--text); background: rgba(255,255,255,0.5); }
-.filter-btn.active {
+.filter-btn:disabled {
+  opacity: 0.4; cursor: not-allowed;
+}
+.filter-btn:not(:disabled):hover { color: var(--text); background: rgba(255,255,255,0.5); }
+.filter-btn.active:not(:disabled) {
   background: var(--surface); color: var(--text);
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
@@ -270,6 +273,51 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 .promise-card__quote-item {
   font-size: 12px; font-style: italic; color: var(--text-secondary);
   line-height: 1.5; padding: 0.4rem 0; border-top: 1px solid var(--border);
+}
+
+/* ============================================================
+   WORKING PAPERS (THINK TANK)
+   ============================================================ */
+.papers-section {
+  padding: var(--section-pad) clamp(1.5rem, 4vw, 3rem);
+  max-width: var(--content-max); margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+
+.papers-intro {
+  font-size: 15px; color: var(--text-secondary);
+  max-width: 600px; line-height: 1.6; margin-bottom: 3rem;
+}
+
+.papers-feed { display: flex; flex-direction: column; gap: 4rem; }
+.papers-empty { font-size: 14px; font-style: italic; color: var(--text-muted); }
+
+.paper-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: clamp(2rem, 5vw, 4rem);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.paper-date {
+  font-family: var(--font-mono); font-size: 11px;
+  color: var(--accent); margin-bottom: 1rem;
+}
+
+.paper-title {
+  font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  font-weight: 600; line-height: 1.2; margin-bottom: 2rem; color: var(--text);
+}
+
+.paper-content { font-size: 16px; line-height: 1.7; color: var(--text-secondary); }
+.paper-content p { margin-bottom: 1.5rem; }
+.paper-content h3 { font-family: var(--font-sans); font-size: 16px; font-weight: 600; color: var(--text); margin: 2rem 0 1rem; }
+.paper-content ul { padding-left: 20px; margin-bottom: 1.5rem; }
+.paper-content li { margin-bottom: 0.5rem; }
+
+img.paper-chart {
+  width: 100%; max-width: 800px; height: auto;
+  margin: 2.5rem 0; display: block;
+  border: 1px solid var(--border-strong); border-radius: 4px;
 }
 
 /* ============================================================

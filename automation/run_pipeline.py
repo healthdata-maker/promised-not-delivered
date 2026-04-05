@@ -1,5 +1,6 @@
 import sys
 import os
+import datetime
 
 # CRITICAL: Add this directory to Python path so sibling modules can be found
 # when this script is called from the repo root by GitHub Actions.
@@ -14,6 +15,7 @@ from visual_router import run_visual_router
 from chart_generator import run_chart_generator
 from illustration_generator import run_illustration_generator
 from updater import run_updater
+from think_tank import run_think_tank
 
 IS_DAY_ZERO = os.environ.get('IS_DAY_ZERO', 'false').lower() == 'true'
 print(f"Pipeline starting. Day zero mode: {IS_DAY_ZERO}")
@@ -53,5 +55,11 @@ run_illustration_generator(routed)
 added = run_updater(routed)
 if added == 0:
     print("Pipeline ran but no documents passed quality checks. Nothing committed.")
-else:
     print(f"Pipeline complete. {added} new documents added.")
+
+# Run the think tank only on Mondays (0) and Wednesdays (2)
+if datetime.datetime.utcnow().weekday() in [0, 2]:
+    print("Monday/Wednesday detected. Triggering Synthesis Pipeline...")
+    run_think_tank()
+else:
+    print("Skipping Think Tank today.")
