@@ -524,13 +524,14 @@ const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('is-visible');
+      observer.unobserve(entry.target); 
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.05, rootMargin: "50px" });
 
-document.querySelectorAll('section').forEach(sec => {
-  sec.classList.add('reveal-section');
-  observer.observe(sec);
+document.querySelectorAll('section, .card-3d').forEach(el => {
+  el.classList.add('reveal-section');
+  observer.observe(el);
 });
 
 // Load Think Tank Papers

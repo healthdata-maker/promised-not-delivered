@@ -7,17 +7,12 @@
 /* --- Design Tokens --- */
 :root {
   --bg: #FAFAF8;
-  --bg-warm: #F4F1EB;
   --surface: #FFFFFF;
-  --surface-alt: #F0EDE6;
-  --text: #1A1A1A;
-  --text-secondary: #5A554E;
-  --text-muted: #9E9892;
-  --accent: #C2410C;
-  --accent-hover: #9A3412;
-  --accent-soft: #FFF7ED;
-  --border: #E5E0D8;
-  --border-strong: #C9C2B8;
+  --surface-raised: #F5F3EE;
+  --text-primary: #1A1A1A;
+  --text-secondary: #5C5C5C;
+  --border: #E6E4DD;
+  --accent: #D95C14;
 
   /* Org colours */
   --unicef: #00AEEF;

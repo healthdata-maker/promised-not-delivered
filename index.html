@@ -34,30 +34,20 @@
   <main id="main" style="display:none;">
 
     <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="reveal">
-        <div class="hero__overline">Research Archive</div>
-        <h1 class="hero__title">Thirty years of promises.<br>The same five commitments.</h1>
-        <p class="hero__subtitle">What global health organisations wrote in strategy documents and what independent evaluations actually found.</p>
-      </div>
-      <div class="hero__stats reveal reveal-delay-2">
-        <div class="hero__stat">
-          <span class="hero__stat-number" id="counter-docs">0</span>
-          <span class="hero__stat-label">Documents tracked</span>
-        </div>
-        <div class="hero__stat">
-          <span class="hero__stat-number" id="counter-promises">0</span>
-          <span class="hero__stat-label">Promise instances found</span>
-        </div>
-        <div class="hero__stat">
-          <span class="hero__stat-number" id="counter-orgs">0</span>
-          <span class="hero__stat-label">Organisations</span>
+    <section id="hero" style="min-height: 100vh; padding-top: 80px; display: flex; flex-direction: column; justify-content: center; position: relative;">
+      <div style="max-width: 900px; margin: 0 auto; padding: 0 2rem; text-align: center;">
+        <h1 style="font-family: 'Source Serif 4', 'Playfair Display', serif; font-size: clamp(3rem, 6vw, 5rem); line-height: 1.1; color: var(--text-primary); margin-bottom: 1.5rem;">
+          Thirty years.<br>The same promises.
+        </h1>
+        <p style="font-family: 'DM Sans', 'Spectral', sans-serif; font-size: clamp(1.2rem, 2vw, 1.5rem); color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem auto;">
+          What global health organisations wrote in strategy documents and what independent evaluations actually found.
+        </p>
+        <div style="display: flex; gap: 3rem; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--text-primary);">
+          <div><strong id="doc-count" style="font-size: 2rem; color: var(--accent); display: block;">0</strong> DOCUMENTS TRACKED</div>
+          <div><strong id="promise-count" style="font-size: 2rem; color: var(--accent); display: block;">0</strong> PROMISES FOUND</div>
         </div>
       </div>
-      <div class="hero__scroll-cue" aria-hidden="true">
-        <span>Scroll</span>
-        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </div>
+      <div style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.5;">Scroll Down v</div>
     </section>
 
     <!-- PROMISE WALL -->
