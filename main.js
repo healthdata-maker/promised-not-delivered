@@ -1,640 +1,514 @@
 /* ============================================================
-   PROMISED, NOT DELIVERED — Main Application Logic
+   PROMISED, NOT DELIVERED — Application Logic
    ============================================================ */
-
 (function () {
   'use strict';
 
   /* --- State --- */
-  let appData = null;
+  let data = null;
   let selectedDocId = null;
   const activeFilters = new Set(['all']);
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* --- Promise category config --- */
-  const CATEGORY_LABELS = {
+  const LABELS = {
     community_ownership: 'Communities will lead',
-    context_sensitivity: 'Context-specific',
+    context_sensitivity: 'Context-specific design',
     participation: 'Participatory approach',
     sustainability: 'Sustainable beyond the project',
     equity: 'Reaching the most vulnerable',
   };
 
-  const CATEGORY_ORDER = [
-    'community_ownership',
-    'context_sensitivity',
-    'participation',
-    'sustainability',
-    'equity',
-  ];
+  const CATS = ['community_ownership', 'context_sensitivity', 'participation', 'sustainability', 'equity'];
 
-  /* --- DOM refs --- */
-  const $ = (sel) => document.querySelector(sel);
-  const $$ = (sel) => document.querySelectorAll(sel);
+  const $ = (s) => document.querySelector(s);
+  const $$ = (s) => document.querySelectorAll(s);
 
   /* ============================================================
-     INIT
+     BOOT
      ============================================================ */
-  document.addEventListener('DOMContentLoaded', init);
+  document.addEventListener('DOMContentLoaded', boot);
 
-  async function init() {
-    bindFilterButtons();
-    bindPanelClose();
+  async function boot() {
+    setupNav();
+    setupFilters();
+    setupPanel();
+    setupScrollReveals();
 
     try {
-      const response = await fetch('data.json');
-      if (!response.ok) throw new Error('Fetch failed');
-      appData = await response.json();
-      hideLoading();
-      render();
-    } catch (err) {
-      console.error('Failed to load data:', err);
-      showError();
+      const res = await fetch('data.json');
+      if (!res.ok) throw new Error();
+      data = await res.json();
+    } catch {
+      $('#loader').classList.add('hidden');
+      $('#error-state').classList.add('show');
       return;
     }
 
-    // Load methodology
-    try {
-      const mdResp = await fetch('methodology.md');
-      if (mdResp.ok) {
-        const mdText = await mdResp.text();
-        const methodBlock = $('#methodology-text');
-        if (methodBlock) methodBlock.textContent = mdText;
-      }
-    } catch (_) {
-      // non-critical
-    }
+    $('#main').style.display = '';
+    render();
+
+    // small delay so paint happens first
+    requestAnimationFrame(() => {
+      setTimeout(() => $('#loader').classList.add('hidden'), 300);
+    });
+
+    // methodology
+    loadMethodology();
   }
 
   /* ============================================================
      RENDER
      ============================================================ */
   function render() {
-    renderHeroCounters();
+    renderCounters();
     renderPromiseWall();
-    renderDualVisual();
+    renderShowcase();
     renderTimeline();
-    renderPromiseIndex();
-    renderDataViz();
+    renderIndex();
   }
 
-  /* --- Hero Counters --- */
-  function renderHeroCounters() {
-    const totalDocs = appData.total_documents || 0;
+  /* --- Counters --- */
+  function renderCounters() {
+    const totalDocs = data.total_documents || 0;
     let totalPromises = 0;
-    Object.values(appData.promise_counts || {}).forEach((v) => (totalPromises += v));
+    Object.values(data.promise_counts || {}).forEach((v) => (totalPromises += v));
 
-    const docEl = $('#counter-documents');
-    const promEl = $('#counter-promises');
+    const orgs = new Set();
+    (data.documents || []).forEach((d) => orgs.add(d.org));
+    const totalOrgs = orgs.size;
 
-    if (prefersReducedMotion) {
-      if (docEl) docEl.textContent = totalDocs;
-      if (promEl) promEl.textContent = totalPromises;
-    } else {
-      animateCounter(docEl, totalDocs);
-      animateCounter(promEl, totalPromises);
-    }
+    animate($('#counter-docs'), totalDocs);
+    animate($('#counter-promises'), totalPromises);
+    animate($('#counter-orgs'), totalOrgs);
   }
 
-  function animateCounter(el, target) {
-    if (!el || target === 0) {
-      if (el) el.textContent = target;
+  function animate(el, target) {
+    if (!el) return;
+    if (target === 0 || reducedMotion) {
+      el.textContent = target;
       return;
     }
-    const duration = 1800;
-    const start = performance.now();
-
-    function tick(now) {
-      const elapsed = now - start;
-      const progress = Math.min(elapsed / duration, 1);
-      // ease-out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      el.textContent = Math.round(eased * target);
-      if (progress < 1) requestAnimationFrame(tick);
-    }
-
-    requestAnimationFrame(tick);
+    const dur = 1800;
+    const t0 = performance.now();
+    (function tick(now) {
+      const p = Math.min((now - t0) / dur, 1);
+      const e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(e * target);
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
   }
 
-  /* --- Promise Frequency Wall --- */
+  /* --- Promise Wall --- */
   function renderPromiseWall() {
-    const container = $('#promise-wall-grid');
-    if (!container) return;
-    container.innerHTML = '';
+    const grid = $('#promise-grid');
+    if (!grid) return;
+    grid.innerHTML = '';
 
-    CATEGORY_ORDER.forEach((cat) => {
-      const count = (appData.promise_counts || {})[cat] || 0;
-      const label = CATEGORY_LABELS[cat];
+    CATS.forEach((cat) => {
+      const count = (data.promise_counts || {})[cat] || 0;
 
-      // Find up to 3 example quotes for this category
-      const exampleQuotes = [];
-      for (const doc of appData.documents || []) {
+      // gather example quotes
+      const quotes = [];
+      for (const doc of data.documents || []) {
         for (const p of doc.promises || []) {
-          if (p.category === cat && exampleQuotes.length < 3) {
-            exampleQuotes.push(p.quote);
-          }
+          if (p.category === cat && quotes.length < 3) quotes.push(p.quote);
         }
-        if (exampleQuotes.length >= 3) break;
+        if (quotes.length >= 3) break;
       }
 
       const card = document.createElement('div');
       card.className = 'promise-card';
       card.dataset.category = cat;
+      card.tabIndex = 0;
 
-      let quotesHTML = '';
-      if (exampleQuotes.length > 0) {
-        quotesHTML = '<div class="promise-card__quotes">';
-        exampleQuotes.forEach((q) => {
-          quotesHTML += `<div class="promise-card__quote">"${escapeHTML(q)}"</div>`;
-        });
-        quotesHTML += '</div>';
+      let qHTML = '';
+      if (quotes.length) {
+        qHTML = '<div class="promise-card__quotes">' +
+          quotes.map((q) => `<div class="promise-card__quote-item">"${esc(q)}"</div>`).join('') +
+          '</div>';
       }
 
       card.innerHTML = `
-        <span class="promise-card__number" data-target="${count}" data-counted="false">0</span>
-        <div class="promise-card__label">${label}</div>
-        <div class="promise-card__key">${cat}</div>
-        ${quotesHTML}
+        <div class="promise-card__count" data-target="${count}" data-counted="false">0</div>
+        <div class="promise-card__label">${LABELS[cat]}</div>
+        <div class="promise-card__key">${cat.replace(/_/g, ' ')}</div>
+        ${qHTML}
       `;
-
-      container.appendChild(card);
+      grid.appendChild(card);
     });
 
-    // IntersectionObserver for count-up
-    observeCountUp();
+    // count-up on scroll
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const num = e.target.querySelector('.promise-card__count');
+        if (num && num.dataset.counted === 'false') {
+          num.dataset.counted = 'true';
+          animate(num, parseInt(num.dataset.target, 10));
+        }
+        obs.unobserve(e.target);
+      });
+    }, { threshold: 0.25 });
+
+    $$('.promise-card').forEach((c) => obs.observe(c));
   }
 
-  function observeCountUp() {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const numEl = entry.target.querySelector('.promise-card__number');
-            if (numEl && numEl.dataset.counted === 'false') {
-              numEl.dataset.counted = 'true';
-              const target = parseInt(numEl.dataset.target, 10);
-              if (prefersReducedMotion) {
-                numEl.textContent = target;
-              } else {
-                animateCounter(numEl, target);
-              }
-            }
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.3 }
-    );
+  /* --- Showcase --- */
+  function renderShowcase() {
+    const left = $('#showcase-left');
+    const right = $('#showcase-right');
 
-    $$('.promise-card').forEach((card) => observer.observe(card));
-  }
-
-  /* --- Dual Visual Showcase --- */
-  function renderDualVisual() {
-    const leftContainer = $('#dual-left-svg');
-    const rightContainer = $('#dual-right-svg');
-
-    // Left: random strategy document illustration
-    const strategyDocs = (appData.documents || []).filter(
-      (d) => d.visual_type === 'illustration' && d.visual_path
-    );
-
-    if (strategyDocs.length > 0 && leftContainer) {
-      const randomDoc = strategyDocs[Math.floor(Math.random() * strategyDocs.length)];
-      fetchSVG(randomDoc.visual_path, leftContainer);
-      const captionEl = $('#dual-left-caption');
-      if (captionEl) {
-        captionEl.textContent = `${randomDoc.title} — ${randomDoc.org}, ${randomDoc.year || 'n.d.'}`;
-      }
-    } else if (leftContainer) {
-      leftContainer.innerHTML = '<div style="color:var(--text-secondary);font-family:var(--font-mono);font-size:12px;padding:2rem;">No illustrations yet. Run the pipeline to populate.</div>';
+    const stratDocs = (data.documents || []).filter((d) => d.visual_type === 'illustration' && d.visual_path);
+    if (stratDocs.length && left) {
+      const doc = stratDocs[Math.floor(Math.random() * stratDocs.length)];
+      loadSVG(doc.visual_path, left);
+      const cap = $('#showcase-left-caption');
+      if (cap) cap.textContent = `${doc.title} — ${doc.org}, ${doc.year || 'n.d.'}`;
+    } else if (left) {
+      left.innerHTML = '<span style="color:var(--text-muted);font-size:13px;">Illustrations appear after the first data collection run.</span>';
     }
 
-    // Right: timeline chart
-    if (rightContainer) {
+    if (right) {
       const img = document.createElement('img');
       img.src = 'charts/promise_timeline.svg';
-      img.alt = 'Promise timeline';
-      img.onerror = function () {
-        rightContainer.innerHTML = '<div style="color:var(--text-secondary);font-family:var(--font-mono);font-size:12px;padding:2rem;">Charts will appear after the first pipeline run.</div>';
+      img.alt = 'Timeline';
+      img.onerror = () => {
+        right.innerHTML = '<span style="color:var(--text-muted);font-size:13px;">Charts appear after the first data collection run.</span>';
       };
-      rightContainer.innerHTML = '';
-      rightContainer.appendChild(img);
+      right.innerHTML = '';
+      right.appendChild(img);
     }
   }
 
-  async function fetchSVG(path, container) {
+  async function loadSVG(path, el) {
     try {
-      const resp = await fetch(path);
-      if (resp.ok) {
-        const svgText = await resp.text();
-        container.innerHTML = svgText;
-      }
-    } catch (_) {
-      container.innerHTML = '<div style="color:var(--text-secondary);font-family:var(--font-mono);font-size:12px;padding:2rem;">Could not load illustration.</div>';
-    }
+      const r = await fetch(path);
+      if (r.ok) el.innerHTML = await r.text();
+    } catch { /* ignore */ }
   }
 
   /* --- Timeline --- */
   function renderTimeline() {
-    renderDesktopTimeline();
-    renderMobileTimeline();
+    renderDesktop();
+    renderMobile();
   }
 
-  function renderDesktopTimeline() {
-    const container = $('#timeline-container');
-    const svgEl = $('#timeline-svg');
-    if (!container || !svgEl) return;
+  function renderDesktop() {
+    const track = $('#timeline-track');
+    const svg = $('#timeline-svg');
+    if (!track || !svg) return;
 
-    const docs = appData.documents || [];
-    if (docs.length === 0) {
-      container.innerHTML = '<div style="color:var(--text-secondary);font-family:var(--font-mono);font-size:12px;padding:2rem;text-align:center;">No documents yet.</div>';
+    const docs = data.documents || [];
+    if (!docs.length) {
+      track.innerHTML = '<div style="text-align:center;padding:3rem;color:var(--text-muted);font-size:14px;">No documents in the archive yet.</div>';
       return;
     }
 
-    const minYear = 1990;
-    const maxYear = 2026;
-    const totalWidth = 1400;
-    const yBase = 100;
+    svg.innerHTML = '';
+    const W = 1400, minY = 1990, maxY = 2026, yBase = 120;
+    const sorted = [...docs].sort((a, b) => (a.year || 9999) - (b.year || 9999));
+    const yearBuckets = {};
+    const dotMap = {};
 
-    svgEl.innerHTML = '';
+    sorted.forEach((doc, i) => {
+      const yr = parseInt(doc.year) || 2024;
+      const x = ((yr - minY) / (maxY - minY)) * (W - 100) + 50;
+      if (!yearBuckets[yr]) yearBuckets[yr] = 0;
+      const y = yBase - 15 - yearBuckets[yr] * 14;
+      yearBuckets[yr]++;
 
-    // Place dots
-    const dotElements = {};
-    const sortedDocs = [...docs].sort((a, b) => (a.year || 9999) - (b.year || 9999));
+      const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c.setAttribute('cx', x);
+      c.setAttribute('cy', y);
+      c.setAttribute('r', 5);
+      c.classList.add('timeline__dot');
+      c.dataset.id = doc.id;
+      c.dataset.docType = doc.doc_type || 'other';
 
-    // Track y offsets to avoid overlapping dots at the same year
-    const yearCounts = {};
-
-    sortedDocs.forEach((doc, i) => {
-      const year = parseInt(doc.year) || 2024;
-      const x = ((year - minYear) / (maxYear - minYear)) * (totalWidth - 100) + 50;
-
-      if (!yearCounts[year]) yearCounts[year] = 0;
-      const yOffset = yearCounts[year] * 14;
-      yearCounts[year]++;
-
-      const y = yBase - 20 - yOffset;
-
-      const isStrategy = doc.doc_type === 'strategy';
       const color = doc.org_color || '#6B7280';
-
-      const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-      circle.setAttribute('cx', x);
-      circle.setAttribute('cy', y);
-      circle.setAttribute('r', 5);
-      circle.classList.add('timeline__dot');
-      circle.dataset.id = doc.id;
-      circle.dataset.docType = doc.doc_type || 'other';
-
-      if (isStrategy) {
-        circle.setAttribute('fill', color);
-        circle.setAttribute('stroke', 'none');
+      if (doc.doc_type === 'strategy') {
+        c.setAttribute('fill', color);
+        c.setAttribute('stroke', 'none');
       } else {
-        circle.setAttribute('fill', 'none');
-        circle.setAttribute('stroke', color);
-        circle.setAttribute('stroke-width', '2');
+        c.setAttribute('fill', 'none');
+        c.setAttribute('stroke', color);
+        c.setAttribute('stroke-width', '2');
       }
 
-      // Staggered fade-in
-      if (!prefersReducedMotion) {
-        circle.style.opacity = '0';
-        circle.style.transition = 'opacity 0.4s ease';
-        setTimeout(() => {
-          circle.style.opacity = '1';
-        }, i * 25);
+      if (!reducedMotion) {
+        c.style.opacity = '0';
+        c.style.transition = 'opacity 0.4s ease';
+        setTimeout(() => (c.style.opacity = '1'), i * 25);
       }
 
-      circle.addEventListener('click', () => openPanel(doc.id));
-      svgEl.appendChild(circle);
-
-      dotElements[doc.id] = circle;
+      c.addEventListener('click', () => openPanel(doc.id));
+      svg.appendChild(c);
+      dotMap[doc.id] = c;
     });
 
-    // Draw arcs between paired docs
+    // arcs
     docs.forEach((doc) => {
-      if (doc.paired_evaluation_id && dotElements[doc.id] && dotElements[doc.paired_evaluation_id]) {
-        const d1 = dotElements[doc.id];
-        const d2 = dotElements[doc.paired_evaluation_id];
-        const x1 = parseFloat(d1.getAttribute('cx'));
-        const y1 = parseFloat(d1.getAttribute('cy'));
-        const x2 = parseFloat(d2.getAttribute('cx'));
-        const y2 = parseFloat(d2.getAttribute('cy'));
-        const midX = (x1 + x2) / 2;
-        const cpY = Math.min(y1, y2) - 30;
-
-        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-        path.setAttribute('d', `M ${x1} ${y1} Q ${midX} ${cpY} ${x2} ${y2}`);
-        path.classList.add('timeline__arc');
-        svgEl.insertBefore(path, svgEl.firstChild);
+      if (doc.paired_evaluation_id && dotMap[doc.id] && dotMap[doc.paired_evaluation_id]) {
+        const a = dotMap[doc.id], b = dotMap[doc.paired_evaluation_id];
+        const x1 = +a.getAttribute('cx'), y1 = +a.getAttribute('cy');
+        const x2 = +b.getAttribute('cx'), y2 = +b.getAttribute('cy');
+        const mx = (x1 + x2) / 2, cy2 = Math.min(y1, y2) - 30;
+        const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        p.setAttribute('d', `M${x1} ${y1} Q${mx} ${cy2} ${x2} ${y2}`);
+        p.classList.add('timeline__arc');
+        svg.insertBefore(p, svg.firstChild);
       }
     });
 
-    // Decade markers
-    const decadeContainer = container;
-    [1990, 2000, 2010, 2020, 2026].forEach((year) => {
-      const existing = container.querySelector(`.timeline__decade[data-year="${year}"]`);
-      if (existing) return;
-      const x = ((year - minYear) / (maxYear - minYear)) * (totalWidth - 100) + 50;
-      const marker = document.createElement('div');
-      marker.className = 'timeline__decade';
-      marker.dataset.year = year;
-      marker.style.left = x + 'px';
-      marker.textContent = year;
-      decadeContainer.appendChild(marker);
+    // decade marks
+    [1990, 2000, 2010, 2020, 2026].forEach((yr) => {
+      if (track.querySelector(`.timeline__decade[data-year="${yr}"]`)) return;
+      const x = ((yr - minY) / (maxY - minY)) * (W - 100) + 50;
+      const m = document.createElement('div');
+      m.className = 'timeline__decade';
+      m.dataset.year = yr;
+      m.style.left = x + 'px';
+      m.textContent = yr;
+      track.appendChild(m);
     });
   }
 
-  function renderMobileTimeline() {
-    const container = $('#timeline-mobile');
-    if (!container) return;
+  function renderMobile() {
+    const el = $('#timeline-mobile');
+    if (!el) return;
+    const docs = [...(data.documents || [])].sort((a, b) => (b.year || 0) - (a.year || 0));
+    if (!docs.length) {
+      el.innerHTML = '<div style="padding:1rem;color:var(--text-muted);font-size:13px;">No documents yet.</div>';
+      return;
+    }
+    el.innerHTML = '';
+    docs.forEach((d) => {
+      const card = document.createElement('div');
+      card.className = 'tl-card';
+      card.dataset.id = d.id;
+      card.dataset.docType = d.doc_type || 'other';
+      card.innerHTML = `
+        <span class="tl-card__year">${d.year || '—'}</span>
+        <span class="tl-card__dot" style="background:${d.org_color || '#6B7280'}"></span>
+        <span class="tl-card__title">${esc(d.title)}</span>
+        <span class="tl-card__type">${d.doc_type || 'other'}</span>
+      `;
+      card.addEventListener('click', () => openPanel(d.id));
+      el.appendChild(card);
+    });
+  }
 
-    const docs = [...(appData.documents || [])].sort((a, b) => (b.year || 0) - (a.year || 0));
-
-    if (docs.length === 0) {
-      container.innerHTML = '<div style="color:var(--text-secondary);font-family:var(--font-mono);font-size:12px;padding:1rem;">No documents yet.</div>';
+  /* --- Index --- */
+  function renderIndex() {
+    const tbody = $('#index-body');
+    if (!tbody) return;
+    const docs = data.documents || [];
+    if (!docs.length) {
+      tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-muted);padding:2rem;">No data yet</td></tr>';
       return;
     }
 
-    container.innerHTML = '';
-    docs.forEach((doc) => {
-      const card = document.createElement('div');
-      card.className = 'timeline__mobile-card';
-      card.dataset.id = doc.id;
-      card.dataset.docType = doc.doc_type || 'other';
-      card.innerHTML = `
-        <span class="timeline__mobile-year">${doc.year || '—'}</span>
-        <span class="timeline__mobile-org" style="background:${doc.org_color || '#6B7280'}"></span>
-        <span class="timeline__mobile-title">${escapeHTML(doc.title)}</span>
-        <span class="timeline__mobile-type">${doc.doc_type || 'other'}</span>
+    const stats = {};
+    docs.forEach((d) => {
+      const org = d.org || 'Other';
+      if (!stats[org]) stats[org] = { org, color: d.org_color || '#6B7280', s: 0, e: 0, p: 0, cats: {} };
+      if (d.doc_type === 'strategy') stats[org].s++;
+      else if (d.doc_type === 'evaluation') stats[org].e++;
+      (d.promises || []).forEach((pr) => {
+        stats[org].p++;
+        stats[org].cats[pr.category] = (stats[org].cats[pr.category] || 0) + 1;
+      });
+    });
+
+    const rows = Object.values(stats).sort((a, b) => b.p - a.p);
+    const maxP = Math.max(...rows.map((r) => r.p), 1);
+    tbody.innerHTML = '';
+
+    rows.forEach((r) => {
+      let topCat = '—', topN = 0;
+      Object.entries(r.cats).forEach(([c, n]) => { if (n > topN) { topN = n; topCat = LABELS[c] || c; } });
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td class="index-table__org" style="color:${r.color}">${esc(r.org)}</td>
+        <td>${r.s}</td><td>${r.e}</td><td>${r.p}</td>
+        <td>${esc(topCat)}</td>
+        <td class="index-table__bar-cell"><div class="index-bar" style="width:${(r.p / maxP) * 100}%"></div></td>
       `;
-      card.addEventListener('click', () => openPanel(doc.id));
-      container.appendChild(card);
+      tbody.appendChild(tr);
     });
   }
 
-  /* --- Side Panel --- */
-  function openPanel(docId) {
-    const doc = (appData.documents || []).find((d) => d.id === docId);
+  /* ============================================================
+     PANEL
+     ============================================================ */
+  function openPanel(id) {
+    const doc = (data.documents || []).find((d) => d.id === id);
     if (!doc) return;
+    selectedDocId = id;
+    const el = $('#panel-content');
+    if (!el) return;
 
-    selectedDocId = docId;
-    const panel = $('#side-panel');
-    const overlay = $('#panel-overlay');
+    let h = '';
 
-    // Populate panel content
-    const content = $('#panel-content');
-    if (!content) return;
+    if (doc.auto_added && !doc.reviewed)
+      h += '<div class="panel__review-badge">Pending editorial review</div>';
 
-    let html = '';
+    h += `<div class="panel__org"><span class="panel__org-dot" style="background:${doc.org_color||'#6B7280'}"></span>
+      <span class="panel__org-name">${esc(doc.org)}</span></div>`;
+    h += `<h2 class="panel__title">${esc(doc.title)}</h2>`;
+    h += `<div class="panel__chips"><span class="panel__chip">${doc.year||'—'}</span>
+      <span class="panel__chip">${(doc.doc_type||'other').toUpperCase()}</span></div>`;
+    h += '<div class="panel__visual" id="pv"></div>';
 
-    // Review badge
-    if (doc.auto_added && !doc.reviewed) {
-      html += '<div class="side-panel__badge-review">pending editorial review</div>';
-    }
+    if (doc.summary) h += `<p class="panel__summary">${esc(doc.summary)}</p>`;
 
-    // Org
-    html += `<div class="side-panel__org">
-      <span class="side-panel__org-dot" style="background:${doc.org_color || '#6B7280'}"></span>
-      <span class="side-panel__org-name">${escapeHTML(doc.org)}</span>
-    </div>`;
-
-    // Title
-    html += `<h2 class="side-panel__title">${escapeHTML(doc.title)}</h2>`;
-
-    // Chips
-    html += `<div class="side-panel__chips">
-      <span class="side-panel__chip">${doc.year || '—'}</span>
-      <span class="side-panel__chip">${(doc.doc_type || 'other').toUpperCase()}</span>
-    </div>`;
-
-    // Visual
-    html += `<div class="side-panel__visual" id="panel-visual"></div>`;
-
-    // Summary
-    if (doc.summary) {
-      html += `<p class="side-panel__summary">${escapeHTML(doc.summary)}</p>`;
-    }
-
-    // Promises
-    if (doc.promises && doc.promises.length > 0) {
-      html += `<div class="side-panel__section-head">Promises Made</div>`;
+    if (doc.promises && doc.promises.length) {
+      h += '<div class="panel__section-head">Promises made</div>';
       doc.promises.forEach((p) => {
-        const score = p.credibility_score || 0;
-        let dotsHTML = '';
-        for (let i = 1; i <= 5; i++) {
-          dotsHTML += `<span class="side-panel__score-dot ${i <= score ? 'filled' : ''}"></span>`;
-        }
-        html += `<div class="side-panel__promise" data-category="${p.category || ''}">
-          <div class="side-panel__quote">"${escapeHTML(p.quote)}"</div>
-          <div class="side-panel__score">${dotsHTML}</div>
-          ${p.adversarial_note ? `<div class="side-panel__adversarial-note">${escapeHTML(p.adversarial_note)}</div>` : ''}
+        const sc = p.credibility_score || 0;
+        let dots = '';
+        for (let i = 1; i <= 5; i++) dots += `<span class="cred-dot ${i<=sc?'filled':''}"></span>`;
+        h += `<div class="panel__promise" data-cat="${p.category||''}">
+          <div class="panel__quote-text">"${esc(p.quote)}"</div>
+          <div class="panel__cred-dots">${dots}</div>
+          ${p.adversarial_note ? `<div class="panel__adversarial">${esc(p.adversarial_note)}</div>` : ''}
         </div>`;
       });
     }
 
-    // Evaluation findings
-    if (doc.evaluation_findings && doc.evaluation_findings.length > 0) {
-      html += `<div class="side-panel__section-head">What the evaluation found</div>`;
-      html += `<div class="side-panel__evaluation-box">`;
-      doc.evaluation_findings.forEach((f) => {
-        html += `<p>${escapeHTML(f)}</p>`;
-      });
-      html += `</div>`;
+    if (doc.evaluation_findings && doc.evaluation_findings.length) {
+      h += '<div class="panel__section-head">What the evaluation found</div>';
+      h += '<div class="panel__eval-box">' +
+        doc.evaluation_findings.map((f) => `<p>${esc(f)}</p>`).join('') + '</div>';
     }
 
-    // Source link
-    if (doc.url) {
-      html += `<a href="${escapeHTML(doc.url)}" target="_blank" rel="noopener noreferrer" class="side-panel__source-link">View source document</a>`;
-    }
+    if (doc.url)
+      h += `<a href="${esc(doc.url)}" target="_blank" rel="noopener noreferrer" class="panel__source-btn">View source document →</a>`;
 
-    content.innerHTML = html;
+    el.innerHTML = h;
 
-    // Load visual
-    const visualEl = document.getElementById('panel-visual');
-    if (visualEl) {
-      if (doc.visual_type === 'illustration' && doc.visual_path) {
-        fetchSVG(doc.visual_path, visualEl);
-      } else if (doc.visual_type === 'chart_reference') {
+    // load visual
+    const pv = document.getElementById('pv');
+    if (pv) {
+      if (doc.visual_type === 'illustration' && doc.visual_path) loadSVG(doc.visual_path, pv);
+      else if (doc.visual_type === 'chart_reference') {
         const img = document.createElement('img');
         img.src = 'charts/promise_timeline.svg';
-        img.alt = 'Promise timeline chart';
-        visualEl.innerHTML = '';
-        visualEl.appendChild(img);
+        img.alt = 'Timeline chart';
+        pv.innerHTML = '';
+        pv.appendChild(img);
       }
     }
 
-    // Open panel
-    panel.classList.add('open');
-    overlay.classList.add('active');
+    $('#panel').classList.add('open');
+    $('#overlay').classList.add('active');
+    document.body.style.overflow = 'hidden';
   }
 
   function closePanel() {
     selectedDocId = null;
-    const panel = $('#side-panel');
-    const overlay = $('#panel-overlay');
-    if (panel) panel.classList.remove('open');
-    if (overlay) overlay.classList.remove('active');
+    $('#panel').classList.remove('open');
+    $('#overlay').classList.remove('active');
+    document.body.style.overflow = '';
   }
 
-  function bindPanelClose() {
-    const closeBtn = $('#panel-close');
-    const overlay = $('#panel-overlay');
-
-    if (closeBtn) closeBtn.addEventListener('click', closePanel);
-    if (overlay) overlay.addEventListener('click', closePanel);
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closePanel();
-    });
+  function setupPanel() {
+    $('#panel-close').addEventListener('click', closePanel);
+    $('#overlay').addEventListener('click', closePanel);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePanel(); });
   }
 
-  /* --- Filters --- */
-  function bindFilterButtons() {
+  /* ============================================================
+     FILTERS
+     ============================================================ */
+  function setupFilters() {
     $$('.filter-btn').forEach((btn) => {
       btn.addEventListener('click', () => {
-        const filter = btn.dataset.filter;
-
-        if (filter === 'all') {
+        const f = btn.dataset.filter;
+        if (f === 'all') {
           activeFilters.clear();
           activeFilters.add('all');
         } else {
           activeFilters.delete('all');
-          if (activeFilters.has(filter)) {
-            activeFilters.delete(filter);
-            if (activeFilters.size === 0) activeFilters.add('all');
-          } else {
-            activeFilters.add(filter);
-          }
+          activeFilters.has(f) ? activeFilters.delete(f) : activeFilters.add(f);
+          if (!activeFilters.size) activeFilters.add('all');
         }
-
-        // Update button styles
-        $$('.filter-btn').forEach((b) => {
-          b.classList.toggle('active', activeFilters.has(b.dataset.filter));
-        });
-
+        $$('.filter-btn').forEach((b) => b.classList.toggle('active', activeFilters.has(b.dataset.filter)));
         applyFilters();
       });
     });
   }
 
   function applyFilters() {
-    const showAll = activeFilters.has('all');
-
-    // Desktop timeline dots
-    $$('.timeline__dot').forEach((dot) => {
-      const type = dot.dataset.docType;
-      if (showAll || activeFilters.has(type)) {
-        dot.classList.remove('timeline__dot--hidden');
-      } else {
-        dot.classList.add('timeline__dot--hidden');
-      }
+    const all = activeFilters.has('all');
+    $$('.timeline__dot').forEach((d) => {
+      d.classList.toggle('timeline__dot--hidden', !all && !activeFilters.has(d.dataset.docType));
     });
-
-    // Mobile cards
-    $$('.timeline__mobile-card').forEach((card) => {
-      const type = card.dataset.docType;
-      if (showAll || activeFilters.has(type)) {
-        card.style.display = '';
-      } else {
-        card.style.display = 'none';
-      }
+    $$('.tl-card').forEach((c) => {
+      c.style.display = all || activeFilters.has(c.dataset.docType) ? '' : 'none';
     });
   }
 
-  /* --- Promise Index (Broken Promise Index table) --- */
-  function renderPromiseIndex() {
-    const tbody = $('#promise-index-body');
-    if (!tbody) return;
+  /* ============================================================
+     NAV SCROLL
+     ============================================================ */
+  function setupNav() {
+    const nav = $('#nav');
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        nav.classList.toggle('scrolled', window.scrollY > 10);
+        ticking = false;
+      });
+    }, { passive: true });
+  }
 
-    const docs = appData.documents || [];
-    if (docs.length === 0) {
-      tbody.innerHTML = '<tr><td colspan="6" style="text-align:center;color:var(--text-secondary)">No data yet</td></tr>';
+  /* ============================================================
+     SCROLL REVEALS
+     ============================================================ */
+  function setupScrollReveals() {
+    if (reducedMotion) {
+      $$('.reveal').forEach((el) => el.classList.add('visible'));
       return;
     }
-
-    // Aggregate by org
-    const orgStats = {};
-    docs.forEach((d) => {
-      const org = d.org || 'Other';
-      if (!orgStats[org]) {
-        orgStats[org] = {
-          org,
-          color: d.org_color || '#6B7280',
-          strategy: 0,
-          evaluation: 0,
-          promises: 0,
-          categoryCounts: {},
-        };
-      }
-      if (d.doc_type === 'strategy') orgStats[org].strategy++;
-      else if (d.doc_type === 'evaluation') orgStats[org].evaluation++;
-
-      (d.promises || []).forEach((p) => {
-        orgStats[org].promises++;
-        const cat = p.category || 'other';
-        orgStats[org].categoryCounts[cat] = (orgStats[org].categoryCounts[cat] || 0) + 1;
-      });
-    });
-
-    const orgs = Object.values(orgStats).sort((a, b) => b.promises - a.promises);
-    const maxPromises = Math.max(...orgs.map((o) => o.promises), 1);
-
-    tbody.innerHTML = '';
-    orgs.forEach((o) => {
-      // Most common category
-      let topCat = '—';
-      let topCount = 0;
-      Object.entries(o.categoryCounts).forEach(([cat, count]) => {
-        if (count > topCount) {
-          topCount = count;
-          topCat = CATEGORY_LABELS[cat] || cat;
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
         }
       });
-
-      const barWidth = (o.promises / maxPromises) * 100;
-
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td class="promise-index__org-name" style="color:${o.color}">${escapeHTML(o.org)}</td>
-        <td>${o.strategy}</td>
-        <td>${o.evaluation}</td>
-        <td>${o.promises}</td>
-        <td>${escapeHTML(topCat)}</td>
-        <td class="promise-index__bar-cell">
-          <div class="promise-index__bar" style="width:${barWidth}%"></div>
-        </td>
-      `;
-      tbody.appendChild(tr);
-    });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    $$('.reveal').forEach((el) => obs.observe(el));
   }
 
-  /* --- Data Viz Section --- */
-  function renderDataViz() {
-    // Charts are static SVGs, just set the src
-    // They are already in the HTML as img tags
-    // Nothing dynamic to do here unless charts are missing
+  /* ============================================================
+     METHODOLOGY
+     ============================================================ */
+  async function loadMethodology() {
+    try {
+      const res = await fetch('methodology.md');
+      if (!res.ok) return;
+      let text = await res.text();
+      // strip markdown heading
+      text = text.replace(/^#\s+.*\n+/, '');
+      const el = $('#methodology-text');
+      if (!el) return;
+      // split into paragraphs
+      const paragraphs = text.split(/\n\n+/).filter((p) => p.trim());
+      el.innerHTML = paragraphs.map((p) => `<p>${esc(p.trim())}</p>`).join('');
+    } catch { /* non-critical */ }
   }
 
-  /* --- Utilities --- */
-  function escapeHTML(str) {
-    if (!str) return '';
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
-  function hideLoading() {
-    const loadingEl = $('#loading-state');
-    if (loadingEl) loadingEl.style.display = 'none';
-    const mainEl = $('#main-content');
-    if (mainEl) mainEl.style.display = '';
-  }
-
-  function showError() {
-    const loadingEl = $('#loading-state');
-    if (loadingEl) loadingEl.style.display = 'none';
-    const errorEl = $('#error-state');
-    if (errorEl) errorEl.classList.add('show');
+  /* ============================================================
+     UTIL
+     ============================================================ */
+  function esc(s) {
+    if (!s) return '';
+    const d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
   }
 })();

@@ -39,7 +39,7 @@ jobs:
       - name: Commit updates if anything changed
         run: |
           git config user.name "SBC Promise Tracker"
-          git config user.email "bot@promised-not-delivered"
+          git config user.email "tracker@promised-not-delivered"
           git add data.json seen_urls.json review_queue.json charts/ illustrations/
           git diff --staged --quiet && echo "Nothing new today. Skipping commit." || (git commit -m "Daily scan: $(date +%Y-%m-%d)" && git push)
 
