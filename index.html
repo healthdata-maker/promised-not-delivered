@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promised, Not Delivered — Tracking rhetorical promises in global health SBC documents</title>
+  <meta name="description" content="An automated archive tracking what global health organisations promised in social and behaviour change strategy documents versus what independent evaluations found.">
+  <meta name="theme-color" content="#0D0D0F">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       1. MASTHEAD
+       ============================================================ -->
+  <header class="masthead" id="masthead">
+    <span class="masthead__name">Promised, Not Delivered</span>
+    <span class="masthead__subtitle">An automated archive. Updated daily.</span>
+    <div class="masthead__filters">
+      <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+      <span style="color:var(--text-secondary);font-family:var(--font-mono);font-size:11px;line-height:48px;">·</span>
+      <button class="filter-btn" data-filter="strategy" id="filter-strategy">Strategy</button>
+      <span style="color:var(--text-secondary);font-family:var(--font-mono);font-size:11px;line-height:48px;">·</span>
+      <button class="filter-btn" data-filter="evaluation" id="filter-evaluation">Evaluations</button>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       LOADING STATE
+       ============================================================ -->
+  <div id="loading-state" style="padding-top:48px;">
+    <div class="hero" style="min-height:100vh;">
+      <div style="width:60%;max-width:500px;">
+        <div class="skeleton" style="height:3rem;margin-bottom:1rem;width:80%;"></div>
+        <div class="skeleton" style="height:3rem;margin-bottom:1rem;width:90%;"></div>
+        <div class="skeleton" style="height:1.5rem;margin-bottom:3rem;width:60%;"></div>
+        <div style="display:flex;gap:4rem;justify-content:center;">
+          <div class="skeleton" style="height:4rem;width:140px;"></div>
+          <div class="skeleton" style="height:4rem;width:140px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ERROR STATE
+       ============================================================ -->
+  <div class="error-state" id="error-state">
+    <p class="error-state__message">Archive is loading. Check back shortly.</p>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT (hidden until data loads)
+       ============================================================ -->
+  <main id="main-content" style="display:none;">
+
+    <!-- 2. HERO -->
+    <section class="hero" id="hero">
+      <div class="hero__headline">
+        <span class="hero__line hero__line--1" id="hero-line-1"></span>
+        <span class="hero__line hero__line--2" id="hero-line-2"></span>
+        <span class="hero__line hero__line--3" id="hero-line-3"></span>
+      </div>
+      <div class="hero__counters">
+        <div class="hero__counter">
+          <span class="hero__counter-number" id="counter-documents">0</span>
+          <span class="hero__counter-label">Documents Tracked</span>
+        </div>
+        <div class="hero__counter">
+          <span class="hero__counter-number" id="counter-promises">0</span>
+          <span class="hero__counter-label">Promise Instances Found</span>
+        </div>
+      </div>
+      <div class="hero__scroll">
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+    </section>
+
+    <!-- 3. PROMISE FREQUENCY WALL -->
+    <section class="promise-wall" id="promise-wall">
+      <div class="section-header">Promise frequency across all documents</div>
+      <div class="promise-wall__grid" id="promise-wall-grid"></div>
+    </section>
+
+    <!-- 4. DUAL VISUAL SHOWCASE -->
+    <section class="dual-visual" id="dual-visual">
+      <div class="section-header">Visual archive</div>
+      <div class="dual-visual__grid">
+        <div class="dual-visual__panel">
+          <h2 class="dual-visual__title">The promises made</h2>
+          <div class="dual-visual__svg-container" id="dual-left-svg"></div>
+          <p class="dual-visual__caption" id="dual-left-caption">A strategy document illustration from the archive.</p>
+        </div>
+        <div class="dual-visual__divider"></div>
+        <div class="dual-visual__panel">
+          <h2 class="dual-visual__title">What evaluations found</h2>
+          <div class="dual-visual__svg-container" id="dual-right-svg"></div>
+          <p class="dual-visual__caption">All documents plotted by year. Strategy dots cluster in waves. Evaluations follow later.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. TIMELINE -->
+    <section class="timeline-section" id="timeline-section">
+      <div class="section-header">Document timeline</div>
+      <div class="timeline__scroll">
+        <div class="timeline__container" id="timeline-container">
+          <div class="timeline__line"></div>
+          <svg class="timeline__svg" id="timeline-svg" viewBox="0 0 1400 200" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+      </div>
+      <div class="timeline__mobile-list" id="timeline-mobile"></div>
+    </section>
+
+    <!-- 6. SIDE PANEL -->
+    <div class="panel-overlay" id="panel-overlay"></div>
+    <aside class="side-panel" id="side-panel">
+      <button class="side-panel__close" id="panel-close" aria-label="Close panel">&times;</button>
+      <div id="panel-content"></div>
+    </aside>
+
+    <!-- 7. BROKEN PROMISE INDEX -->
+    <section class="promise-index" id="promise-index">
+      <div class="section-header">Broken promise index</div>
+      <table class="promise-index__table">
+        <thead>
+          <tr>
+            <th>Organisation</th>
+            <th>Strategy docs</th>
+            <th>Evaluation docs</th>
+            <th>Promise instances</th>
+            <th>Most common promise type</th>
+            <th>Volume</th>
+          </tr>
+        </thead>
+        <tbody id="promise-index-body"></tbody>
+      </table>
+    </section>
+
+    <!-- 8. DATA VISUALISATIONS -->
+    <section class="data-viz" id="data-viz">
+      <div class="section-header">Data visualisations</div>
+      <div class="data-viz__grid">
+        <div class="data-viz__card">
+          <img src="charts/promise_counts.svg" alt="Promise frequency chart" id="chart-promise-counts">
+          <p class="data-viz__caption">How often each type of promise appears across the full archive. Community ownership and context-sensitivity are the most repeated.</p>
+        </div>
+        <div class="data-viz__card">
+          <img src="charts/org_breakdown.svg" alt="Organisation breakdown chart" id="chart-org-breakdown">
+          <p class="data-viz__caption">Strategy documents vastly outnumber evaluations in every organisation's archive. The gap is the argument.</p>
+        </div>
+        <div class="data-viz__card">
+          <img src="charts/promise_timeline.svg" alt="Promise timeline chart" id="chart-promise-timeline">
+          <p class="data-viz__caption">Every document in the archive by year. Strategy documents cluster in waves. Evaluations follow years later - when they follow at all.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. METHODOLOGY -->
+    <section class="methodology" id="methodology">
+      <div class="methodology__inner">
+        <h2 class="methodology__title">How this works</h2>
+        <pre class="methodology__text" id="methodology-text">Loading methodology...</pre>
+      </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer class="footer" id="footer">
+      <p class="footer__text">
+        Updated daily by automated agents. Quotes are exact extracts from source documents.<br>
+        <a href="https://github.com" target="_blank" rel="noopener">Code on GitHub</a> · Built with Gemini API · Hosted on Cloudflare Pages
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- Hero text reveal script (runs before main.js) -->
+  <script>
+    (function() {
+      var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var lines = [
+        { id: 'hero-line-1', text: 'Thirty years.' },
+        { id: 'hero-line-2', text: 'The same promises.' },
+        { id: 'hero-line-3', text: 'What global health organisations said — and what evaluations found.' }
+      ];
+      var charIndex = 0;
+      lines.forEach(function(line) {
+        var el = document.getElementById(line.id);
+        if (!el) return;
+        if (prefersReducedMotion) {
+          el.textContent = line.text;
+          return;
+        }
+        el.innerHTML = '';
+        for (var i = 0; i < line.text.length; i++) {
+          var span = document.createElement('span');
+          span.className = 'hero__char';
+          span.style.setProperty('--char-index', charIndex);
+          span.textContent = line.text[i] === ' ' ? '\u00A0' : line.text[i];
+          el.appendChild(span);
+          charIndex++;
+        }
+      });
+    })();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>
