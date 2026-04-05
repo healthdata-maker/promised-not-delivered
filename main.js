@@ -5,7 +5,6 @@
   'use strict';
 
   let data = null;
-  let papers = [];
   let selectedDocId = null;
   const activeFilters = new Set(['all']);
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -44,18 +43,6 @@
       return;
     }
 
-    try {
-      const pRes = await fetch('papers.json');
-      if (pRes.ok) papers = await pRes.json();
-    } catch { /* soft fail */ }
-
-    // Disable filters if empty
-    if (!data.documents || data.documents.length === 0) {
-      $$('.filter-btn').forEach(b => b.setAttribute('disabled', 'true'));
-    }
-
-    setupTiltEffects();
-
     $('#main').style.display = '';
     render();
 
@@ -73,7 +60,6 @@
     renderShowcase();
     renderTimeline();
     renderIndex();
-    renderWorkingPapers();
   }
 
   /* --- Counters --- */
@@ -164,7 +150,7 @@
       const doc = stratDocs[Math.floor(Math.random() * stratDocs.length)];
       loadSVG(doc.visual_path, left);
       const cap = $('#showcase-left-caption');
-      if (cap) cap.textContent = `${doc.title} : ${doc.org}, ${doc.year || 'n.d.'}`;
+      if (cap) cap.textContent = `${doc.title} — ${doc.org}, ${doc.year || 'n.d.'}`;
     } else if (left) {
       left.innerHTML = '<span style="color:var(--text-muted);font-size:13px;">Illustrations appear after the first data collection run.</span>';
     }
@@ -288,7 +274,7 @@
       card.dataset.id = d.id;
       card.dataset.docType = d.doc_type || 'other';
       card.innerHTML = `
-        <span class="tl-card__year">${d.year || ''}</span>
+        <span class="tl-card__year">${d.year || '—'}</span>
         <span class="tl-card__dot" style="background:${d.org_color || '#6B7280'}"></span>
         <span class="tl-card__title">${esc(d.title)}</span>
         <span class="tl-card__type">${d.doc_type || 'other'}</span>
@@ -325,7 +311,7 @@
     tbody.innerHTML = '';
 
     rows.forEach((r) => {
-      let topCat = 'None', topN = 0;
+      let topCat = '—', topN = 0;
       Object.entries(r.cats).forEach(([c, n]) => { if (n > topN) { topN = n; topCat = LABELS[c] || c; } });
       const tr = document.createElement('tr');
       tr.innerHTML = `
@@ -355,7 +341,7 @@
     h += `<div class="panel__org"><span class="panel__org-dot" style="background:${doc.org_color||'#6B7280'}"></span>
       <span class="panel__org-name">${esc(doc.org)}</span></div>`;
     h += `<h2 class="panel__title">${esc(doc.title)}</h2>`;
-    h += `<div class="panel__chips"><span class="panel__chip">${doc.year||'n/a'}</span>
+    h += `<div class="panel__chips"><span class="panel__chip">${doc.year||'—'}</span>
       <span class="panel__chip">${(doc.doc_type||'other').toUpperCase()}</span></div>`;
     h += '<div class="panel__visual" id="pv"></div>';
 
@@ -469,43 +455,16 @@
      SCROLL REVEALS
      ============================================================ */
   function setupScrollReveals() {
-    // Replaced by external logic
-  }
-
-  /* ============================================================
-     3D TILT EFFECTS
-     ============================================================ */
-  function setupTiltEffects() {
-    if (reducedMotion) return;
-    const cards = $$('.promise-card, .dataviz__card');
-    cards.forEach(card => {
-      card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * -5;
-        const rotateY = ((x - centerX) / centerX) * 5;
-        
-        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
-        card.style.transition = 'transform 0.1s ease-out';
-        card.style.zIndex = '10';
+    if (reducedMotion) {
+      $$('.reveal').forEach((el) => el.classList.add('visible'));
+      return;
+    }
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
       });
-
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
-        card.style.transition = 'transform 0.5s ease-out';
-        card.style.zIndex = '1';
-      });
-    });
-  }
-
-  /* ============================================================
-     WORKING PAPERS
-     ============================================================ */
-  function renderWorkingPapers() {
-    // Replaced by external logic
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    $$('.reveal').forEach((el) => obs.observe(el));
   }
 
   /* ============================================================
@@ -518,42 +477,3 @@
     return d.innerHTML;
   }
 })();
-
-// Intersection Observer for Scroll Reveals
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target); 
-    }
-  });
-}, { threshold: 0.05, rootMargin: "50px" });
-
-document.querySelectorAll('section, .card-3d').forEach(el => {
-  el.classList.add('reveal-section');
-  observer.observe(el);
-});
-
-// Load Think Tank Papers
-fetch("papers.json")
-  .then(response => response.json())
-  .then(papers => {
-    const container = document.getElementById("papers-container");
-    if (!papers || papers.length === 0) {
-      container.innerHTML = "<p class='empty-state'>The Think Tank is gathering data. First paper publishes Wednesday.</p>";
-      return;
-    }
-    
-    let html = "";
-    papers.forEach(paper => {
-      html += `
-        <article class="card-3d">
-          <div class="paper-date">${paper.date}</div>
-          <h3 class="paper-title">${paper.title}</h3>
-          <div class="paper-content">${paper.content}</div>
-        </article>
-      `;
-    });
-    container.innerHTML = html;
-  })
-  .catch(err => console.log("Think Tank pending first run."));

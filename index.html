@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Promised, Not Delivered: What global health organisations said vs. what evaluations found</title>
+  <title>Promised, Not Delivered — What global health organisations said vs. what evaluations found</title>
   <meta name="description" content="A research archive tracking rhetorical commitments in global health SBC strategy documents and comparing them against independent evaluation findings.">
   <meta name="theme-color" content="#FAFAF8">
   <link rel="stylesheet" href="style.css">
@@ -18,7 +18,7 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <a href="#hero" class="nav__logo">Promised, Not Delivered</a>
-    <div class="nav__filters" id="nav-filters" title="Archive logic handles filtering. Filters will activate once data populates.">
+    <div class="nav__filters" id="nav-filters">
       <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
       <button class="filter-btn" data-filter="strategy" id="filter-strategy">Strategy</button>
       <button class="filter-btn" data-filter="evaluation" id="filter-evaluation">Evaluation</button>
@@ -34,20 +34,30 @@
   <main id="main" style="display:none;">
 
     <!-- HERO -->
-    <section id="hero" style="min-height: 100vh; padding-top: 80px; display: flex; flex-direction: column; justify-content: center; position: relative;">
-      <div style="max-width: 900px; margin: 0 auto; padding: 0 2rem; text-align: center;">
-        <h1 style="font-family: 'Source Serif 4', 'Playfair Display', serif; font-size: clamp(3rem, 6vw, 5rem); line-height: 1.1; color: var(--text-primary); margin-bottom: 1.5rem;">
-          Thirty years.<br>The same promises.
-        </h1>
-        <p style="font-family: 'DM Sans', 'Spectral', sans-serif; font-size: clamp(1.2rem, 2vw, 1.5rem); color: var(--text-secondary); max-width: 600px; margin: 0 auto 3rem auto;">
-          What global health organisations wrote in strategy documents and what independent evaluations actually found.
-        </p>
-        <div style="display: flex; gap: 3rem; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 1rem; color: var(--text-primary);">
-          <div><strong id="doc-count" style="font-size: 2rem; color: var(--accent); display: block;">0</strong> DOCUMENTS TRACKED</div>
-          <div><strong id="promise-count" style="font-size: 2rem; color: var(--accent); display: block;">0</strong> PROMISES FOUND</div>
+    <section class="hero" id="hero">
+      <div class="reveal">
+        <div class="hero__overline">Research Archive</div>
+        <h1 class="hero__title">Thirty years of promises.<br>The same five commitments.</h1>
+        <p class="hero__subtitle">What global health organisations wrote in strategy documents — and what independent evaluations actually found.</p>
+      </div>
+      <div class="hero__stats reveal reveal-delay-2">
+        <div class="hero__stat">
+          <span class="hero__stat-number" id="counter-docs">0</span>
+          <span class="hero__stat-label">Documents tracked</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" id="counter-promises">0</span>
+          <span class="hero__stat-label">Promise instances found</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-number" id="counter-orgs">0</span>
+          <span class="hero__stat-label">Organisations</span>
         </div>
       </div>
-      <div style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.5;">Scroll Down v</div>
+      <div class="hero__scroll-cue" aria-hidden="true">
+        <span>Scroll</span>
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
     </section>
 
     <!-- PROMISE WALL -->
@@ -74,7 +84,7 @@
         <div>
           <h3 class="showcase__panel-title">What evaluations found</h3>
           <div class="showcase__frame" id="showcase-right"></div>
-          <p class="showcase__caption">Every document by year. Strategy documents cluster in waves. Evaluations follow later when they follow at all.</p>
+          <p class="showcase__caption">Every document by year. Strategy documents cluster in waves. Evaluations follow later — when they follow at all.</p>
         </div>
       </div>
     </section>
@@ -82,7 +92,7 @@
     <!-- TIMELINE -->
     <section class="timeline" id="timeline-section">
       <div class="timeline__header reveal">
-        <div class="section-label">1990 to present</div>
+        <div class="section-label">1990 – present</div>
         <h2 class="section-title">Every document in the archive</h2>
       </div>
       <div class="timeline__scroll">
@@ -143,22 +153,12 @@
         </div>
         <div class="dataviz__card">
           <img src="charts/promise_timeline.svg" alt="Documents over time" onerror="this.parentElement.style.display='none'">
-          <p class="dataviz__caption">Every document by year. Strategy documents cluster in waves. Evaluations follow years later when they follow at all.</p>
+          <p class="dataviz__caption">Every document by year. Strategy documents cluster in waves. Evaluations follow years later — when they follow at all.</p>
         </div>
       </div>
     </section>
 
-    <!-- WORKING PAPERS -->
-    <section id="working-papers" class="reveal-section">
-      <div class="section-header">
-        <h2>Automated Think Tank</h2>
-        <p>Rigorous synthesis generated bi-weekly by multi-agent adversarial debate.</p>
-      </div>
-      <div id="papers-container" class="papers-grid">
-      </div>
-    </section>
-
-    <!-- HOW IT WORKS FLOWCHART -->
+    <!-- HOW IT WORKS — FLOWCHART -->
     <section class="flowchart-section" id="how-it-works">
       <div class="flowchart__inner reveal">
         <div class="section-label">Process</div>

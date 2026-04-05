@@ -7,12 +7,17 @@
 /* --- Design Tokens --- */
 :root {
   --bg: #FAFAF8;
+  --bg-warm: #F4F1EB;
   --surface: #FFFFFF;
-  --surface-raised: #F5F3EE;
-  --text-primary: #1A1A1A;
-  --text-secondary: #5C5C5C;
-  --border: #E6E4DD;
-  --accent: #D95C14;
+  --surface-alt: #F0EDE6;
+  --text: #1A1A1A;
+  --text-secondary: #5A554E;
+  --text-muted: #9E9892;
+  --accent: #C2410C;
+  --accent-hover: #9A3412;
+  --accent-soft: #FFF7ED;
+  --border: #E5E0D8;
+  --border-strong: #C9C2B8;
 
   /* Org colours */
   --unicef: #00AEEF;
@@ -131,11 +136,8 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
   color: var(--text-secondary); border-radius: 4px;
   cursor: pointer; transition: all 0.2s ease;
 }
-.filter-btn:disabled {
-  opacity: 0.4; cursor: not-allowed;
-}
-.filter-btn:not(:disabled):hover { color: var(--text); background: rgba(255,255,255,0.5); }
-.filter-btn.active:not(:disabled) {
+.filter-btn:hover { color: var(--text); background: rgba(255,255,255,0.5); }
+.filter-btn.active {
   background: var(--surface); color: var(--text);
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
 }
@@ -268,44 +270,6 @@ a:hover { color: var(--accent-hover); text-decoration: underline; }
 .promise-card__quote-item {
   font-size: 12px; font-style: italic; color: var(--text-secondary);
   line-height: 1.5; padding: 0.4rem 0; border-top: 1px solid var(--border);
-}
-
-/* ============================================================
-   3D AND ANIMATION CSS
-   ============================================================ */
-.reveal-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal-section.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-.card-3d {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  transform: perspective(1000px) rotateX(0) rotateY(0);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 2rem;
-}
-.card-3d:hover {
-  transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) translateY(-5px);
-  box-shadow: 20px 20px 60px rgba(0,0,0,0.4), -20px -20px 60px rgba(255,255,255,0.02);
-  border-color: var(--accent);
-}
-.papers-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.paper-chart {
-  width: 100%;
-  border-radius: 4px;
-  margin: 1.5rem 0;
-  border: 1px solid var(--border);
 }
 
 /* ============================================================
