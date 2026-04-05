@@ -469,16 +469,7 @@
      SCROLL REVEALS
      ============================================================ */
   function setupScrollReveals() {
-    if (reducedMotion) {
-      $$('.reveal').forEach((el) => el.classList.add('visible'));
-      return;
-    }
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
-    $$('.reveal').forEach((el) => obs.observe(el));
+    // Replaced by external logic
   }
 
   /* ============================================================
@@ -514,17 +505,7 @@
      WORKING PAPERS
      ============================================================ */
   function renderWorkingPapers() {
-    const feed = $('#papers-feed');
-    if (!feed) return;
-    if (!papers || papers.length === 0) return;
-    
-    feed.innerHTML = papers.map((p, i) => `
-      <article class="paper-card reveal ${i > 0 ? 'reveal-delay-1' : ''}">
-        <div class="paper-date">${esc(p.date)}</div>
-        <h3 class="paper-title">${esc(p.title)}</h3>
-        <div class="paper-content">${p.content}</div>
-      </article>
-    `).join('');
+    // Replaced by external logic
   }
 
   /* ============================================================
@@ -537,3 +518,41 @@
     return d.innerHTML;
   }
 })();
+
+// Intersection Observer for Scroll Reveals
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(sec => {
+  sec.classList.add('reveal-section');
+  observer.observe(sec);
+});
+
+// Load Think Tank Papers
+fetch("papers.json")
+  .then(response => response.json())
+  .then(papers => {
+    const container = document.getElementById("papers-container");
+    if (!papers || papers.length === 0) {
+      container.innerHTML = "<p class='empty-state'>The Think Tank is gathering data. First paper publishes Wednesday.</p>";
+      return;
+    }
+    
+    let html = "";
+    papers.forEach(paper => {
+      html += `
+        <article class="card-3d">
+          <div class="paper-date">${paper.date}</div>
+          <h3 class="paper-title">${paper.title}</h3>
+          <div class="paper-content">${paper.content}</div>
+        </article>
+      `;
+    });
+    container.innerHTML = html;
+  })
+  .catch(err => console.log("Think Tank pending first run."));
