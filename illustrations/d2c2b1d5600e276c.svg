@@ -1,0 +1,36 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  
+  <!-- Ground Line -->
+  <path d="M 60 250 L 340 250" stroke="#6B7280" stroke-width="1"/>
+  
+  <!-- Fulcrum (Triangle) -->
+  <path d="M 180 250 L 220 250 L 200 210 Z" fill="#6B7280"/>
+  <!-- Fulcrum Crosshatch Shadow -->
+  <path d="M 190 250 L 200 240 M 195 250 L 205 240 M 200 250 L 210 240" stroke="#0D0D0F" stroke-width="1.5"/>
+  
+  <!-- Balance Beam -->
+  <rect x="80" y="206" width="240" height="4" fill="#6B7280"/>
+  
+  <!-- Equity: Left Side (Taller boost for smaller need) -->
+  <rect x="100" y="146" width="40" height="60" fill="#6B7280"/>
+  <!-- Left Pedestal Crosshatch -->
+  <path d="M 100 160 L 140 160 M 100 175 L 140 175 M 100 190 L 140 190" stroke="#0D0D0F" stroke-width="1"/>
+  <circle cx="120" cy="130" r="12" fill="#6B7280"/>
+  
+  <!-- Equity: Right Side (Smaller boost for taller need) -->
+  <rect x="260" y="181" width="40" height="25" fill="#6B7280"/>
+  <!-- Right Pedestal Crosshatch -->
+  <path d="M 260 190 L 300 190 M 260 198 L 300 198" stroke="#0D0D0F" stroke-width="1"/>
+  <!-- Right Person (Represented as a taller geometric form) -->
+  <path d="M 270 181 L 290 181 L 290 145 L 270 145 Z" fill="#6B7280"/>
+  <circle cx="280" cy="130" r="12" fill="#6B7280"/>
+  
+  <!-- Horizon/Level Line (Metaphor for Equity Outcome) -->
+  <path d="M 100 110 L 300 110" stroke="#6B7280" stroke-width="0.5" stroke-dasharray="4 4"/>
+  
+  <!-- Abstract Shadow Elements -->
+  <path d="M 120 250 L 135 250" stroke="#6B7280" stroke-width="3"/>
+  <path d="M 265 250 L 280 250" stroke="#6B7280" stroke-width="3"/>
+</svg>

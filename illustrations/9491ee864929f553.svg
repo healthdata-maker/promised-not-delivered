@@ -1,0 +1,31 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  <defs>
+    <pattern id="hatch" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1.2" />
+    </pattern>
+  </defs>
+  
+  <!-- Left Giver Arm -->
+  <polygon points="0,240 194,170 194,205 0,300" fill="#6B7280" />
+  <polygon points="0,240 194,170 194,180 0,255" fill="url(#hatch)" />
+  
+  <!-- Right Receiver Arm -->
+  <polygon points="400,150 206,90 206,125 400,210" fill="#6B7280" />
+  <polygon points="400,150 206,90 206,100 400,165" fill="url(#hatch)" />
+  
+  <!-- Torch Shaft -->
+  <rect x="194" y="90" width="12" height="120" fill="#6B7280" stroke="#0D0D0F" stroke-width="2"/>
+  
+  <!-- Flame Structure -->
+  <polygon points="200,15 235,75 200,105 165,75" fill="#6B7280" />
+  <polygon points="200,40 220,75 200,95 180,75" fill="#0D0D0F" />
+  <polygon points="200,55 212,75 200,88 188,75" fill="url(#hatch)" />
+  
+  <!-- Accent Lines for motion/tension -->
+  <line x1="194" y1="170" x2="194" y2="205" stroke="#0D0D0F" stroke-width="2"/>
+  <line x1="206" y1="90" x2="206" y2="125" stroke="#0D0D0F" stroke-width="2"/>
+  
+  <!-- Conceptual Ground/Horizon -->
+  <line x1="40" y1="280" x2="360" y2="280" stroke="#6B7280" stroke-width="1" stroke-dasharray="4 8"/>
+</svg>

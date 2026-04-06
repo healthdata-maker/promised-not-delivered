@@ -1,12 +1,43 @@
 {
-  "last_updated": "",
-  "total_documents": 0,
+  "last_updated": "2026-04-06 07:39 UTC",
+  "total_documents": 1,
   "promise_counts": {
     "community_ownership": 0,
     "context_sensitivity": 0,
     "participation": 0,
     "sustainability": 0,
-    "equity": 0
+    "equity": 1
   },
-  "documents": []
+  "documents": [
+    {
+      "id": "d2c2b1d5600e276c",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2010,
+      "title": "Aiming high for young people : three years on",
+      "url": "https://core.ac.uk/download/4160619.pdf",
+      "source": "CORE",
+      "summary": "They failed. In 2010, the British government promised to help kids in poor neighborhoods by putting more youth workers and police officers on the streets to change how local services reach those who need support the most in their daily lives. These grand goals mostly masked deep budget cuts that soon left these same communities with almost no real help at all. We still don't know where that money went.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/d2c2b1d5600e276c.svg",
+      "promises": [
+        {
+          "quote": "We are also determined to maintain our focus on supporting the most deprived neighbourhoods. We are raising our expectations on local services to work in new ways – with more outreach and street based work by youth workers and the police.",
+          "category": "equity",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "While it names specific methods (outreach, street-based work) and actors (youth workers, police), 'raising our expectations' is an aspirational policy stance rather than a concrete guarantee of service delivery."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 3.0,
+      "review_flags": [
+        "low_avg_credibility"
+      ]
+    }
+  ]
 }
