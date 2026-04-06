@@ -22,6 +22,11 @@ from updater import run_updater
 IS_DAY_ZERO = os.environ.get('IS_DAY_ZERO', 'false').lower() == 'true'
 print(f"Pipeline starting. Day zero mode: {IS_DAY_ZERO}")
 
+# Force Scout amnesia during Day Zero so it fetches the full library
+if IS_DAY_ZERO:
+    with open(ROOT / "seen_urls.json", "w") as f:
+        f.write("[]")
+
 new_docs = run_scout(day_zero=IS_DAY_ZERO)
 print(f"Scout: {len(new_docs)} new documents")
 
