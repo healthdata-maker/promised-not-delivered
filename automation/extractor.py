@@ -1,5 +1,6 @@
 import requests
 import time
+import warnings
 from pathlib import Path
 
 try:
@@ -7,7 +8,8 @@ try:
 except ImportError:
     import fitz
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, XMLParsedAsHTMLWarning
+warnings.filterwarnings("ignore", category=XMLParsedAsHTMLWarning)
 
 def extract_from_url(url, max_pages=30):
     try:
