@@ -124,16 +124,22 @@ def search_openalex(query, from_year=1990):
         r = requests.get(OPENALEX_BASE, params=params, timeout=30)
         if r.status_code == 200:
             for item in r.json().get("results", []):
-                best_oa = item.get("best_oa_location", {})
-                pdf_url = best_oa.get("pdf_url") or item.get("open_access", {}).get("oa_url")
-                if pdf_url:
-                    venue = item.get("primary_location", {}).get("source", {}).get("display_name", "")
-                    results.append(make_entry(item.get("title", ""), pdf_url, item.get("publication_year"), "OpenAlex", venue=venue))
+                try:
+                    best_oa = item.get("best_oa_location") or {}
+                    open_access = item.get("open_access") or {}
+                    pdf_url = best_oa.get("pdf_url") or open_access.get("oa_url")
+                    if pdf_url:
+                        primary = item.get("primary_location") or {}
+                        source = primary.get("source") or {}
+                        venue = source.get("display_name", "")
+                        results.append(make_entry(item.get("title", ""), pdf_url, item.get("publication_year"), "OpenAlex", venue=venue))
+                except Exception:
+                    continue
         time.sleep(0.5)
     except Exception as e:
         print(f"OpenAlex error: {e}")
     return results
-
+    
 def search_core(query, from_year=1990):
     results = []
     core_key = os.environ.get("CORE_API_KEY", "")
