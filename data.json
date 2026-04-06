@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-04-06 07:39 UTC",
-  "total_documents": 1,
+  "last_updated": "2026-04-06 08:52 UTC",
+  "total_documents": 5,
   "promise_counts": {
     "community_ownership": 0,
-    "context_sensitivity": 0,
-    "participation": 0,
-    "sustainability": 0,
+    "context_sensitivity": 2,
+    "participation": 1,
+    "sustainability": 1,
     "equity": 1
   },
   "documents": [
@@ -37,6 +37,120 @@
       "credibility_score": 3.0,
       "review_flags": [
         "low_avg_credibility"
+      ]
+    },
+    {
+      "id": "25247d6473b7d575",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "strategy",
+      "year": 2024,
+      "title": "Using Vignettes to Gain Insights Into Social Norms Related to Voluntary Family Planning and Gender-Based Violence in South Sudan",
+      "url": "https://www.ghspjournal.org/content/ghsp/early/2024/06/21/GHSP-D-23-00489.full.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/25247d6473b7d575.svg",
+      "promises": [
+        {
+          "quote": "Findings from this study were shared with stakeholders and communities to codesign interventions aimed at increasing the use of FP/RH services.",
+          "category": "participation",
+          "credibility_score": 4,
+          "keep": true,
+          "adversarial_note": "Identifies a specific methodology (codesign) and participants (stakeholders and communities), although it is phrased as a completed or ongoing action rather than a future-facing promise."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 4.0,
+      "review_flags": []
+    },
+    {
+      "id": "8b86c53fa663f368",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "strategy",
+      "year": 2020,
+      "title": "Evidence to inform an integrated social and behavior change strategy in the Sahel",
+      "url": "https://core.ac.uk/download/524743891.pdf",
+      "source": "CORE",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/8b86c53fa663f368.svg",
+      "promises": [
+        {
+          "quote": "Based on lessons from RISE I, RISE II will introduce several adjustments, including emphasis on local ownership and culturally sensitive",
+          "category": "sustainability",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "While it uses the active 'will introduce', 'emphasis' is a vague aspirational intent rather than a specific programmatic mechanism or concrete action."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 3.0,
+      "review_flags": [
+        "low_avg_credibility"
+      ]
+    },
+    {
+      "id": "4d25720f4d6e9976",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": null,
+      "title": "Improving food hygiene behaviours among child caregivers in rural community households of Malawi",
+      "url": "https://core.ac.uk/download/571223214.pdf",
+      "source": "CORE",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/4d25720f4d6e9976.svg",
+      "promises": [
+        {
+          "quote": "Developing a Contextually Appropriate Integrated Hygiene Intervention to Achieve Sustained Reductions in Dirrhoeal Diseases.",
+          "category": "context_sensitivity",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "e7baa8401fe4f1ae",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "strategy",
+      "year": 2024,
+      "title": "Mexican Clinical Practice Guidelines for Adult Overweight and Obesity Management",
+      "url": "https://core.ac.uk/download/642802036.pdf",
+      "source": "CORE",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/e7baa8401fe4f1ae.svg",
+      "promises": [
+        {
+          "quote": "A review of recent international obesity clinical practice guidelines and an expert consensus process identified: i) common recommendations appropriate for implementation in Mexico",
+          "category": "context_sensitivity",
+          "approximate_position": "early"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
       ]
     }
   ]

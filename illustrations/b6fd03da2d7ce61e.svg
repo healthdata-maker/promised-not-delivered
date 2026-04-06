@@ -1,0 +1,33 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#0D0D0F" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Left Figure / Reaching Arm -->
+  <polygon points="0,300 0,220 160,180 140,240 100,300" fill="#6B7280"/>
+  <polygon points="60,210 180,165 185,175 65,220" fill="#6B7280"/>
+  
+  <!-- Right Figure / Receiving Arm -->
+  <polygon points="400,300 400,220 240,180 260,240 300,300" fill="#6B7280"/>
+  <polygon points="340,210 220,165 215,175 335,220" fill="#6B7280"/>
+
+  <!-- The Torch / Link -->
+  <rect x="194" y="130" width="12" height="60" fill="#6B7280"/>
+  <polygon points="200,60 225,120 200,140 175,120" fill="#6B7280"/>
+  
+  <!-- Stylized Flame Elements -->
+  <polygon points="200,40 210,70 200,85 190,70" fill="#6B7280"/>
+  
+  <!-- Shadow Crosshatching (Geometric Overlay) -->
+  <polygon points="0,300 0,220 80,200 60,300" fill="url(#hatch)" opacity="0.4"/>
+  <polygon points="400,300 400,220 320,200 340,300" fill="url(#hatch)" opacity="0.4"/>
+  <polygon points="206,130 206,190 194,190 194,130" fill="url(#hatch)" opacity="0.3"/>
+  <polygon points="200,60 215,95 200,105 185,95" fill="url(#hatch)" opacity="0.4"/>
+
+  <!-- Abstract Community Foundation -->
+  <polygon points="120,300 280,300 200,260" fill="#6B7280" opacity="0.2"/>
+</svg>

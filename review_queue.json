@@ -1,9 +1,33 @@
 {
-  "last_updated": "2026-04-06 07:39 UTC",
+  "last_updated": "2026-04-06 08:52 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
       "title": "Aiming high for young people : three years on",
+      "org": "Other",
+      "added": "2026-04-06"
+    },
+    {
+      "id": "25247d6473b7d575",
+      "title": "Using Vignettes to Gain Insights Into Social Norms Related to Voluntary Family Planning and Gender-Based Violence in South Sudan",
+      "org": "Other",
+      "added": "2026-04-06"
+    },
+    {
+      "id": "8b86c53fa663f368",
+      "title": "Evidence to inform an integrated social and behavior change strategy in the Sahel",
+      "org": "Other",
+      "added": "2026-04-06"
+    },
+    {
+      "id": "4d25720f4d6e9976",
+      "title": "Improving food hygiene behaviours among child caregivers in rural community households of Malawi",
+      "org": "Other",
+      "added": "2026-04-06"
+    },
+    {
+      "id": "e7baa8401fe4f1ae",
+      "title": "Mexican Clinical Practice Guidelines for Adult Overweight and Obesity Management",
       "org": "Other",
       "added": "2026-04-06"
     }
@@ -12,6 +36,12 @@
     {
       "id": "d2c2b1d5600e276c",
       "title": "Aiming high for young people : three years on",
+      "org": "Other",
+      "added": "2026-04-06"
+    },
+    {
+      "id": "8b86c53fa663f368",
+      "title": "Evidence to inform an integrated social and behavior change strategy in the Sahel",
       "org": "Other",
       "added": "2026-04-06"
     }
