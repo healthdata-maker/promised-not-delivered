@@ -272,8 +272,8 @@ a:hover { color: #F0C87A; }
 }
 
 .hero__scroll-cue {
-  position: absolute; bottom: 2.5rem; left: clamp(2rem, 8vw, 8rem); z-index: 2;
-  display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem;
+  position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 0.8rem;
   opacity: 0; animation: scrollCueIn 0.8s 1.8s var(--ease-out) forwards;
 }
 @keyframes scrollCueIn { to { opacity: 1; } }
@@ -294,7 +294,6 @@ a:hover { color: #F0C87A; }
 .hero__scroll-cue span {
   font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.12em;
   text-transform: uppercase; color: var(--text-3);
-  writing-mode: vertical-lr; transform: rotate(180deg);
 }
 
 /* ============================================================
