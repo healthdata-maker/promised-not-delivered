@@ -1,0 +1,29 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+
+  <!-- Receiver (Left Figure/Arm) -->
+  <polygon points="0,260 180,200 185,170 170,165 0,220" fill="url(#hatch)" />
+  <polygon points="0,260 180,200 180,195 0,255" fill="#6B7280" />
+
+  <!-- Giver (Right Figure/Arm) -->
+  <polygon points="400,260 220,200 215,170 230,165 400,220" fill="#6B7280" />
+
+  <!-- Torch Handle -->
+  <rect x="194" y="110" width="12" height="90" fill="#6B7280" />
+  <rect x="200" y="110" width="6" height="90" fill="url(#hatch)" />
+
+  <!-- Geometric Flame Metaphor (Knowledge/Competence) -->
+  <polygon points="200,10 240,80 200,120 160,80" fill="#6B7280" />
+  <polygon points="200,40 220,80 200,100 180,80" fill="#0D0D0F" />
+  
+  <!-- Geometric Spark Detail -->
+  <polygon points="170,40 175,50 165,50" fill="#6B7280" />
+  <polygon points="230,55 235,65 225,65" fill="url(#hatch)" />
+</svg>
