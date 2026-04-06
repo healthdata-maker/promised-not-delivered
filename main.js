@@ -211,14 +211,10 @@
      HERO TEXT REVEAL
      ============================================================ */
   function initHeroReveal() {
-    /* Split lines into char spans */
+    /* Wrap lines in inner span for reveal animation */
     $$('.hero__line').forEach((line) => {
       const text = line.textContent;
-      line.innerHTML = '<span class="hero__line-inner">' +
-        [...text].map(ch =>
-          `<span style="display:inline-block">${ch === ' ' ? '&nbsp;' : ch}</span>`
-        ).join('') +
-        '</span>';
+      line.innerHTML = `<span class="hero__line-inner">${text}</span>`;
     });
 
     if (reducedMotion) {
