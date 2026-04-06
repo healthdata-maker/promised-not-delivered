@@ -40,7 +40,7 @@ jobs:
         run: |
           git config user.name "SBC Promise Tracker"
           git config user.email "tracker@promised-not-delivered"
-          git add data.json seen_urls.json review_queue.json charts/ illustrations/
+          git add data.json seen_urls.json review_queue.json charts/ illustrations/ automation/day_zero_checkpoint.json
           git diff --staged --quiet && echo "Nothing new today. Skipping commit." || (git commit -m "Daily scan: $(date +%Y-%m-%d)" && git push)
 
       - name: Deploy to Cloudflare Pages
