@@ -5,23 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Promised, Not Delivered — What global health organisations said vs. what evaluations found</title>
   <meta name="description" content="A research archive tracking rhetorical commitments in global health SBC strategy documents and comparing them against independent evaluation findings.">
-  <meta name="theme-color" content="#FAFAF8">
+  <meta name="theme-color" content="#0A0A0B">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- CURSOR -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- GRAIN -->
+  <div class="grain" aria-hidden="true"></div>
+
   <!-- LOADER -->
   <div class="loader" id="loader">
-    <div class="loader__spinner"></div>
+    <div class="loader__inner">
+      <div class="loader__bar-wrap"><div class="loader__bar" id="loader-bar"></div></div>
+      <p class="loader__label">Loading archive</p>
+    </div>
   </div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
-    <a href="#hero" class="nav__logo">Promised, Not Delivered</a>
-    <div class="nav__filters" id="nav-filters">
-      <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
-      <button class="filter-btn" data-filter="strategy" id="filter-strategy">Strategy</button>
-      <button class="filter-btn" data-filter="evaluation" id="filter-evaluation">Evaluation</button>
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-text">Promised, Not Delivered</span>
+    </a>
+    <div class="nav__right">
+      <div class="nav__filters" id="nav-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="strategy">Strategy</button>
+        <button class="filter-btn" data-filter="evaluation">Evaluation</button>
+      </div>
     </div>
   </nav>
 
@@ -35,54 +52,67 @@
 
     <!-- HERO -->
     <section class="hero" id="hero">
-      <div class="reveal">
-        <div class="hero__overline">Research Archive</div>
-        <h1 class="hero__title">Thirty years of promises.<br>The same five commitments.</h1>
-        <p class="hero__subtitle">What global health organisations wrote in strategy documents — and what independent evaluations actually found.</p>
-      </div>
-      <div class="hero__stats reveal reveal-delay-2">
-        <div class="hero__stat">
-          <span class="hero__stat-number" id="counter-docs">0</span>
-          <span class="hero__stat-label">Documents tracked</span>
+      <canvas class="hero__canvas" id="hero-canvas"></canvas>
+      <div class="hero__vignette"></div>
+      <div class="hero__content">
+        <div class="hero__kicker">
+          <span class="hero__kicker-dot"></span>
+          <span>Research Archive · Global Health SBC · 1990–Present</span>
         </div>
-        <div class="hero__stat">
-          <span class="hero__stat-number" id="counter-promises">0</span>
-          <span class="hero__stat-label">Promise instances found</span>
-        </div>
-        <div class="hero__stat">
-          <span class="hero__stat-number" id="counter-orgs">0</span>
-          <span class="hero__stat-label">Organisations</span>
+        <h1 class="hero__title" id="hero-title">
+          <span class="hero__line" data-line="0">Thirty years.</span>
+          <span class="hero__line" data-line="1">The same promises.</span>
+        </h1>
+        <p class="hero__subtitle" id="hero-subtitle">What global health organisations wrote in strategy documents —<br>and what independent evaluations actually found.</p>
+        <div class="hero__stats" id="hero-stats">
+          <div class="hero__stat">
+            <span class="hero__stat-number" id="counter-docs">0</span>
+            <span class="hero__stat-label">Documents tracked</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" id="counter-promises">0</span>
+            <span class="hero__stat-label">Promise instances found</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-number" id="counter-orgs">0</span>
+            <span class="hero__stat-label">Organisations</span>
+          </div>
         </div>
       </div>
       <div class="hero__scroll-cue" aria-hidden="true">
+        <div class="hero__scroll-track"><div class="hero__scroll-thumb"></div></div>
         <span>Scroll</span>
-        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </div>
     </section>
 
     <!-- PROMISE WALL -->
     <section class="promise-wall" id="promise-wall">
-      <div class="reveal">
+      <div class="promise-wall__header">
         <div class="section-label">By category</div>
-        <h2 class="section-title">The five commitments they keep making</h2>
+        <h2 class="section-title">The five commitments<br>they keep making</h2>
       </div>
-      <div class="promise-grid reveal reveal-delay-1" id="promise-grid"></div>
+      <div class="promise-grid" id="promise-grid"></div>
     </section>
 
     <!-- SHOWCASE -->
     <section class="showcase" id="showcase">
-      <div class="reveal">
+      <div class="showcase__header">
         <div class="section-label">Visual archive</div>
-        <h2 class="section-title">The rhetoric and the record</h2>
+        <h2 class="section-title">The rhetoric<br>and the record</h2>
       </div>
-      <div class="showcase__grid reveal reveal-delay-1">
-        <div>
-          <h3 class="showcase__panel-title">The promises made</h3>
+      <div class="showcase__grid">
+        <div class="showcase__panel">
+          <h3 class="showcase__panel-title">
+            <span class="showcase__panel-num">01</span>The promises made
+          </h3>
           <div class="showcase__frame" id="showcase-left"></div>
           <p class="showcase__caption" id="showcase-left-caption">A strategy document from the archive.</p>
         </div>
-        <div>
-          <h3 class="showcase__panel-title">What evaluations found</h3>
+        <div class="showcase__divider"></div>
+        <div class="showcase__panel">
+          <h3 class="showcase__panel-title">
+            <span class="showcase__panel-num">02</span>What evaluations found
+          </h3>
           <div class="showcase__frame" id="showcase-right"></div>
           <p class="showcase__caption">Every document by year. Strategy documents cluster in waves. Evaluations follow later — when they follow at all.</p>
         </div>
@@ -91,9 +121,13 @@
 
     <!-- TIMELINE -->
     <section class="timeline" id="timeline-section">
-      <div class="timeline__header reveal">
+      <div class="timeline__header">
         <div class="section-label">1990 – present</div>
-        <h2 class="section-title">Every document in the archive</h2>
+        <h2 class="section-title">Every document<br>in the archive</h2>
+        <p class="timeline__legend">
+          <span class="tl-legend-dot tl-legend-dot--filled"></span> Strategy
+          <span class="tl-legend-dot tl-legend-dot--hollow"></span> Evaluation
+        </p>
       </div>
       <div class="timeline__scroll">
         <div class="timeline__track" id="timeline-track">
@@ -104,22 +138,24 @@
       <div class="timeline__mobile" id="timeline-mobile"></div>
     </section>
 
-    <!-- SIDE PANEL -->
+    <!-- PANEL + OVERLAY -->
     <div class="overlay" id="overlay"></div>
     <aside class="panel" id="panel">
-      <div class="panel__close">
-        <button class="panel__close-btn" id="panel-close" aria-label="Close">&times;</button>
+      <div class="panel__top">
+        <button class="panel__close-btn" id="panel-close" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
       </div>
       <div class="panel__inner" id="panel-content"></div>
     </aside>
 
-    <!-- BROKEN PROMISE INDEX -->
+    <!-- INDEX -->
     <section class="index-section" id="index-section">
-      <div class="reveal">
+      <div class="index-section__header">
         <div class="section-label">Comparative</div>
-        <h2 class="section-title">Promise index by organisation</h2>
+        <h2 class="section-title">Promise index<br>by organisation</h2>
       </div>
-      <div class="reveal reveal-delay-1">
+      <div class="index-table-wrap">
         <table class="index-table">
           <thead>
             <tr>
@@ -136,103 +172,109 @@
       </div>
     </section>
 
-    <!-- DATA VISUALISATIONS -->
+    <!-- DATA VIZ -->
     <section class="dataviz" id="dataviz">
-      <div class="reveal">
+      <div class="dataviz__header">
         <div class="section-label">Charts</div>
         <h2 class="section-title">The data, visualised</h2>
       </div>
-      <div class="dataviz__grid reveal reveal-delay-1">
+      <div class="dataviz__grid">
         <div class="dataviz__card">
-          <img src="charts/promise_counts.svg" alt="Promise frequency by category" onerror="this.parentElement.style.display='none'">
+          <div class="dataviz__card-img-wrap">
+            <img src="charts/promise_counts.svg" alt="Promise frequency by category" onerror="this.parentElement.parentElement.style.display='none'">
+          </div>
           <p class="dataviz__caption">How often each type of promise appears. Community ownership and context-sensitivity are the most repeated.</p>
         </div>
         <div class="dataviz__card">
-          <img src="charts/org_breakdown.svg" alt="Documents by organisation" onerror="this.parentElement.style.display='none'">
+          <div class="dataviz__card-img-wrap">
+            <img src="charts/org_breakdown.svg" alt="Documents by organisation" onerror="this.parentElement.parentElement.style.display='none'">
+          </div>
           <p class="dataviz__caption">Strategy documents vastly outnumber evaluations in every organisation's archive. The gap is the argument.</p>
         </div>
         <div class="dataviz__card">
-          <img src="charts/promise_timeline.svg" alt="Documents over time" onerror="this.parentElement.style.display='none'">
+          <div class="dataviz__card-img-wrap">
+            <img src="charts/promise_timeline.svg" alt="Documents over time" onerror="this.parentElement.parentElement.style.display='none'">
+          </div>
           <p class="dataviz__caption">Every document by year. Strategy documents cluster in waves. Evaluations follow years later — when they follow at all.</p>
         </div>
       </div>
     </section>
 
-    <!-- HOW IT WORKS — FLOWCHART -->
-    <section class="flowchart-section" id="how-it-works">
-      <div class="flowchart__inner reveal">
+    <!-- PROCESS -->
+    <section class="process-section" id="how-it-works">
+      <div class="process-section__header">
         <div class="section-label">Process</div>
-        <h2 class="section-title">How this archive is built</h2>
-        <p class="flowchart__intro">Every night, new documents are found, read, and examined. Here is the process, start to finish.</p>
+        <h2 class="section-title">How this archive<br>is built</h2>
+        <p class="section-intro">Every night, automated agents search for new documents, extract text, identify promises, challenge their own findings, and surface what they found. Here is the full chain, step by step.</p>
       </div>
-
-      <div class="flowchart reveal reveal-delay-1">
-        <div class="flow-step">
-          <div class="flow-step__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <div class="process-steps" id="process-steps">
+        <div class="process-step">
+          <div class="process-step__head">
+            <span class="process-step__num">01</span>
+            <svg class="process-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
           </div>
-          <div class="flow-step__label">Search</div>
-          <div class="flow-step__desc">8 open-access databases scanned for new strategy documents and evaluation reports.</div>
+          <h3 class="process-step__label">Search</h3>
+          <p class="process-step__desc">8 open-access databases scanned nightly: OpenAlex, CORE, PubMed, Europe PMC, Semantic Scholar, World Bank, ReliefWeb, WHO IRIS.</p>
         </div>
-        <div class="flow-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 6 15 12 9 18"/></svg>
-        </div>
-
-        <div class="flow-step">
-          <div class="flow-step__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <div class="process-step__connector"></div>
+        <div class="process-step">
+          <div class="process-step__head">
+            <span class="process-step__num">02</span>
+            <svg class="process-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </div>
-          <div class="flow-step__label">Extract</div>
-          <div class="flow-step__desc">Full text extracted from PDFs and web pages. Up to 30 pages per document.</div>
+          <h3 class="process-step__label">Extract</h3>
+          <p class="process-step__desc">Full text pulled from PDFs and HTML pages. Up to 30 pages per document. Already-seen URLs are never re-processed.</p>
         </div>
-        <div class="flow-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 6 15 12 9 18"/></svg>
-        </div>
-
-        <div class="flow-step">
-          <div class="flow-step__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+        <div class="process-step__connector"></div>
+        <div class="process-step">
+          <div class="process-step__head">
+            <span class="process-step__num">03</span>
+            <svg class="process-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
           </div>
-          <div class="flow-step__label">Identify</div>
-          <div class="flow-step__desc">Direct quotes are identified where organisations make commitments across five categories.</div>
+          <h3 class="process-step__label">Identify</h3>
+          <p class="process-step__desc">Exact quotes are extracted where organisations make programmatic commitments across five tracked categories.</p>
         </div>
-        <div class="flow-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 6 15 12 9 18"/></svg>
-        </div>
-
-        <div class="flow-step">
-          <div class="flow-step__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="process-step__connector"></div>
+        <div class="process-step">
+          <div class="process-step__head">
+            <span class="process-step__num">04</span>
+            <svg class="process-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
-          <div class="flow-step__label">Review</div>
-          <div class="flow-step__desc">Each quote is challenged: is it a real commitment or aspirational language? Scored 1–5. Below 3 is removed.</div>
+          <h3 class="process-step__label">Challenge</h3>
+          <p class="process-step__desc">A second model call adversarially reviews each quote. Is this a real commitment or aspirational language? Scored 1–5. Below 3 is removed.</p>
         </div>
-        <div class="flow-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="9 6 15 12 9 18"/></svg>
-        </div>
-
-        <div class="flow-step">
-          <div class="flow-step__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+        <div class="process-step__connector"></div>
+        <div class="process-step">
+          <div class="process-step__head">
+            <span class="process-step__num">05</span>
+            <svg class="process-step__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
           </div>
-          <div class="flow-step__label">Archive</div>
-          <div class="flow-step__desc">Surviving quotes, summaries, and visualisations enter the archive. Flagged for editorial review.</div>
+          <h3 class="process-step__label">Archive</h3>
+          <p class="process-step__desc">Surviving quotes, summaries, and illustrations enter the archive. Flagged for editorial review before displaying without the pending badge.</p>
         </div>
       </div>
-
-      <p class="flowchart__footnote reveal reveal-delay-2">All quotes are exact extracts from source documents, not paraphrases. If something looks wrong, the source link is there.</p>
+      <p class="process-footnote">All quotes are exact extracts from source documents, not paraphrases. If something looks wrong, the source link is there.</p>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-      <p class="footer__text">
-        Quotes are exact extracts from source documents, not paraphrases or summaries.<br>
-        <a href="https://github.com" target="_blank" rel="noopener">Source code</a> · Hosted on Cloudflare Pages
-      </p>
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__name">Promised, Not Delivered</p>
+          <p class="footer__tagline">A continuously updated research archive</p>
+        </div>
+        <p class="footer__text">
+          Quotes are exact extracts from source documents, not paraphrases or summaries.<br>
+          <a href="https://github.com" target="_blank" rel="noopener">Source code</a> · Hosted on Cloudflare Pages · Updated nightly by automated agents
+        </p>
+      </div>
     </footer>
 
   </main>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
