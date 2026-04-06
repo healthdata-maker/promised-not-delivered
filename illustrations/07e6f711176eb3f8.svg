@@ -1,0 +1,35 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Hand 1 (Giving - Bottom Left) -->
+  <path d="M0 300 L120 300 L180 180 L160 170 L90 280 L0 280 Z" fill="#6B7280" />
+  <path d="M120 300 L180 180 L200 190 L135 300 Z" fill="url(#hatch)" />
+  
+  <!-- Hand 2 (Receiving - Top Right) -->
+  <path d="M400 0 L280 0 L220 120 L240 130 L310 20 L400 20 Z" fill="#6B7280" />
+  <path d="M280 0 L220 120 L200 110 L265 0 Z" fill="url(#hatch)" />
+  
+  <!-- The Torch -->
+  <path d="M185 110 L215 190 L230 185 L200 105 Z" fill="#6B7280" />
+  <path d="M190 115 L210 175 L220 170 L200 110 Z" fill="#0D0D0F" />
+  
+  <!-- The Flame (Geometric/Abstract) -->
+  <path d="M185 105 L200 40 L215 100 Z" fill="#6B7280" />
+  <path d="M170 95 L190 70 L205 105 Z" fill="url(#hatch)" />
+  <path d="M195 90 L220 60 L230 100 Z" fill="url(#hatch)" />
+  
+  <!-- Visual Connections (Motion/Tension lines) -->
+  <rect x="195" y="145" width="10" height="2" fill="#6B7280" transform="rotate(-70 195 145)" />
+  <rect x="205" y="155" width="15" height="1.5" fill="#6B7280" transform="rotate(-70 205 155)" />
+  
+  <!-- Geometric Accents for "Scale" -->
+  <circle cx="200" cy="150" r="60" stroke="#6B7280" stroke-width="0.5" fill="none" opacity="0.3" />
+  <circle cx="200" cy="150" r="80" stroke="#6B7280" stroke-width="0.3" fill="none" opacity="0.2" />
+</svg>

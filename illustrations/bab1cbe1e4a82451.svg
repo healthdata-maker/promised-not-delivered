@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Systemic Circular Path (Abstract) -->
+  <circle cx="200" cy="170" r="80" fill="none" stroke="#6B7280" stroke-width="1" stroke-dasharray="8 4" opacity="0.3" />
+
+  <!-- Torch Handle -->
+  <rect x="192" y="150" width="16" height="70" fill="#6B7280" />
+  
+  <!-- Flame (Geometric) -->
+  <path d="M200 80 L225 145 L175 145 Z" fill="#6B7280" />
+  <path d="M200 100 L212 145 L188 145 Z" fill="#0D0D0F" />
+
+  <!-- Left Figure's Arm/Hand -->
+  <path d="M100 240 L190 190 L190 205 L110 250 Z" fill="#6B7280" />
+  
+  <!-- Right Figure's Arm/Hand -->
+  <path d="M300 240 L210 190 L210 205 L290 250 Z" fill="#6B7280" />
+
+  <!-- Crosshatch Shadows on Torch -->
+  <line x1="195" y1="160" x2="205" y2="150" stroke="#0D0D0F" stroke-width="1.5" />
+  <line x1="195" y1="175" x2="205" y2="165" stroke="#0D0D0F" stroke-width="1.5" />
+  <line x1="195" y1="190" x2="205" y2="180" stroke="#0D0D0F" stroke-width="1.5" />
+  <line x1="195" y1="205" x2="205" y2="195" stroke="#0D0D0F" stroke-width="1.5" />
+  <line x1="195" y1="220" x2="205" y2="210" stroke="#0D0D0F" stroke-width="1.5" />
+
+  <!-- Crosshatch Shadows on Left Arm -->
+  <line x1="130" y1="230" x2="145" y2="215" stroke="#0D0D0F" stroke-width="1" />
+  <line x1="145" y1="225" x2="160" y2="210" stroke="#0D0D0F" stroke-width="1" />
+  <line x1="160" y1="220" x2="175" y2="205" stroke="#0D0D0F" stroke-width="1" />
+
+  <!-- Crosshatch Shadows on Right Arm -->
+  <line x1="270" y1="230" x2="255" y2="215" stroke="#0D0D0F" stroke-width="1" />
+  <line x1="255" y1="225" x2="240" y2="210" stroke="#0D0D0F" stroke-width="1" />
+  <line x1="240" y1="220" x2="225" y2="205" stroke="#0D0D0F" stroke-width="1" />
+
+  <!-- Central Connection Point (The Transfer) -->
+  <rect x="190" y="185" width="20" height="20" fill="none" stroke="#6B7280" stroke-width="2" transform="rotate(45 200 195)" />
+</svg>
