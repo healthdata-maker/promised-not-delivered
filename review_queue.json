@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-06 08:52 UTC",
+  "last_updated": "2026-04-07 12:40 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -30,6 +30,174 @@
       "title": "Mexican Clinical Practice Guidelines for Adult Overweight and Obesity Management",
       "org": "Other",
       "added": "2026-04-06"
+    },
+    {
+      "id": "068fef2da9b7550b",
+      "title": "Multi-omics approaches for understanding gene-environment interactions in noncommunicable diseases: techniques, translation, and equity issues",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "a955bd66e3d68398",
+      "title": "Risk Communication and Community Engagement (RCCE) implementations to control cholera outbreak in Oromia region, Ethiopia",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "51fed454e9764f2f",
+      "title": "A cluster randomized trial protocol to evaluate the effectiveness of an integrated package of improved take-home foods complemented with social and behaviour change communication strategies to improve nutritional status in children aged 6–36 months in six states of India: NECCTAR trial",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "f5fdb28c0a816b7b",
+      "title": "Impact assessment of social behavioral change activities on infant and young child feeding (IYCF) of the nutrition program in the host community",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "c38813b5a281927f",
+      "title": "Rethinking Development Approach: Evaluating Participatory C4d Strategies in The Swapno Anti-Poverty Initiative, Jamalpur, Bangladesh",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "b530f818c2b4ca4f",
+      "title": "Communication For Development (C4D) and Environmental Sustainability in Nigeria",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "e63ef8f074ed12ec",
+      "title": "Capacity Building in Developing Countries",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "2a1300091ed64571",
+      "title": "Competency-based education and training for Community Health Workers: a scoping review",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "d11a4afc9f7193da",
+      "title": "Enhancing female teachers’ engagement, Self-efficacy, and performance in mathematics and science through continuous professional development training program in Rwanda",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "f7c9e14d8c96b9cc",
+      "title": "Youth perspectives on gene drive technologies for malaria control in Tanzania",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "1a2d537ad7da2441",
+      "title": "Urban-rural disparities in cervical cancer screening among Indian women between 30–49 years: a geospatial and decomposition analysis using a nationally representative survey",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "62b8296710188d5f",
+      "title": "Narrative Review of Human-Centered Design in Public Health Interventions in Low- and Middle-Income Countries: Recommendations for Practice, Research, and Reporting",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "064c1f0103bf6efc",
+      "title": "“The future for pastoralists is dark unless something is done”: illuminating the constraints and opportunities for a climate-resilient future for Kenyan pastoralists",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "4cb3c05b5b9f1250",
+      "title": "Gendered Dimensions of Climate Change Impacts: Challenges and Adaptive Strategies",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "f2eed0711494eb39",
+      "title": "Global burden and trends of viral hepatitis among women of childbearing age from 1990 to 2021",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "2210b416b559908f",
+      "title": "Provider Engagement, Multichannel Education, and Knowledge Dissemination for Collaborative Healthcare Improvement Outcomes",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "0a4432b5ff01007c",
+      "title": "MPOX outbreak in Africa: the urgent need for local manufacturing of the vaccine and decolonized health systems",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "ba7173d2c8a04b43",
+      "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "2e35d3bafe803a33",
+      "title": "Gender differences in health-seeking behaviour: insights from the National Health and Morbidity Survey 2019",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "1aab3cb49bca4360",
+      "title": "Towards conversational diagnostic artificial intelligence",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "a5af5bd6986cb349",
+      "title": "The burden of malaria in East Africa: prevalence, risk factors, and control strategies",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "ca01497dac4a65e8",
+      "title": "Assessing the knowledge, attitudes and practices towards malaria prevention and determinants of antenatal care utilization among pregnant women in Sekyere South district, Ghana; a cross-sectional study",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "beba00b59f971d97",
+      "title": "Towards elimination of genital schistosomiasis in Africa: Outlining strategic public health objectives and measures to protect future generations",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "239d11ce9807b032",
+      "title": "Democratiassess: Edge Native Quantized Ai for Equitable, Offline Adaptive Exams in Resource-constrained Universities",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "d54eb70d18369c26",
+      "title": "Patients' Perspectives on the Acceptability and Effectiveness of a Community Health Worker-Led Intervention to Increase Chronic Kidney Disease Knowledge and Screening among Underserved Latine Adults: The CARE 2.0 Study.",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "01a6127ea66e2abb",
+      "title": "A Nunavut community-directed Inuit youth mental wellness initiative: making I-SPARX fly.",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "0d0d0842eb4953f6",
+      "title": "The Evolution and Sustainability of Environmental Health Services in the Azraq Refugee Camp, Jordan: A Qualitative Study.",
+      "org": "Other",
+      "added": "2026-04-07"
+    },
+    {
+      "id": "365b276698ba8ab8",
+      "title": "Promoting Comprehensive Sexuality Education in Pakistan Using a Cocreated Social Media Intervention: Development and Pilot Testing Study.",
+      "org": "Other",
+      "added": "2026-04-07"
     }
   ],
   "flagged_low_credibility": [
@@ -44,6 +212,12 @@
       "title": "Evidence to inform an integrated social and behavior change strategy in the Sahel",
       "org": "Other",
       "added": "2026-04-06"
+    },
+    {
+      "id": "ba7173d2c8a04b43",
+      "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
+      "org": "Other",
+      "added": "2026-04-07"
     }
   ],
   "flagged_ambiguous_source": []

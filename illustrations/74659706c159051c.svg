@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6B7280" stroke-width="1.5" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+
+  <!-- Left Figure / Giving Hand -->
+  <path d="M0 240 L160 240 L160 215 L0 215 Z" fill="#6B7280" />
+  <path d="M160 240 L195 240 L195 215 L160 215 Z" fill="#6B7280" />
+  <rect x="175" y="215" width="20" height="40" fill="url(#hatch)" />
+
+  <!-- Right Figure / Receiving Hand -->
+  <path d="M400 240 L240 240 L240 215 L400 215 Z" fill="#6B7280" />
+  <path d="M240 240 L205 240 L205 215 L240 215 Z" fill="#6B7280" />
+  <rect x="205" y="215" width="20" height="40" fill="url(#hatch)" />
+
+  <!-- The Torch Handle -->
+  <path d="M192 230 L208 230 L212 140 L188 140 Z" fill="#6B7280" />
+  <path d="M200 230 L208 230 L212 140 L204 140 Z" fill="url(#hatch)" />
+  
+  <!-- Torch Top Bowl -->
+  <path d="M180 140 L220 140 L225 125 L175 125 Z" fill="#6B7280" />
+  <path d="M180 140 L220 140 L220 135 L180 135 Z" fill="#0D0D0F" />
+
+  <!-- The Flame (Metaphor for knowledge and continuity) -->
+  <!-- Outer Flame -->
+  <path d="M200 30 L225 120 L175 120 Z" fill="#6B7280" />
+  <!-- Inner Detail (Hatch for texture) -->
+  <path d="M200 60 L215 120 L185 120 Z" fill="url(#hatch)" />
+  <!-- Flame Negative Space -->
+  <path d="M200 120 L210 100 L190 100 Z" fill="#0D0D0F" />
+  
+  <!-- Geometric Accents (Spark/Continuity) -->
+  <rect x="198" y="15" width="4" height="10" fill="#6B7280" />
+  <rect x="180" y="50" width="3" height="15" fill="#6B7280" />
+  <rect x="217" y="65" width="3" height="15" fill="#6B7280" />
+
+  <!-- Horizontal "Burden" line -->
+  <line x1="40" y1="260" x2="360" y2="260" stroke="#6B7280" stroke-width="1" stroke-dasharray="8 4" />
+</svg>

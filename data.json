@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-04-06 08:52 UTC",
-  "total_documents": 5,
+  "last_updated": "2026-04-07 12:40 UTC",
+  "total_documents": 33,
   "promise_counts": {
-    "community_ownership": 0,
-    "context_sensitivity": 2,
-    "participation": 1,
-    "sustainability": 1,
-    "equity": 1
+    "community_ownership": 9,
+    "context_sensitivity": 13,
+    "participation": 14,
+    "sustainability": 6,
+    "equity": 12
   },
   "documents": [
     {
@@ -142,6 +142,901 @@
           "quote": "A review of recent international obesity clinical practice guidelines and an expert consensus process identified: i) common recommendations appropriate for implementation in Mexico",
           "category": "context_sensitivity",
           "approximate_position": "early"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "068fef2da9b7550b",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "strategy",
+      "year": 2025,
+      "title": "Multi-omics approaches for understanding gene-environment interactions in noncommunicable diseases: techniques, translation, and equity issues",
+      "url": "https://humgenomics.biomedcentral.com/counter/pdf/10.1186/s40246-025-00718-9",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/068fef2da9b7550b.svg",
+      "promises": [
+        {
+          "quote": "We underscore the potential of global multi-omics research in advancing our understanding of NCDs and enhancing patient outcomes across diverse and underserved populations, emphasizing the need for equity and fairness-centered research and strategic investments to build local capacities in underrepresented populations and regions.",
+          "category": "equity",
+          "approximate_position": "early"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "a955bd66e3d68398",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Risk Communication and Community Engagement (RCCE) implementations to control cholera outbreak in Oromia region, Ethiopia",
+      "url": "https://tropmedhealth.biomedcentral.com/counter/pdf/10.1186/s41182-024-00679-0",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/a955bd66e3d68398.svg",
+      "promises": [
+        {
+          "quote": "The RCCE interventions and awareness creation need to begin with the small units of the community structures, including individuals and families and have to happen continuously with the community, and health workers’ involvement at all level.",
+          "category": "community_ownership",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "51fed454e9764f2f",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "evaluation",
+      "year": 2026,
+      "title": "A cluster randomized trial protocol to evaluate the effectiveness of an integrated package of improved take-home foods complemented with social and behaviour change communication strategies to improve nutritional status in children aged 6–36 months in six states of India: NECCTAR trial",
+      "url": "https://public-pages-files-2025.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1712806/pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "chart_reference",
+      "visual_path": "charts/promise_timeline.svg",
+      "promises": [
+        {
+          "quote": "In the second phase, insights from formative research will inform co-development of an intervention package comprising optimized THR formulations and a multi-level SBCC strategy through an iterative and participatory process, which will be piloted to assess feasibility and acceptability.",
+          "category": "participation",
+          "credibility_score": 5,
+          "keep": true,
+          "adversarial_note": null
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 5.0,
+      "review_flags": []
+    },
+    {
+      "id": "f5fdb28c0a816b7b",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "evaluation",
+      "year": 2025,
+      "title": "Impact assessment of social behavioral change activities on infant and young child feeding (IYCF) of the nutrition program in the host community",
+      "url": "https://www.medrxiv.org/content/medrxiv/early/2025/11/19/2025.11.17.25340405.full.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "chart_reference",
+      "visual_path": "charts/promise_timeline.svg",
+      "promises": [
+        {
+          "quote": "Community-based IYCF counselling and support can play an important role in improving these practices: it can ensure access to these services in the poorest and the most vulnerable communities with limited access to health care and therefore become an important strategy for programming with an equity focus.",
+          "category": "equity",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "c38813b5a281927f",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "strategy",
+      "year": 2025,
+      "title": "Rethinking Development Approach: Evaluating Participatory C4d Strategies in The Swapno Anti-Poverty Initiative, Jamalpur, Bangladesh",
+      "url": "https://wahacademia.com/index.php/Journal/article/download/176/142/533",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/c38813b5a281927f.svg",
+      "promises": [
+        {
+          "quote": "This transition is evident in the SWAPNO project, where C4D strategies center on community-led recruitment and training.",
+          "category": "community_ownership",
+          "credibility_score": 4,
+          "keep": true,
+          "adversarial_note": "Identifies specific programmatic mechanisms (recruitment and training) but is phrased descriptively as an observation of the project's current state."
+        },
+        {
+          "quote": "Unlike traditional, theory-based approaches, SWAPNO directly implements participatory communication, allowing women to become active participants in the development process.",
+          "category": "participation",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "While it names a methodology (participatory communication), it remains somewhat broad and functions as a high-level description of the approach rather than a specific action plan."
+        },
+        {
+          "quote": "The SWAPNO project targets ultra-poor women, specifically those who are widowed, divorced, abandoned, or left with a disabled husband. These women are considered the most vulnerable and economically disadvantaged segment of society.",
+          "category": "equity",
+          "credibility_score": 5,
+          "keep": true,
+          "adversarial_note": null
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 4.0,
+      "review_flags": []
+    },
+    {
+      "id": "b530f818c2b4ca4f",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Communication For Development (C4D) and Environmental Sustainability in Nigeria",
+      "url": "https://rayyanjurnal.com/index.php/ijrael/article/download/6977/pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/b530f818c2b4ca4f.svg",
+      "promises": [
+        {
+          "quote": "Communication for Development (C4D) primarily refocuses the conventional paradigms of communication by integrating participatory approaches that empower communities. It goes beyond conveying information; rather, it involves engaging individuals in meaningful dialogues that encourage participation and ownership.",
+          "category": "participation",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "Effectively utilising local languages and culturally relevant narratives enhances the receptivity of the target audience, leading to improved knowledge retention and behaviour changes.",
+          "category": "context_sensitivity",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "Engaging communities through culturally resonant messages nurtures a sense of ownership and pride in environmental stewardship.",
+          "category": "community_ownership",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "e63ef8f074ed12ec",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Capacity Building in Developing Countries",
+      "url": "https://neyaglobal.com/wa-data/public/site/non-profit-books/1-10/3:100%20Capacity%20Building%20in%20Developing%20Countries%20REF-compressed.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/e63ef8f074ed12ec.svg",
+      "promises": [
+        {
+          "quote": "The content also emphasizes the importance of contextual analysis, including political, economic, social, cultural, and environmental factors, in designing impactful capacity-building programs.",
+          "category": "context_sensitivity",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "Readers will gain practical skills for conducting needs assessments, designing culturally appropriate training programs, building partnerships, mobilizing resources, and implementing and evaluating capacity-building initiatives.",
+          "category": "context_sensitivity",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "In Latin America, agricultural development programs in Bolivia adapted their approaches to reflect local environmental conditions and traditional farming practices, employing participatory methods that emphasized local knowledge and involvement",
+          "category": "context_sensitivity",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "2a1300091ed64571",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "evaluation",
+      "year": 2025,
+      "title": "Competency-based education and training for Community Health Workers: a scoping review",
+      "url": "https://bmchealthservres.biomedcentral.com/counter/pdf/10.1186/s12913-025-12217-7",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "chart_reference",
+      "visual_path": "charts/promise_timeline.svg",
+      "promises": [
+        {
+          "quote": "When competency-based education programs are designed together with communities, education can prepare CHWs to better meet the needs of the populations they serve, through adapting to emerging health challenges, tailoring their approach to address specific community needs, and responding dynamically to evolving health priorities, ensuring a more agile and responsive healthcare workforce",
+          "category": "participation",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "d11a4afc9f7193da",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Enhancing female teachers’ engagement, Self-efficacy, and performance in mathematics and science through continuous professional development training program in Rwanda",
+      "url": "https://link.springer.com/content/pdf/10.1007/s44217-025-00708-y.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/d11a4afc9f7193da.svg",
+      "promises": [
+        {
+          "quote": "The project fosters gender equity by (a) ensuring that women are prioritized to participate as trainers or trainees in the customized training program; (b) including gender-responsive pedagogy in the training program; (c) including a unit on gender equity in the STEM coaching course for school subject leaders and managers",
+          "category": "equity",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "f7c9e14d8c96b9cc",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Youth perspectives on gene drive technologies for malaria control in Tanzania",
+      "url": "https://www.researchsquare.com/article/rs-8202624/latest.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/f7c9e14d8c96b9cc.svg",
+      "promises": [
+        {
+          "quote": "However, their success depends on public understanding and acceptance, particularly among the youth, who represent a significant share of the population. This study investigated perceptions of young people (age: 15–35) in Tanzania regarding malaria, the potential of GDMMs in accelerating control efforts, and the role of youth in supporting the success of such novel technologies.",
+          "category": "participation",
+          "approximate_position": "early"
+        },
+        {
+          "quote": "This segmentation enables tailored engagement strategies that address the unique concerns, values, and motivations of different groups, thereby improving communication effectiveness, trust, and eventual uptake. This is especially crucial in the case of GDMMs, which are both novel and complex, and carry perceived risks that may be differently interpreted by various community segments.",
+          "category": "context_sensitivity",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "Meaningful, early, inclusive, and sustained involvement is essential to ensure informed youth participation and build public support for emerging interventions like GDMMs.",
+          "category": "participation",
+          "approximate_position": "early"
+        },
+        {
+          "quote": "The success is heavily contingent on a combination technical efficacy, community understanding and acceptance, responsive governance, and the development of context-specific regulatory and technical capacities.",
+          "category": "context_sensitivity",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "1a2d537ad7da2441",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Urban-rural disparities in cervical cancer screening among Indian women between 30–49 years: a geospatial and decomposition analysis using a nationally representative survey",
+      "url": "https://bmccancer.biomedcentral.com/counter/pdf/10.1186/s12885-025-13446-z",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/1a2d537ad7da2441.svg",
+      "promises": [
+        {
+          "quote": "there is a need to comprehensively design tailor-made advocacy initiatives and simultaneously address the broader determinants of health.",
+          "category": "context_sensitivity",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "62b8296710188d5f",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "evaluation",
+      "year": 2025,
+      "title": "Narrative Review of Human-Centered Design in Public Health Interventions in Low- and Middle-Income Countries: Recommendations for Practice, Research, and Reporting",
+      "url": "https://www.ghspjournal.org/content/ghsp/13/1/e2400164.full.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "chart_reference",
+      "visual_path": "charts/promise_timeline.svg",
+      "promises": [
+        {
+          "quote": "It aligns well with the research shift in low- and middle-income countries (LMICs), which emphasizes strengthening local capacity and cultivating community-driven solutions.",
+          "category": "community_ownership",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "064c1f0103bf6efc",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "“The future for pastoralists is dark unless something is done”: illuminating the constraints and opportunities for a climate-resilient future for Kenyan pastoralists",
+      "url": "https://www.ecologyandsociety.org/vol30/iss2/art39/ES-2025-16073.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/064c1f0103bf6efc.svg",
+      "promises": [
+        {
+          "quote": "Studies that incorporate community perspectives, such as this study, are critical if governments are to design better interventions and policies that allow for adaptation in a timely, community-driven way.",
+          "category": "community_ownership",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "4cb3c05b5b9f1250",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "evaluation",
+      "year": 2025,
+      "title": "Gendered Dimensions of Climate Change Impacts: Challenges and Adaptive Strategies",
+      "url": "https://agrifoodscience.com/index.php/TURJAF/article/download/7481/3645",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "chart_reference",
+      "visual_path": "charts/promise_timeline.svg",
+      "promises": [
+        {
+          "quote": "This review underscores the critical need for inclusive and equitable strategies that foster resilience and sustainability in vulnerable communities while highlighting the intersectionality of gender and climate change.",
+          "category": "equity",
+          "approximate_position": "early"
+        },
+        {
+          "quote": "Strategies identified include capacity-building initiatives, inclusive policies, gender-responsive financing mechanisms, and participatory governance.",
+          "category": "participation",
+          "approximate_position": "early"
+        },
+        {
+          "quote": "This study contributes to the growing recognition that sustainable communities cannot be achieved without addressing gendered impacts and fostering inclusive solutions for a more equitable future.",
+          "category": "sustainability",
+          "approximate_position": "early"
+        },
+        {
+          "quote": "The central hypothesis guiding this review is that addressing gender disparities in climate adaptation and mitigation is not only critical for achieving social justice, but also pivotal for enhancing the overall effectiveness of climate action.",
+          "category": "equity",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "f2eed0711494eb39",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Global burden and trends of viral hepatitis among women of childbearing age from 1990 to 2021",
+      "url": "https://www.frontiersin.org/journals/microbiology/articles/10.3389/fmicb.2025.1553129/pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/f2eed0711494eb39.svg",
+      "promises": [
+        {
+          "quote": "Eﬀective prevention strategies must account for local healthcare and socioeconomic challenges, requiring region-speciﬁc approaches that align with regional epidemiology and are backed by national elimination plans and adequate resources",
+          "category": "context_sensitivity",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "2210b416b559908f",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Provider Engagement, Multichannel Education, and Knowledge Dissemination for Collaborative Healthcare Improvement Outcomes",
+      "url": "https://www.multiperspectivesjournal.com/uploads/archives/20251021135515_GMP-2025-1-028.1.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/2210b416b559908f.svg",
+      "promises": [
+        {
+          "quote": "The study proceeds in four integrated phases spanning discovery, co-design, deployment, and learning-health-system scale-up.",
+          "category": "participation",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "A co-design phase follows, establishing governance, ethics, data-sharing agreements, and privacy-by-design controls suited to multi-institution learning.",
+          "category": "participation",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "Equity guardrails include culturally sensitive messaging and language-appropriate materials and low-bandwidth/offline options for connectivity-constrained settings.",
+          "category": "equity",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "Each wedge receives: (1) baseline measurement; (2) a two-week co-design sprint to localize content; (3) a six-week intensive learning burst; (4) a 12-week sustainment period with coaching.",
+          "category": "participation",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "0a4432b5ff01007c",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "MPOX outbreak in Africa: the urgent need for local manufacturing of the vaccine and decolonized health systems",
+      "url": "https://bmcpublichealth.biomedcentral.com/counter/pdf/10.1186/s12889-025-25120-x",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/0a4432b5ff01007c.svg",
+      "promises": [
+        {
+          "quote": "Addressing MPOX and future health threats in Africa demands a shift toward decolonized health systems that emphasize South-South collaboration, indigenous knowledge, and local ownership.",
+          "category": "community_ownership",
+          "approximate_position": "late"
+        },
+        {
+          "quote": "Coordinated short-term actions and long-term investments are crucial for fostering resilient, self-sustaining health systems that can respond effectively to emerging infectious diseases.",
+          "category": "sustainability",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "ba7173d2c8a04b43",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
+      "url": "https://research.rug.nl/en/publications/f0fc092f-18dd-428b-ac44-5985663105b7",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/ba7173d2c8a04b43.svg",
+      "promises": [
+        {
+          "quote": "COVID-19 pandemic recovery efforts, such as WHO’s Big Catch-Up, as well as efforts to bolster routine services must prioritise reaching marginalised populations and target subnational geographies to regain lost ground and achieve global immunisation goals.",
+          "category": "equity",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "Phrased as a normative recommendation ('must prioritise') for external programs (like WHO's Big Catch-Up) rather than an internal programmatic commitment by the study authors."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 3.0,
+      "review_flags": [
+        "low_avg_credibility"
+      ]
+    },
+    {
+      "id": "2e35d3bafe803a33",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Gender differences in health-seeking behaviour: insights from the National Health and Morbidity Survey 2019",
+      "url": "https://bmchealthservres.biomedcentral.com/counter/pdf/10.1186/s12913-025-13020-0",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/2e35d3bafe803a33.svg",
+      "promises": [
+        {
+          "quote": "This emphasises the importance of targeted interventions which are gender-sensitive to address structural inequities and achieve equitable healthcare utilisation across all demographic groups in Malaysia.",
+          "category": "equity",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "1aab3cb49bca4360",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Towards conversational diagnostic artificial intelligence",
+      "url": "https://www.nature.com/articles/s41586-025-08866-7.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/1aab3cb49bca4360.svg",
+      "promises": [
+        {
+          "quote": "A health equity-centric approach to integrating such technology into existing workflows, which implies work in the development, implementation and policy stages, may have the potential to help realize better health outcomes (particularly for populations facing healthcare disparities).",
+          "category": "equity",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "a5af5bd6986cb349",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "The burden of malaria in East Africa: prevalence, risk factors, and control strategies",
+      "url": "https://link.springer.com/content/pdf/10.1186/s12936-025-05492-6.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/a5af5bd6986cb349.svg",
+      "promises": [
+        {
+          "quote": "To combat malaria in East Africa, urgent investments in sustainable financing, climate-adaptive interventions, resistance monitoring, and community-driven strategies are essential to avert projected excess mortality and achieve regional malaria elimination goals.",
+          "category": "community_ownership",
+          "approximate_position": "early"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "ca01497dac4a65e8",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Assessing the knowledge, attitudes and practices towards malaria prevention and determinants of antenatal care utilization among pregnant women in Sekyere South district, Ghana; a cross-sectional study",
+      "url": "https://malariajournal.biomedcentral.com/counter/pdf/10.1186/s12936-025-05614-0",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/ca01497dac4a65e8.svg",
+      "promises": [
+        {
+          "quote": "Understanding the KAP of pregnant mothers is crucial for designing effective behaviour-change and service-delivery strategies, such as promoting ITN use and optimal IPTp uptake, aligned with local conditions in the Sekyere South Municipality.",
+          "category": "context_sensitivity",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "beba00b59f971d97",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Towards elimination of genital schistosomiasis in Africa: Outlining strategic public health objectives and measures to protect future generations",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/A0EB87A70A8E717A3C90A3CAD72C98F2/S0031182025101078a.pdf/div-class-title-towards-elimination-of-genital-schistosomiasis-in-africa-outlining-strategic-public-health-objectives-and-measures-to-protect-future-generations-div.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/beba00b59f971d97.svg",
+      "promises": [
+        {
+          "quote": "Multi-stakeholder collaboration and community engagement for effective implementation of Water Sanitation and Hygiene components of disease control.",
+          "category": "participation",
+          "approximate_position": "early"
+        },
+        {
+          "quote": "Whilst maintaining a school-based approach is still foundational, targeted and sustainable expansion of preventive chemotherapy to other at-risk groups within communities is needed to secure real prospects in elimination of genital schistosomiasis as a public health problem in Africa.",
+          "category": "sustainability",
+          "approximate_position": "early"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "239d11ce9807b032",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2026,
+      "title": "Democratiassess: Edge Native Quantized Ai for Equitable, Offline Adaptive Exams in Resource-constrained Universities",
+      "url": "https://www.researchsquare.com/article/rs-8663087/latest.pdf",
+      "source": "OpenAlex",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/239d11ce9807b032.svg",
+      "promises": [
+        {
+          "quote": "Our work demonstrates that it is technologically and economically feasible to bridge the equity gap in educational assessment, moving towards a future where advanced testing tools are universally accessible, not privileges of well-resourced institutions.",
+          "category": "equity",
+          "approximate_position": "early"
+        },
+        {
+          "quote": "This work establishes the technical and economic feasibility of equitable, personalized assessment in low-connectivity academic environments, offering a sustainable model for educational technology in the Global South.",
+          "category": "sustainability",
+          "approximate_position": "early"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "d54eb70d18369c26",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "evaluation",
+      "year": "2024",
+      "title": "Patients' Perspectives on the Acceptability and Effectiveness of a Community Health Worker-Led Intervention to Increase Chronic Kidney Disease Knowledge and Screening among Underserved Latine Adults: The CARE 2.0 Study.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11429309/",
+      "source": "PubMed/PMC",
+      "summary": "",
+      "visual_type": "chart_reference",
+      "visual_path": "charts/promise_timeline.svg",
+      "promises": [
+        {
+          "quote": "CHWs utilized a culturally tailored CKD Flipchart, and 100 underserved patients received the intervention.",
+          "category": "context_sensitivity",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "01a6127ea66e2abb",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": "2024",
+      "title": "A Nunavut community-directed Inuit youth mental wellness initiative: making I-SPARX fly.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11468022/",
+      "source": "PubMed/PMC",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/01a6127ea66e2abb.svg",
+      "promises": [
+        {
+          "quote": "Inuit communities have advocated an urgent imperative to generate novel, holistic approaches to address this crisis, by creating and evaluating prevention and intervention tools that build on existing cultural strengths, are appropriate to Inuit communities, and accessible and sustainable in Northern Canadian contexts where mental health resources are scarce.",
+          "category": "sustainability",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "It is of utmost importance that mental wellness research embraces a community-directed approach wherein Inuit define their research priorities, act as leading decision-makers in research activities, exercise control, and own research products.",
+          "category": "community_ownership",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "The present paper reviews Making I-SPARX Fly in Nunavut (I-SPARX), a five-year community- and youth-directed mental wellness initiative, developed in partnership with members of five Nunavut hamlets and evaluated by youth across the NU territory.",
+          "category": "participation",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "Empirically grounded, asynchronous e-tools, developed in collaboration with Inuit communities to ensure cultural specificity, may support psychological wellness in communities where mental health resources are scarce.",
+          "category": "context_sensitivity",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "0d0d0842eb4953f6",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": "2025",
+      "title": "The Evolution and Sustainability of Environmental Health Services in the Azraq Refugee Camp, Jordan: A Qualitative Study.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12453110/",
+      "source": "PubMed/PMC",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/0d0d0842eb4953f6.svg",
+      "promises": [
+        {
+          "quote": "Early incorporation of sustainability in planning and increased efforts to build the capacity of refugees to contribute and take ownership of environmental health services will likely enhance long-term environmental health service provision and development outcomes.",
+          "category": "community_ownership",
+          "approximate_position": "early"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "365b276698ba8ab8",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": "2024",
+      "title": "Promoting Comprehensive Sexuality Education in Pakistan Using a Cocreated Social Media Intervention: Development and Pilot Testing Study.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11699495/",
+      "source": "PubMed/PMC",
+      "summary": "",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/365b276698ba8ab8.svg",
+      "promises": [
+        {
+          "quote": "This study aims to use the cocreation process to develop, pilot, and evaluate an intervention based on community readiness level to respond to community resistance by introducing CSE content",
+          "category": "participation",
+          "approximate_position": "mid"
         }
       ],
       "paired_evaluation_id": null,
