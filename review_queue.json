@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-07 12:40 UTC",
+  "last_updated": "2026-04-08 08:18 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -198,6 +198,30 @@
       "title": "Promoting Comprehensive Sexuality Education in Pakistan Using a Cocreated Social Media Intervention: Development and Pilot Testing Study.",
       "org": "Other",
       "added": "2026-04-07"
+    },
+    {
+      "id": "a1c5a4debd580cda",
+      "title": "Randomized trial of a community-based, culturally tailored intervention: High engagement among Latina breast cancer survivors.",
+      "org": "Other",
+      "added": "2026-04-08"
+    },
+    {
+      "id": "7d118cf1ca8551af",
+      "title": "Facilitators and barriers to community-led monitoring of health programs: Qualitative evidence from the global implementation landscape",
+      "org": "Other",
+      "added": "2026-04-08"
+    },
+    {
+      "id": "c16b7f5634cb42e1",
+      "title": "Critical analysis of interprofessional student-led community health promotion workshops.",
+      "org": "Other",
+      "added": "2026-04-08"
+    },
+    {
+      "id": "7bc8cd56c8fe25b5",
+      "title": "Feasibility, acceptability and preliminary effect of a community-led HIV self-testing model among adolescent girls and young women in Rural Northern Uganda: a quasi-experimental study protocol",
+      "org": "Other",
+      "added": "2026-04-08"
     }
   ],
   "flagged_low_credibility": [
@@ -218,6 +242,12 @@
       "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
       "org": "Other",
       "added": "2026-04-07"
+    },
+    {
+      "id": "7bc8cd56c8fe25b5",
+      "title": "Feasibility, acceptability and preliminary effect of a community-led HIV self-testing model among adolescent girls and young women in Rural Northern Uganda: a quasi-experimental study protocol",
+      "org": "Other",
+      "added": "2026-04-08"
     }
   ],
   "flagged_ambiguous_source": []

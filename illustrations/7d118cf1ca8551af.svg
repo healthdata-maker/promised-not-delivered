@@ -1,0 +1,37 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  <defs>
+    <!-- Texture: Horizontal Lines -->
+    <pattern id="h-strip" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M 0 2 H 4" stroke="#6B7280" stroke-width="0.5"/>
+    </pattern>
+    <!-- Texture: Vertical Lines -->
+    <pattern id="v-strip" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M 2 0 V 4" stroke="#6B7280" stroke-width="0.5"/>
+    </pattern>
+    <!-- Texture: Crosshatch -->
+    <pattern id="cross" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M 0 2 H 4 M 2 0 V 4" stroke="#6B7280" stroke-width="0.5"/>
+    </pattern>
+    <!-- Texture: Diagonal -->
+    <pattern id="diag" width="4" height="4" patternUnits="userSpaceOnUse">
+      <path d="M -1,1 L 1,-1 M 0,4 L 4,0 M 3,5 L 5,3" stroke="#6B7280" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  
+  <!-- Central Abstract Map Shape -->
+  <g stroke="#6B7280" stroke-width="1.5">
+    <!-- Region 1: Northwest -->
+    <polygon points="100,70 190,85 185,145 95,135" fill="url(#h-strip)"/>
+    <!-- Region 2: Northeast -->
+    <polygon points="190,85 305,65 290,155 185,145" fill="url(#v-strip)"/>
+    <!-- Region 3: Southwest -->
+    <polygon points="95,135 185,145 175,235 85,215" fill="url(#diag)"/>
+    <!-- Region 4: Southeast -->
+    <polygon points="185,145 290,155 325,245 175,235" fill="url(#cross)"/>
+  </g>
+
+  <!-- Heavy Outer Perimeter for Editorial Starkness -->
+  <path d="M100,70 L190,85 L305,65 L290,155 L325,245 L175,235 L85,215 L95,135 Z" 
+        fill="none" stroke="#6B7280" stroke-width="3" stroke-linejoin="miter"/>
+</svg>

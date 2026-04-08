@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  
+  <!-- Patterns for Contextual Textures -->
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="0.8"/>
+    </pattern>
+    <pattern id="grid" width="6" height="6" patternUnits="userSpaceOnUse">
+      <path d="M 6 0 L 0 0 0 6" fill="none" stroke="#6B7280" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="0.8" fill="#6B7280"/>
+    </pattern>
+  </defs>
+
+  <!-- The Map: Abstract geometric landmass divided into context zones -->
+  <path d="M60,120 L120,60 L280,40 L340,100 L320,240 L180,260 L80,220 Z" fill="none" stroke="#6B7280" stroke-width="2"/>
+  
+  <!-- Context Region 1: Rural/Traditional (Hatch) -->
+  <path d="M60,120 L120,60 L190,140 L140,190 Z" fill="url(#hatch)" stroke="#6B7280" stroke-width="1"/>
+  
+  <!-- Context Region 2: Urban/Institutional (Grid) -->
+  <path d="M120,60 L280,40 L340,100 L190,140 Z" fill="url(#grid)" stroke="#6B7280" stroke-width="1"/>
+  
+  <!-- Context Region 3: Community/Fluid (Dots) -->
+  <path d="M190,140 L340,100 L320,240 L180,260 L140,190 Z" fill="url(#dots)" stroke="#6B7280" stroke-width="1"/>
+  
+  <!-- The Analysis: Measurement/Alignment lines representing Critical Analysis -->
+  <line x1="190" y1="20" x2="190" y2="280" stroke="#6B7280" stroke-width="0.5" stroke-dasharray="8 4"/>
+  <line x1="40" y1="140" x2="360" y2="140" stroke="#6B7280" stroke-width="0.5" stroke-dasharray="8 4"/>
+  
+  <!-- Intersection Points (The Workshop/Interprofessional Nodes) -->
+  <circle cx="190" cy="140" r="6" fill="#0D0D0F" stroke="#6B7280" stroke-width="2"/>
+  <rect x="186" y="56" width="8" height="8" fill="#6B7280" transform="rotate(45 190 60)"/>
+  <rect x="186" y="216" width="8" height="8" fill="#6B7280" transform="rotate(45 190 220)"/>
+  
+  <!-- Frame corners to suggest editorial rigor -->
+  <polyline points="20,40 20,20 40,20" fill="none" stroke="#6B7280" stroke-width="1"/>
+  <polyline points="360,20 380,20 380,40" fill="none" stroke="#6B7280" stroke-width="1"/>
+  <polyline points="380,260 380,280 360,280" fill="none" stroke="#6B7280" stroke-width="1"/>
+  <polyline points="40,280 20,280 20,260" fill="none" stroke="#6B7280" stroke-width="1"/>
+</svg>

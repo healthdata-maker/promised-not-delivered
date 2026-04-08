@@ -1,0 +1,35 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Left Figure / Arm (Solid) -->
+  <path d="M0,240 L160,180 L165,200 L0,270 Z" fill="#6B7280" />
+  <!-- Left Figure Shadow (Hatch) -->
+  <path d="M0,270 L165,200 L165,215 L0,290 Z" fill="url(#hatch)" />
+  
+  <!-- Right Figure / Arm (Solid) -->
+  <path d="M400,240 L240,180 L235,200 L400,270 Z" fill="#6B7280" />
+  <!-- Right Figure Shadow (Hatch) -->
+  <path d="M400,270 L235,200 L235,215 L400,290 Z" fill="url(#hatch)" />
+  
+  <!-- The Torch Handle -->
+  <path d="M185,140 L215,140 L220,200 L180,200 Z" fill="#6B7280" />
+  <!-- Torch Shadow Side -->
+  <path d="M200,140 L215,140 L220,200 L205,200 Z" fill="url(#hatch)" />
+  
+  <!-- The Flame (Geometric/Abstract) -->
+  <path d="M200,50 L230,110 L200,135 L170,110 Z" fill="#6B7280" />
+  
+  <!-- Abstract "Community" Foundation -->
+  <path d="M140,280 L260,280 L250,290 L150,290 Z" fill="#6B7280" />
+  
+  <!-- Connecting Geometric Accents -->
+  <line x1="160" y1="180" x2="185" y2="170" stroke="#6B7280" stroke-width="2" />
+  <line x1="240" y1="180" x2="215" y2="170" stroke="#6B7280" stroke-width="2" />
+</svg>

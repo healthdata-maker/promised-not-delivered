@@ -1,0 +1,32 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  
+  <!-- Ground/Horizon Line -->
+  <line x1="80" y1="240" x2="320" y2="240" stroke="#6B7280" stroke-width="2"/>
+  
+  <!-- Figure Left (Giver) -->
+  <polygon points="110,240 150,240 130,150" fill="none" stroke="#6B7280" stroke-width="2"/>
+  <path d="M125,170 L135,170 M122,185 L138,185 M120,200 L140,200 M117,215 L143,215" stroke="#6B7280" stroke-width="1"/>
+  
+  <!-- Figure Right (Receiver) -->
+  <polygon points="250,240 290,240 270,150" fill="none" stroke="#6B7280" stroke-width="2"/>
+  <path d="M265,170 L275,170 M262,185 L278,185 M260,200 L280,200 M257,215 L283,215" stroke="#6B7280" stroke-width="1"/>
+  
+  <!-- The Torch Handle -->
+  <rect x="195" y="140" width="10" height="60" fill="#6B7280"/>
+  
+  <!-- The Flame (Geometric/Abstract) -->
+  <polygon points="200,80 215,115 200,140 185,115" fill="#6B7280"/>
+  <polygon points="200,100 208,120 200,135 192,120" fill="#0D0D0F"/>
+  
+  <!-- Arm/Hand Gestures (Abstract lines) -->
+  <path d="M140,180 L195,180" fill="none" stroke="#6B7280" stroke-width="2"/>
+  <path d="M260,180 L205,180" fill="none" stroke="#6B7280" stroke-width="2"/>
+  
+  <!-- Shadow/Hatching on Ground -->
+  <path d="M100,250 L120,250 M140,250 L160,250 M180,250 L220,250 M240,250 L260,250 M280,250 L300,250" stroke="#6B7280" stroke-width="1"/>
+  
+  <!-- Crosshatch Detail for Flame "Glow" -->
+  <path d="M170,110 L180,100 M175,125 L185,115 M220,110 L210,100 M225,125 L215,115" stroke="#6B7280" stroke-width="1"/>
+</svg>

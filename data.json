@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-04-07 12:40 UTC",
-  "total_documents": 33,
+  "last_updated": "2026-04-08 08:18 UTC",
+  "total_documents": 37,
   "promise_counts": {
-    "community_ownership": 9,
-    "context_sensitivity": 13,
-    "participation": 14,
-    "sustainability": 6,
+    "community_ownership": 11,
+    "context_sensitivity": 16,
+    "participation": 15,
+    "sustainability": 7,
     "equity": 12
   },
   "documents": [
@@ -1046,6 +1046,137 @@
       "credibility_score": null,
       "review_flags": [
         "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "a1c5a4debd580cda",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": "2025",
+      "title": "Randomized trial of a community-based, culturally tailored intervention: High engagement among Latina breast cancer survivors.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12127782/",
+      "source": "PubMed/PMC",
+      "summary": "Community leadership works. In 2025, researchers worked with Nueva Vida Inc to help Latina breast cancer survivors by letting community members rewrite training manuals, lead the actual project, and run daily supervision to ensure the program felt right for the women involved. Although the study shows high engagement from survivors who felt heard, it fails to link this warm feeling to any measurable medical gains or survival rates over time. Trust is not health.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/a1c5a4debd580cda.svg",
+      "promises": [
+        {
+          "quote": "The codevelopment with Nueva Vida Inc included collaboration to update the intervention manual, create specific discussion and intervention activities, codevelop interventionist training, plan for interventionist supervision, and share responsibility and leadership of the entire project.",
+          "category": "participation",
+          "credibility_score": 5,
+          "keep": true,
+          "adversarial_note": ""
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 5.0,
+      "review_flags": []
+    },
+    {
+      "id": "7d118cf1ca8551af",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2024,
+      "title": "Facilitators and barriers to community-led monitoring of health programs: Qualitative evidence from the global implementation landscape",
+      "url": "https://journals.plos.org/globalpublichealth/article/file?id=10.1371/journal.pgph.0003293&type=printable",
+      "source": "Semantic Scholar",
+      "summary": "Donors often stall. A 2024 report on qualitative evidence shows that community led monitoring still hits walls because global health groups prioritize rigid metrics over the real world experiences of local people who need reliable funding and actual power to change how their clinics run. Even though these programs help find gaps, health leaders rarely trust local data enough to ditch their own checklists. The money stays dry.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/7d118cf1ca8551af.svg",
+      "promises": [
+        {
+          "quote": "While the accuracy of community data is important, the CLM model intentionally prioritizes context-specific knowledge, participatory methodologies, and local decision-making over commonly held standards for monitoring and evaluation (M&E).",
+          "category": "context_sensitivity",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "This approach prioritizes responsiveness and adaptability, allowing communities to define their own monitoring indicators and methodologies.",
+          "category": "community_ownership",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "Successful implementation of CLM requires prioritizing community ownership and leadership, donor commitment to sustainable and reliable funding, and strengthened support of programs across the data collection and advocacy lifecycle.",
+          "category": "sustainability",
+          "approximate_position": "early"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "c16b7f5634cb42e1",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Critical analysis of interprofessional student-led community health promotion workshops.",
+      "url": "https://doi.org/10.22605/rrh9522",
+      "source": "Semantic Scholar",
+      "summary": "This 2025 report shows how student volunteers run health workshops for various local groups. They mostly fail. Although these student ambassadors claim to assess specific needs to tailor their health lessons, the analysis reveals that their presence often lacks the deep local knowledge - or the time - necessary to fix basic medical gaps in these communities. We still do not know if their icebreakers can produce real results.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/c16b7f5634cb42e1.svg",
+      "promises": [
+        {
+          "quote": "Each partner organization is assigned an ambassador, a student volunteer selected annually who coordinates workshops and conducts needs assessments with their respective organization to tailor topics to their community needs.",
+          "category": "context_sensitivity",
+          "credibility_score": 5,
+          "keep": true,
+          "adversarial_note": null
+        },
+        {
+          "quote": "Workshops typically include an icebreaker and evidence-based learning activities, with designs adapted to organizational needs.",
+          "category": "context_sensitivity",
+          "credibility_score": 4,
+          "keep": true,
+          "adversarial_note": "Describes a specific programmatic approach, though 'typically' introduces slight ambiguity regarding the hard requirement of these elements."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 4.5,
+      "review_flags": []
+    },
+    {
+      "id": "7bc8cd56c8fe25b5",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2024,
+      "title": "Feasibility, acceptability and preliminary effect of a community-led HIV self-testing model among adolescent girls and young women in Rural Northern Uganda: a quasi-experimental study protocol",
+      "url": "https://implementationsciencecomms.biomedcentral.com/counter/pdf/10.1186/s43058-024-00596-7",
+      "source": "Semantic Scholar",
+      "summary": "Tests save lives. In 2024, researchers proposed a plan to use peer leaders and community health workers to help girls in rural Northern Uganda test themselves for HIV at home, yet this strategy relies on the same social networks that often fail to reach those who are most isolated or judged by their neighbors. Relying on local peers sounds good on paper. Success depends on trust. Whether these young women will trust their friends with their secrets remains a gamble.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/7bc8cd56c8fe25b5.svg",
+      "promises": [
+        {
+          "quote": "This study aims to develop and assess a community-led HIV self-testing approach for adolescent girls and young women in Northern Uganda, leveraging peer leaders and community health workers.",
+          "category": "community_ownership",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "Phrased as a research objective ('aims to') rather than a direct programmatic guarantee, though it does specify the 'who' and 'how'."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 3.0,
+      "review_flags": [
+        "low_avg_credibility"
       ]
     }
   ]
