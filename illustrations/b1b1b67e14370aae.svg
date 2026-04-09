@@ -1,0 +1,39 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" x="0" y="0" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1" />
+    </pattern>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Outer structural ring -->
+  <circle cx="200" cy="150" r="120" fill="none" stroke="#6B7280" stroke-width="0.5" stroke-opacity="0.5" />
+  
+  <!-- Participation ring (dashed) -->
+  <circle cx="200" cy="150" r="100" fill="none" stroke="#6B7280" stroke-width="2" stroke-dasharray="1, 12" stroke-linecap="round" />
+  
+  <!-- Hatch-filled intervention ring -->
+  <path d="M 200,70 A 80,80 0 1,1 199.9,70" fill="none" stroke="url(#hatch)" stroke-width="12" />
+  
+  <!-- Inner solid ring -->
+  <circle cx="200" cy="150" r="50" fill="none" stroke="#6B7280" stroke-width="1" />
+  
+  <!-- Central core -->
+  <circle cx="200" cy="150" r="15" fill="#6B7280" />
+  
+  <!-- Geometric crosshair (Compass/Indigenous directions) -->
+  <line x1="200" y1="20" x2="200" y2="50" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="200" y1="250" x2="200" y2="280" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="70" y1="150" x2="100" y2="150" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="300" y1="150" x2="330" y2="150" stroke="#6B7280" stroke-width="1.5" />
+  
+  <!-- Intervention wedge -->
+  <path d="M 200,150 L 340,80 L 345,95 Z" fill="#6B7280" opacity="0.8" />
+  
+  <!-- Connecting nodes -->
+  <circle cx="200" cy="30" r="3" fill="#6B7280" />
+  <circle cx="200" cy="270" r="3" fill="#6B7280" />
+  <circle cx="85" y="150" r="3" fill="#6B7280" />
+  <circle cx="315" y="150" r="3" fill="#6B7280" />
+</svg>

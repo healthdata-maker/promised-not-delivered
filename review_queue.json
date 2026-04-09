@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-08 08:18 UTC",
+  "last_updated": "2026-04-09 08:25 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -222,6 +222,24 @@
       "title": "Feasibility, acceptability and preliminary effect of a community-led HIV self-testing model among adolescent girls and young women in Rural Northern Uganda: a quasi-experimental study protocol",
       "org": "Other",
       "added": "2026-04-08"
+    },
+    {
+      "id": "e84f4b7695cba5f1",
+      "title": "Community engagement and empowerment to address health inequalities: A rapid evidence review",
+      "org": "Other",
+      "added": "2026-04-09"
+    },
+    {
+      "id": "b1b1b67e14370aae",
+      "title": "Developing a Menopausal Transition Health Promotion Intervention With Indigenous, Integrative, and Biomedical Health Education: A Community-Based Approach With Urban American Indian/Alaska Native Women",
+      "org": "Other",
+      "added": "2026-04-09"
+    },
+    {
+      "id": "57847282e788b64c",
+      "title": "Community strategies for health promotion and prevention of chronic non-communicable diseases with a focus on physical activity and nutrition: the URO/FOCOS study protocol",
+      "org": "Other",
+      "added": "2026-04-09"
     }
   ],
   "flagged_low_credibility": [
@@ -248,6 +266,12 @@
       "title": "Feasibility, acceptability and preliminary effect of a community-led HIV self-testing model among adolescent girls and young women in Rural Northern Uganda: a quasi-experimental study protocol",
       "org": "Other",
       "added": "2026-04-08"
+    },
+    {
+      "id": "e84f4b7695cba5f1",
+      "title": "Community engagement and empowerment to address health inequalities: A rapid evidence review",
+      "org": "Other",
+      "added": "2026-04-09"
     }
   ],
   "flagged_ambiguous_source": []

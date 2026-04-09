@@ -1,0 +1,32 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  <defs>
+    <pattern id="h" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="4" x2="8" y2="4" stroke="#6B7280" stroke-width="1"/>
+    </pattern>
+    <pattern id="v" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="4" y1="0" x2="4" y2="8" stroke="#6B7280" stroke-width="1"/>
+    </pattern>
+    <pattern id="d" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M-2,2 L2,-2 M0,8 L8,0 M6,10 L10,6" stroke="#6B7280" stroke-width="1"/>
+    </pattern>
+    <pattern id="c" width="8" height="8" patternUnits="userSpaceOnUse">
+      <line x1="0" y1="0" x2="8" y2="8" stroke="#6B7280" stroke-width="1"/>
+      <line x1="8" y1="0" x2="0" y2="8" stroke="#6B7280" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- Map Regions -->
+  <polygon points="200,150 100,120 180,60" fill="url(#v)" stroke="#6B7280" stroke-width="1.5"/>
+  <polygon points="200,150 180,60 300,80" fill="url(#h)" stroke="#6B7280" stroke-width="1.5"/>
+  <polygon points="200,150 300,80 340,210" fill="none" stroke="#6B7280" stroke-width="1.5"/>
+  <polygon points="200,150 340,210 140,240" fill="url(#c)" stroke="#6B7280" stroke-width="1.5"/>
+  <polygon points="200,150 140,240 100,120" fill="url(#d)" stroke="#6B7280" stroke-width="1.5"/>
+  
+  <!-- Boundary Definition -->
+  <path d="M100,120 L180,60 L300,80 L340,210 L140,240 Z" fill="none" stroke="#6B7280" stroke-width="3"/>
+  
+  <!-- Context Sensitivity Marker -->
+  <rect x="192" y="142" width="16" height="16" fill="#0D0D0F" stroke="#6B7280" stroke-width="2" transform="rotate(45 200 150)"/>
+  <circle cx="200" cy="150" r="3" fill="#6B7280"/>
+</svg>
