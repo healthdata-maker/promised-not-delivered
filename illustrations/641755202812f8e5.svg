@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  
+  <!-- Torch Handle -->
+  <rect x="192" y="110" width="16" height="100" fill="#6B7280"/>
+  
+  <!-- Left Hand / Arm (Giving) -->
+  <path d="M0 240 L160 180 L185 180 L185 210 L165 215 L30 280 Z" fill="#6B7280"/>
+  
+  <!-- Right Hand (Receiving) -->
+  <path d="M400 240 L240 180 L215 180 L215 210 L235 215 L370 280 Z" fill="#6B7280"/>
+  
+  <!-- Flame (Geometric Shards) -->
+  <path d="M200 30 L225 110 L175 110 Z" fill="#6B7280"/>
+  <path d="M185 60 L200 90 L170 100 Z" fill="#6B7280"/>
+  <path d="M215 60 L230 100 L200 90 Z" fill="#6B7280"/>
+
+  <!-- Crosshatch Texture on Left Arm -->
+  <line x1="40" y1="240" x2="60" y2="260" stroke="#0D0D0F" stroke-width="1.5"/>
+  <line x1="60" y1="230" x2="80" y2="250" stroke="#0D0D0F" stroke-width="1.5"/>
+  <line x1="80" y1="220" x2="100" y2="240" stroke="#0D0D0F" stroke-width="1.5"/>
+  <line x1="100" y1="210" x2="120" y2="230" stroke="#0D0D0F" stroke-width="1.5"/>
+  <line x1="120" y1="200" x2="140" y2="220" stroke="#0D0D0F" stroke-width="1.5"/>
+  <line x1="140" y1="190" x2="160" y2="210" stroke="#0D0D0F" stroke-width="1.5"/>
+
+  <!-- Crosshatch Texture on Right Arm -->
+  <line x1="360" y1="240" x2="340" y2="260" stroke="#0D0D0F" stroke-width="1.5"/>
+  <line x1="340" y1="230" x2="320" y2="250" stroke="#0D0D0F" stroke-width="1.5"/>
+  <line x1="320" y1="220" x2="300" y2="240" stroke="#0D0D0F" stroke-width="1.5"/>
+  <line x1="300" y1="210" x2="280" y2="230" stroke="#0D0D0F" stroke-width="1.5"/>
+  <line x1="280" y1="200" x2="260" y2="220" stroke="#0D0D0F" stroke-width="1.5"/>
+  <line x1="260" y1="190" x2="240" y2="210" stroke="#0D0D0F" stroke-width="1.5"/>
+
+  <!-- Torch Texture -->
+  <line x1="192" y1="130" x2="208" y2="130" stroke="#0D0D0F" stroke-width="2"/>
+  <line x1="192" y1="150" x2="208" y2="150" stroke="#0D0D0F" stroke-width="2"/>
+  <line x1="192" y1="170" x2="208" y2="170" stroke="#0D0D0F" stroke-width="2"/>
+</svg>
