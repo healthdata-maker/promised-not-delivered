@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-04-09 08:25 UTC",
-  "total_documents": 40,
+  "last_updated": "2026-04-16 09:05 UTC",
+  "total_documents": 41,
   "promise_counts": {
     "community_ownership": 11,
     "context_sensitivity": 21,
     "participation": 16,
     "sustainability": 7,
-    "equity": 12
+    "equity": 13
   },
   "documents": [
     {
@@ -1285,6 +1285,36 @@
       "reviewed": false,
       "credibility_score": 4.333333333333333,
       "review_flags": []
+    },
+    {
+      "id": "41bd0bdd380fb918",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
+      "url": "https://pure.eur.nl/en/publications/6e9c743d-05b7-4d60-87a2-a7d06e79ace8",
+      "source": "OpenAlex",
+      "summary": "In 2025, the Global Burden of Disease study showed that childhood vaccination progress has stalled since the pandemic. Progress has stopped. While global health groups promised a big catch - up after the recent health crisis, many countries still fail to reach the poorest children in rural areas who need basic protection from preventable diseases that kill them every day. Whether these nations can find the money to fix their broken systems before the 2030 deadline remains a dark mystery.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/41bd0bdd380fb918.svg",
+      "promises": [
+        {
+          "quote": "COVID-19 pandemic recovery efforts, such as WHO's Big Catch-Up, as well as efforts to bolster routine services must prioritise reaching marginalised populations and target subnational geographies to regain lost ground and achieve global immunisation goals.",
+          "category": "equity",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "Phrased as a normative recommendation ('must prioritise') in a research paper rather than a direct programmatic commitment by an implementing agency."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 3.0,
+      "review_flags": [
+        "low_avg_credibility"
+      ]
     }
   ]
 }

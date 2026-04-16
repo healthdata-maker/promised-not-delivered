@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Crosshatch Pattern Definition -->
+  <defs>
+    <pattern id="crosshatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="4" y2="0" stroke="#6B7280" stroke-width="0.5" />
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="0.5" />
+    </pattern>
+  </defs>
+
+  <!-- Ground Shadow/Hatching -->
+  <rect x="120" y="260" width="160" height="8" fill="url(#crosshatch)" />
+  <line x1="100" y1="260" x2="300" y2="260" stroke="#6B7280" stroke-width="2" />
+
+  <!-- Fulcrum (Scale Base) -->
+  <path d="M200 180 L230 260 L170 260 Z" fill="none" stroke="#6B7280" stroke-width="2" />
+  <path d="M200 180 L230 260 L200 260 Z" fill="url(#crosshatch)" />
+  <circle cx="200" cy="180" r="4" fill="#0D0D0F" stroke="#6B7280" stroke-width="2" />
+
+  <!-- Scale Beam -->
+  <line x1="80" y1="180" x2="320" y2="180" stroke="#6B7280" stroke-width="3" />
+
+  <!-- Scale Pans/Supports -->
+  <line x1="100" y1="180" x2="100" y2="230" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="300" y1="180" x2="300" y2="230" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="70" y1="230" x2="130" y2="230" stroke="#6B7280" stroke-width="2" />
+  <line x1="270" y1="230" x2="330" y2="230" stroke="#6B7280" stroke-width="2" />
+
+  <!-- Left Figures (Diverse Representation) -->
+  <rect x="80" y="210" width="8" height="20" fill="#6B7280" />
+  <rect x="92" y="200" width="8" height="30" fill="none" stroke="#6B7280" stroke-width="1.5" />
+  <rect x="104" y="215" width="8" height="15" fill="#6B7280" />
+  <rect x="116" y="210" width="8" height="20" fill="url(#crosshatch)" stroke="#6B7280" stroke-width="0.5" />
+
+  <!-- Right Figures (Balanced Equity) -->
+  <rect x="276" y="210" width="8" height="20" fill="#6B7280" />
+  <rect x="288" y="200" width="8" height="30" fill="none" stroke="#6B7280" stroke-width="1.5" />
+  <rect x="300" y="215" width="8" height="15" fill="#6B7280" />
+  <rect x="312" y="210" width="8" height="20" fill="url(#crosshatch)" stroke="#6B7280" stroke-width="0.5" />
+
+  <!-- Conceptual Detail: Connecting the years/coverage metaphorically -->
+  <line x1="80" y1="180" x2="80" y2="170" stroke="#6B7280" stroke-width="1" />
+  <line x1="320" y1="180" x2="320" y2="170" stroke="#6B7280" stroke-width="1" />
+</svg>
