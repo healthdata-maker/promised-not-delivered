@@ -1,0 +1,35 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  
+  <!-- Shadow Hatching Pattern -->
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Receiver Hand (Right) -->
+  <path d="M400 180 L280 180 L260 140 L240 145 L265 195 L400 195 Z" fill="#6B7280"/>
+  <path d="M260 140 L235 135 L215 155 L235 165 Z" fill="#6B7280"/>
+  
+  <!-- Giver Hand (Left) -->
+  <path d="M0 210 L120 210 L145 160 L175 165 L155 225 L0 225 Z" fill="#6B7280" opacity="0.8"/>
+  <path d="M145 160 L170 145 L190 165 L170 180 Z" fill="#6B7280" opacity="0.8"/>
+
+  <!-- The Torch -->
+  <path d="M185 170 L215 170 L225 80 L175 80 Z" fill="#6B7280"/>
+  
+  <!-- Geometric Flame -->
+  <path d="M200 10 L230 60 L200 90 L170 60 Z" fill="#6B7280"/>
+  <path d="M200 30 L215 60 L200 80 L185 60 Z" fill="#0D0D0F"/>
+  
+  <!-- Stylized Shadow/Crosshatch details -->
+  <rect x="185" y="140" width="30" height="15" fill="url(#hatch)"/>
+  <path d="M280 180 L260 140 L240 145 L250 160 Z" fill="url(#hatch)"/>
+  <path d="M120 210 L145 160 L160 175 L145 195 Z" fill="url(#hatch)"/>
+  
+  <!-- Abstract Geometric Accents (The Burden/Malaria) -->
+  <circle cx="200" cy="50" r="60" stroke="#6B7280" stroke-width="1" fill="none" stroke-dasharray="4 8"/>
+  <path d="M100 50 L120 70 M80 30 L100 50" stroke="#6B7280" stroke-width="2"/>
+  <path d="M300 250 L320 230 M320 270 L340 250" stroke="#6B7280" stroke-width="2"/>
+</svg>
