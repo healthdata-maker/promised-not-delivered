@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-04-16 09:05 UTC",
-  "total_documents": 41,
+  "last_updated": "2026-04-18 06:55 UTC",
+  "total_documents": 42,
   "promise_counts": {
     "community_ownership": 11,
     "context_sensitivity": 21,
     "participation": 16,
     "sustainability": 7,
-    "equity": 13
+    "equity": 14
   },
   "documents": [
     {
@@ -1305,6 +1305,36 @@
           "credibility_score": 3,
           "keep": true,
           "adversarial_note": "Phrased as a normative recommendation ('must prioritise') in a research paper rather than a direct programmatic commitment by an implementing agency."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 3.0,
+      "review_flags": [
+        "low_avg_credibility"
+      ]
+    },
+    {
+      "id": "4866a3c91ee2d345",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
+      "url": "https://researchonline.gcu.ac.uk/ws/files/104372466/103747648.pdf",
+      "source": "OpenAlex",
+      "summary": "The 2025 Global Burden of Disease Study shows that world leaders failed to keep their vaccination promises. Progress has stalled. Forecasts suggest we will miss 2030 goals because current programs - despite the WHO \"Big Catch-Up\" - fail to reach marginalized kids in poor regions who need shots that save lives to survive basic childhood diseases that we should have ended years ago. Recovery from the pandemic years remains a distant dream. Will we ever reach those kids?",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/4866a3c91ee2d345.svg",
+      "promises": [
+        {
+          "quote": "COVID-19 pandemic recovery efforts, such as WHO’s “Big Catch-Up” initiative, as well as efforts to bolster routine services must prioritise reaching marginalised populations and target subnational geographies to regain lost ground and achieve global immunisation goals.",
+          "category": "equity",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "Phrased as a normative recommendation ('must prioritise') for third parties rather than a direct programmatic commitment from the authors."
         }
       ],
       "paired_evaluation_id": null,

@@ -1,0 +1,44 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Fulcrum (Stylized as a sharp needle tip) -->
+  <polygon points="200,160 190,260 210,260" fill="#6B7280" />
+  <polygon points="200,160 200,260 210,260" fill="url(#hatch)" />
+  
+  <!-- Main Balance Beam -->
+  <rect x="80" y="155" width="240" height="6" fill="#6B7280" />
+  
+  <!-- Left Side: Fragmented Figures -->
+  <line x1="100" y1="161" x2="80" y2="220" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="100" y1="161" x2="120" y2="220" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="70" y1="220" x2="130" y2="220" stroke="#6B7280" stroke-width="2" />
+  
+  <!-- Fragmented Figures (Abstracted) -->
+  <circle cx="90" cy="210" r="5" fill="#6B7280" />
+  <rect x="85" y="215" width="10" height="5" fill="#6B7280" />
+  <circle cx="110" cy="205" r="4" fill="url(#hatch)" />
+  <rect x="106" y="209" width="8" height="11" fill="#6B7280" />
+  <rect x="115" y="212" width="6" height="8" fill="url(#hatch)" />
+
+  <!-- Right Side: Unified Figure -->
+  <line x1="300" y1="161" x2="280" y2="220" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="300" y1="161" x2="320" y2="220" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="270" y1="220" x2="330" y2="220" stroke="#6B7280" stroke-width="2" />
+  
+  <!-- Solid Figure (Abstracted) -->
+  <circle cx="300" cy="200" r="8" fill="#6B7280" />
+  <path d="M290 208 L310 208 L315 220 L285 220 Z" fill="#6B7280" />
+  <path d="M300 208 L310 208 L315 220 L300 220 Z" fill="url(#hatch)" />
+
+  <!-- Metaphorical Element: The Time Axis -->
+  <line x1="60" y1="270" x2="340" y2="270" stroke="#6B7280" stroke-width="1" stroke-dasharray="4 4" />
+  <path d="M60 270 L70 265 V275 Z" fill="#6B7280" />
+  <path d="M340 270 L330 265 V275 Z" fill="#6B7280" />
+</svg>

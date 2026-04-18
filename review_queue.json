@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-16 09:05 UTC",
+  "last_updated": "2026-04-18 06:55 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -246,6 +246,12 @@
       "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
       "org": "Other",
       "added": "2026-04-16"
+    },
+    {
+      "id": "4866a3c91ee2d345",
+      "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
+      "org": "Other",
+      "added": "2026-04-18"
     }
   ],
   "flagged_low_credibility": [
@@ -284,6 +290,12 @@
       "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
       "org": "Other",
       "added": "2026-04-16"
+    },
+    {
+      "id": "4866a3c91ee2d345",
+      "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
+      "org": "Other",
+      "added": "2026-04-18"
     }
   ],
   "flagged_ambiguous_source": []
