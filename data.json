@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-04-18 06:55 UTC",
-  "total_documents": 42,
+  "last_updated": "2026-05-06 10:39 UTC",
+  "total_documents": 43,
   "promise_counts": {
-    "community_ownership": 11,
+    "community_ownership": 12,
     "context_sensitivity": 21,
     "participation": 16,
-    "sustainability": 7,
+    "sustainability": 8,
     "equity": 14
   },
   "documents": [
@@ -1345,6 +1345,41 @@
       "review_flags": [
         "low_avg_credibility"
       ]
+    },
+    {
+      "id": "a0d1dcef2024c5bd",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": "2026",
+      "title": "Identifying Synergistic Mechanisms of Community-Led Policy, Systems, and Environmental Change for Childhood Obesity Prevention in the Multi-Site Catalyzing Communities Initiative.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13136475/",
+      "source": "PubMed/PMC",
+      "summary": "The 2026 report on the Catalyzing Communities Initiative claims to fix childhood obesity through local leadership and small grants. It failed. By giving groups tiny amounts of seed funding and some training in systems thinking, researchers hoped to change how entire regions approach health, but the results from these multi - site projects show mostly talk and very little real change for children. They failed to show how these local committees actually help kids eat better. We still do not know if the money was wasted.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/a0d1dcef2024c5bd.svg",
+      "promises": [
+        {
+          "quote": "The Catalyzing Communities Initiative (CCI) was designed to implement and evaluate a community-driven approach in which community partners and research teams build meaningful partnerships to support the mobilization of multisector community leadership to improve child health equity, typically focusing on nutrition, physical activity, and healthy weight.",
+          "category": "community_ownership",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "While it describes the program's core mechanism, it is phrased as a retrospective design intent rather than a concrete commitment to specific actions."
+        },
+        {
+          "quote": "Committees receive seed funding to implement selected PSE actions and ongoing technical assistance from the research team in systems thinking, meeting facilitation, and PSE implementation, evaluation, and strategy refinement, with the goal of building community capacity to enact sustainable, equity-oriented change.",
+          "category": "sustainability",
+          "credibility_score": 5,
+          "keep": true,
+          "adversarial_note": ""
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 4.0,
+      "review_flags": []
     }
   ]
 }

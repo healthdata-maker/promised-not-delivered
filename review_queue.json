@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-04-18 06:55 UTC",
+  "last_updated": "2026-05-06 10:39 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -252,6 +252,12 @@
       "title": "Global, regional, and national trends in routine childhood vaccination coverage from 1980 to 2023 with forecasts to 2030: a systematic analysis for the Global Burden of Disease Study 2023",
       "org": "Other",
       "added": "2026-04-18"
+    },
+    {
+      "id": "a0d1dcef2024c5bd",
+      "title": "Identifying Synergistic Mechanisms of Community-Led Policy, Systems, and Environmental Change for Childhood Obesity Prevention in the Multi-Site Catalyzing Communities Initiative.",
+      "org": "Other",
+      "added": "2026-05-06"
     }
   ],
   "flagged_low_credibility": [

@@ -1,0 +1,33 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Left Figure/Arm -->
+  <path d="M 0 240 L 140 180 L 155 210 L 0 280 Z" fill="#6B7280" />
+  <path d="M 20 260 L 140 205 L 155 210 L 0 280 Z" fill="url(#hatch)" />
+  
+  <!-- Right Figure/Arm -->
+  <path d="M 400 240 L 260 180 L 245 210 L 400 280 Z" fill="#6B7280" opacity="0.8" />
+  <path d="M 380 260 L 260 205 L 245 210 L 400 280 Z" fill="url(#hatch)" />
+
+  <!-- Torch Handle -->
+  <path d="M 185 195 L 215 195 L 210 110 L 190 110 Z" fill="#6B7280" />
+  <path d="M 200 195 L 215 195 L 210 110 L 205 110 Z" fill="url(#hatch)" />
+
+  <!-- Torch Top/Bowl -->
+  <path d="M 175 110 L 225 110 L 235 85 L 165 85 Z" fill="#6B7280" />
+  
+  <!-- Flame - Geometric -->
+  <path d="M 200 85 L 180 50 L 205 70 L 215 20 L 225 70 L 250 50 L 230 85 Z" fill="#6B7280" />
+  <path d="M 205 85 L 215 45 L 225 85 Z" fill="url(#hatch)" />
+
+  <!-- Connection / Synergetic Lines -->
+  <rect x="155" y="185" width="90" height="4" fill="#6B7280" />
+  <rect x="155" y="195" width="90" height="2" fill="url(#hatch)" />
+</svg>
