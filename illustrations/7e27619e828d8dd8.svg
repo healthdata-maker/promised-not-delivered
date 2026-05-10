@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="0.8" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Figure Left (Giver) -->
+  <path d="M40 300 L120 180 L160 180 L160 300 Z" fill="#6B7280" />
+  <rect x="105" y="145" width="30" height="30" fill="#6B7280" /> <!-- Head -->
+  <path d="M140 190 L210 160 L215 175 L145 205 Z" fill="#6B7280" /> <!-- Arm -->
+  
+  <!-- Shadow Hatching Figure Left -->
+  <path d="M100 210 L120 180 L160 180 L160 210 Z" fill="url(#hatch)" opacity="0.5" />
+
+  <!-- Figure Right (Receiver) -->
+  <path d="M360 300 L280 180 L240 180 L240 300 Z" fill="#6B7280" />
+  <rect x="265" y="145" width="30" height="30" fill="#6B7280" /> <!-- Head -->
+  <path d="M260 190 L195 200 L190 215 L255 205 Z" fill="#6B7280" /> <!-- Arm -->
+
+  <!-- Torch Handle -->
+  <path d="M195 150 L215 150 L208 220 L202 220 Z" fill="#6B7280" />
+  
+  <!-- Torch Flame (Geometric) -->
+  <path d="M205 70 L230 140 L180 140 Z" fill="#6B7280" />
+  <path d="M190 100 L205 130 L175 130 Z" fill="#6B7280" />
+  <path d="M220 100 L235 130 L205 130 Z" fill="#6B7280" />
+  
+  <!-- Shadow Hatching on Torch -->
+  <path d="M205 70 L215 100 L205 140 L195 100 Z" fill="url(#hatch)" />
+  <rect x="202" y="160" width="6" height="40" fill="url(#hatch)" />
+
+  <!-- Ground Line -->
+  <line x1="40" y1="300" x2="360" y2="300" stroke="#6B7280" stroke-width="2" />
+</svg>
