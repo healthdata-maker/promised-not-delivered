@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-06 10:39 UTC",
-  "total_documents": 43,
+  "last_updated": "2026-05-11 06:51 UTC",
+  "total_documents": 44,
   "promise_counts": {
     "community_ownership": 12,
-    "context_sensitivity": 21,
+    "context_sensitivity": 22,
     "participation": 16,
     "sustainability": 8,
     "equity": 14
@@ -1372,6 +1372,34 @@
           "credibility_score": 5,
           "keep": true,
           "adversarial_note": ""
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 4.0,
+      "review_flags": []
+    },
+    {
+      "id": "8f7136b3d71ec100",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": "2024",
+      "title": "Community Health workers United to Reduce Colorectal cancer and cardiovascular disease among people at Higher risk (CHURCH): study protocol for a randomized controlled trial.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11046862/",
+      "source": "PubMed/PMC",
+      "summary": "In 2024, the CHURCH study team promised to use community health workers to help high - risk groups avoid colorectal cancer and heart disease by tweaking an old web - based lifestyle program - yet their reliance on digital platforms ignores the deep digital divide that leaves the most vulnerable patients behind. It lacks teeth. While the researchers claim this web - based approach will change outcomes, they offer no evidence that poor families can even access the internet.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/8f7136b3d71ec100.svg",
+      "promises": [
+        {
+          "quote": "The latter will be addressed by culturally adapting an existing, web-based lifestyle program called Alive!.",
+          "category": "context_sensitivity",
+          "credibility_score": 4,
+          "keep": true,
+          "adversarial_note": "Specifically identifies the intervention tool (Alive!) and the concrete action of cultural adaptation, though it is framed as a methodological step in a study protocol."
         }
       ],
       "paired_evaluation_id": null,

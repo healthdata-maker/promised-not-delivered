@@ -1,0 +1,35 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  
+  <!-- Abstract Map Regions -->
+  <path d="M80 100 L180 80 L320 110 L310 220 L190 240 L90 210 Z" fill="none" stroke="#6B7280" stroke-width="2"/>
+  
+  <!-- Internal Dividers -->
+  <path d="M180 80 L190 160 L90 210" fill="none" stroke="#6B7280" stroke-width="1.5"/>
+  <path d="M190 160 L310 220" fill="none" stroke="#6B7280" stroke-width="1.5"/>
+  <path d="M190 160 L320 110" fill="none" stroke="#6B7280" stroke-width="1.5"/>
+
+  <!-- Texture Region 1: Vertical Hatching (Top Left) -->
+  <path d="M110 95 v30 M125 92 v45 M140 88 v55 M155 85 v65 M170 82 v75" fill="none" stroke="#6B7280" stroke-width="1"/>
+
+  <!-- Texture Region 2: Horizontal Hatching (Bottom) -->
+  <path d="M120 200 h40 M110 215 h60 M125 230 h40 M190 225 h30 M220 235 h40 M260 225 h30" fill="none" stroke="#6B7280" stroke-width="1"/>
+
+  <!-- Texture Region 3: Diagonal Hatching (Right) -->
+  <path d="M220 130 l20-20 M240 145 l25-25 M265 155 l30-30 M280 175 l30-30 M295 195 l20-20" fill="none" stroke="#6B7280" stroke-width="1"/>
+
+  <!-- Texture Region 4: Cross-hatch (Top Center) -->
+  <path d="M210 100 l15 15 M210 115 l15-15 M235 105 l15 15 M235 120 l15-15 M260 110 l15 15 M260 125 l15-15" fill="none" stroke="#6B7280" stroke-width="1"/>
+
+  <!-- Context Sensitivity Marker (The "Lens") -->
+  <circle cx="190" cy="160" r="35" fill="#0D0D0F" stroke="#6B7280" stroke-width="2"/>
+  
+  <!-- Detail inside Lens (Enhanced context) -->
+  <path d="M175 160 h30 M175 150 h30 M175 170 h30" fill="none" stroke="#6B7280" stroke-width="1.5"/>
+  <path d="M190 145 v30" fill="none" stroke="#6B7280" stroke-width="1.5"/>
+  
+  <!-- Geometric accents -->
+  <rect x="70" y="70" width="8" height="8" fill="#6B7280"/>
+  <rect x="325" y="230" width="8" height="8" fill="#6B7280"/>
+</svg>

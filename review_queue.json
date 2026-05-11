@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-06 10:39 UTC",
+  "last_updated": "2026-05-11 06:51 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -258,6 +258,12 @@
       "title": "Identifying Synergistic Mechanisms of Community-Led Policy, Systems, and Environmental Change for Childhood Obesity Prevention in the Multi-Site Catalyzing Communities Initiative.",
       "org": "Other",
       "added": "2026-05-06"
+    },
+    {
+      "id": "8f7136b3d71ec100",
+      "title": "Community Health workers United to Reduce Colorectal cancer and cardiovascular disease among people at Higher risk (CHURCH): study protocol for a randomized controlled trial.",
+      "org": "Other",
+      "added": "2026-05-11"
     }
   ],
   "flagged_low_credibility": [
