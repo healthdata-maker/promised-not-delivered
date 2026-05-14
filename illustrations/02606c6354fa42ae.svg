@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+
+  <!-- Fulcrum (Base) -->
+  <polygon points="200,180 225,250 175,250" fill="none" stroke="#6B7280" stroke-width="2" />
+  <polygon points="200,180 225,250 200,250" fill="url(#hatch)" />
+
+  <!-- Balance Beam -->
+  <rect x="70" y="178" width="260" height="4" fill="#6B7280" />
+
+  <!-- Left Scale Assembly (Equity) -->
+  <line x1="100" y1="182" x2="100" y2="230" stroke="#6B7280" stroke-width="1.5" />
+  <path d="M70,230 L130,230 L120,245 L80,245 Z" fill="none" stroke="#6B7280" stroke-width="1.5" />
+  <!-- Left Figure -->
+  <circle cx="100" cy="205" r="8" fill="#6B7280" />
+  <path d="M90,230 L110,230 L105,215 L95,215 Z" fill="url(#hatch)" />
+  <path d="M90,230 L110,230 L105,215 L95,215 Z" fill="none" stroke="#6B7280" stroke-width="1" />
+
+  <!-- Right Scale Assembly (Equity) -->
+  <line x1="300" y1="182" x2="300" y2="230" stroke="#6B7280" stroke-width="1.5" />
+  <path d="M270,230 L330,230 L320,245 L280,245 Z" fill="none" stroke="#6B7280" stroke-width="1.5" />
+  <!-- Right Figure -->
+  <circle cx="300" cy="205" r="8" fill="none" stroke="#6B7280" stroke-width="1.5" />
+  <path d="M290,230 L310,230 L305,215 L295,215 Z" fill="#6B7280" />
+
+  <!-- Subtle Time/Malaria Metaphor: The Central Clock/Cross -->
+  <circle cx="200" cy="130" r="35" fill="none" stroke="#6B7280" stroke-width="1" stroke-dasharray="4 2" />
+  <rect x="198" y="110" width="4" height="40" fill="#6B7280" />
+  <rect x="180" y="128" width="40" height="4" fill="#6B7280" />
+  
+  <!-- Ground Line -->
+  <line x1="50" y1="250" x2="350" y2="250" stroke="#6B7280" stroke-width="1" />
+</svg>

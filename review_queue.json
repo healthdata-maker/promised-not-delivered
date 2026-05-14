@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-11 06:51 UTC",
+  "last_updated": "2026-05-14 06:33 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -264,6 +264,12 @@
       "title": "Community Health workers United to Reduce Colorectal cancer and cardiovascular disease among people at Higher risk (CHURCH): study protocol for a randomized controlled trial.",
       "org": "Other",
       "added": "2026-05-11"
+    },
+    {
+      "id": "02606c6354fa42ae",
+      "title": "The 24, 2 hours initiative: a game changer in malaria mortality reduction",
+      "org": "Other",
+      "added": "2026-05-14"
     }
   ],
   "flagged_low_credibility": [

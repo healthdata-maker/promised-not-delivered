@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-05-11 06:51 UTC",
-  "total_documents": 44,
+  "last_updated": "2026-05-14 06:33 UTC",
+  "total_documents": 45,
   "promise_counts": {
     "community_ownership": 12,
     "context_sensitivity": 22,
     "participation": 16,
     "sustainability": 8,
-    "equity": 14
+    "equity": 15
   },
   "documents": [
     {
@@ -1400,6 +1400,34 @@
           "credibility_score": 4,
           "keep": true,
           "adversarial_note": "Specifically identifies the intervention tool (Alive!) and the concrete action of cultural adaptation, though it is framed as a methodological step in a study protocol."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 4.0,
+      "review_flags": []
+    },
+    {
+      "id": "02606c6354fa42ae",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": 2025,
+      "title": "The 24, 2 hours initiative: a game changer in malaria mortality reduction",
+      "url": "https://malariajournal.biomedcentral.com/counter/pdf/10.1186/s12936-025-05634-w",
+      "source": "OpenAlex",
+      "summary": "The 24, 2 hours initiative from 2025 aims to give free malaria care to every person through community - based workers. By removing costs for every age group and moving life - saving medicine directly into local neighborhoods, the plan hopes to stop malaria deaths among the poorest families who currently live too far away from the nearest public clinics or hospitals. Talk is cheap. Similar global health plans often fail because local supply chains break down once the initial funding runs dry. Will medicine actually reach people?",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/02606c6354fa42ae.svg",
+      "promises": [
+        {
+          "quote": "Moreover, providing free, community-based malaria case management (CMCM) for all age groups is a key strategic shift proposed by the initiative. This measure aims to improve affordability and accessibility for low-income households while enhancing equity in access to primary health care.",
+          "category": "equity",
+          "credibility_score": 4,
+          "keep": true,
+          "adversarial_note": "Names a specific mechanism (free CMCM) and target population (all age groups), though it is phrased as a 'proposed shift' within a description of the initiative rather than a direct pledge."
         }
       ],
       "paired_evaluation_id": null,
