@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-05-14 06:33 UTC",
-  "total_documents": 45,
+  "last_updated": "2026-05-18 07:12 UTC",
+  "total_documents": 47,
   "promise_counts": {
     "community_ownership": 12,
     "context_sensitivity": 22,
-    "participation": 16,
-    "sustainability": 8,
+    "participation": 17,
+    "sustainability": 10,
     "equity": 15
   },
   "documents": [
@@ -1436,6 +1436,67 @@
       "reviewed": false,
       "credibility_score": 4.0,
       "review_flags": []
+    },
+    {
+      "id": "61cdcb0dcd4fd414",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "strategy",
+      "year": null,
+      "title": "An Africa strategy for IIMI",
+      "url": "https://core.ac.uk/download/pdf/6404939.pdf",
+      "source": "CORE",
+      "summary": "IIMI promised better water for Africa. By teaming up with local groups, they aimed to fix irrigation systems that were failing across the continent. They failed. Although the strategy said it would rely on local experts to study these problems, the actual work stayed trapped in academic circles where researchers talked to themselves instead of helping the people who were actually trying to grow food in the dust. The crops are still dying.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/61cdcb0dcd4fd414.svg",
+      "promises": [
+        {
+          "quote": "the main vehicle for identifying and analyzing local irrigation management problems will be collaborative research with local institutions.",
+          "category": "participation",
+          "approximate_position": "mid"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "04bbda2f86a5ae6d",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": null,
+      "title": "The Health Promoting University: opportunities, challenges and future developments",
+      "url": "https://core.ac.uk/download/1442435.pdf",
+      "source": "CORE",
+      "summary": "The Health Promoting University report outlines a plan to put health at the center of campus policy. They promised to weave sustainable health into every part of their planning. It sounds good. However, promising something in principle usually means the hard work has not actually started yet. Their \"Touch\" project tries to use peer education and outreach to help students, yet the report fails to show how these local wins will actually change the rigid structures of the wider institution or if the money will ever flow.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/04bbda2f86a5ae6d.svg",
+      "promises": [
+        {
+          "quote": "it has been agreed, in principle, that the next policy review should seek to embed the concept of sustainable health within the University's overall planning and policy framework",
+          "category": "sustainability",
+          "approximate_position": "mid"
+        },
+        {
+          "quote": "Drawing on positive evaluations of both peer education and outreach projects, ‘Touch’ has merged these two approaches to create a highly credible, visible, developmental and sustainable initiative.",
+          "category": "sustainability",
+          "approximate_position": "late"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
     }
   ]
 }

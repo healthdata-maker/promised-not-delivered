@@ -1,0 +1,32 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Ground / Land Degradation (Stark horizontal line with cracks) -->
+  <path d="M 40 240 L 360 240" stroke="#6B7280" stroke-width="2" />
+  <path d="M 120 240 L 110 260 M 280 240 L 295 255 M 200 240 L 195 270" stroke="#6B7280" stroke-width="1.5" />
+  
+  <!-- Figures / Hands Passing (Geometric and Abstract) -->
+  <polygon points="0,220 100,220 175,170 170,155 80,205 0,205" fill="#6B7280" />
+  <polygon points="400,220 300,220 225,170 230,155 320,205 400,205" fill="#6B7280" />
+  
+  <!-- The Torch -->
+  <rect x="188" y="145" width="24" height="40" fill="#0D0D0F" stroke="#6B7280" stroke-width="2" />
+  <polygon points="200,80 225,140 175,140" fill="#6B7280" />
+  
+  <!-- Light Metaphor (Hard Geometric Lines) -->
+  <line x1="200" y1="70" x2="200" y2="40" stroke="#6B7280" stroke-width="1" />
+  <line x1="220" y1="85" x2="245" y2="65" stroke="#6B7280" stroke-width="1" />
+  <line x1="180" y1="85" x2="155" y2="65" stroke="#6B7280" stroke-width="1" />
+  
+  <!-- Crosshatch Fills for Editorial Shadow (Manual lines) -->
+  <path d="M 10 205 L 20 215 M 30 205 L 40 215 M 50 205 L 60 215 M 70 205 L 80 215" stroke="#0D0D0F" stroke-width="1" />
+  <path d="M 390 205 L 380 215 M 370 205 L 360 215 M 350 205 L 340 215 M 330 205 L 320 215" stroke="#0D0D0F" stroke-width="1" />
+  
+  <!-- Shadow under the torch intersection -->
+  <path d="M 190 150 L 210 150 L 210 180 L 190 180 Z" fill="#6B7280" opacity="0.2" />
+  <line x1="192" y1="155" x2="208" y2="155" stroke="#0D0D0F" stroke-width="0.5" />
+  <line x1="192" y1="160" x2="208" y2="160" stroke="#0D0D0F" stroke-width="0.5" />
+  <line x1="192" y1="165" x2="208" y2="165" stroke="#0D0D0F" stroke-width="0.5" />
+  <line x1="192" y1="170" x2="208" y2="170" stroke="#0D0D0F" stroke-width="0.5" />
+</svg>

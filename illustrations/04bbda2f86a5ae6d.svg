@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="300" fill="#0D0D0F"/>
+  
+  <!-- Concrete Block Left -->
+  <path d="M0 220 L180 210 L170 280 L0 300 Z" fill="none" stroke="#6B7280" stroke-width="2"/>
+  <path d="M180 210 L190 215 L180 285 L170 280 Z" fill="url(#hatch)"/>
+  
+  <!-- Concrete Block Right -->
+  <path d="M220 205 L400 215 L400 290 L210 275 Z" fill="none" stroke="#6B7280" stroke-width="2"/>
+  <path d="M210 275 L220 205 L210 200 L200 270 Z" fill="url(#hatch)"/>
+  
+  <!-- Void/Crack Shadow -->
+  <path d="M180 210 L220 205 L210 275 L170 280 Z" fill="#0D0D0F" stroke="#6B7280" stroke-width="1"/>
+  
+  <!-- The Sprout (Abstract/Geometric) -->
+  <path d="M200 240 L200 100" stroke="#6B7280" stroke-width="3" stroke-linecap="square"/>
+  
+  <!-- Leaf Left -->
+  <path d="M200 180 L160 160 L180 150 L200 170 Z" fill="#6B7280"/>
+  <path d="M160 160 L145 130 L170 145 Z" fill="url(#hatch)"/>
+  
+  <!-- Leaf Right -->
+  <path d="M200 150 L240 130 L220 120 L200 140 Z" fill="#6B7280"/>
+  <path d="M240 130 L255 100 L230 115 Z" fill="url(#hatch)"/>
+  
+  <!-- Top Bud -->
+  <path d="M200 100 L185 80 L200 60 L215 80 Z" fill="#6B7280"/>
+  
+  <!-- Accent Lines for Texture -->
+  <line x1="40" y1="240" x2="80" y2="240" stroke="#6B7280" stroke-width="0.5"/>
+  <line x1="320" y1="245" x2="360" y2="245" stroke="#6B7280" stroke-width="0.5"/>
+  <line x1="175" y1="230" x2="175" y2="260" stroke="#6B7280" stroke-width="0.5"/>
+</svg>

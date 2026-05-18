@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-14 06:33 UTC",
+  "last_updated": "2026-05-18 07:12 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -270,6 +270,18 @@
       "title": "The 24, 2 hours initiative: a game changer in malaria mortality reduction",
       "org": "Other",
       "added": "2026-05-14"
+    },
+    {
+      "id": "61cdcb0dcd4fd414",
+      "title": "An Africa strategy for IIMI",
+      "org": "Other",
+      "added": "2026-05-18"
+    },
+    {
+      "id": "04bbda2f86a5ae6d",
+      "title": "The Health Promoting University: opportunities, challenges and future developments",
+      "org": "Other",
+      "added": "2026-05-18"
     }
   ],
   "flagged_low_credibility": [

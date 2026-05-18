@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="6" stroke="#6B7280" stroke-width="1" />
+    </pattern>
+    <clipPath id="africa-clip">
+       <path d="M175,100 L235,100 L245,140 L210,230 L195,210 L165,150 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+
+  <!-- Radiating Participation Rings -->
+  <circle cx="205" cy="155" r="45" fill="none" stroke="#6B7280" stroke-width="1.5" stroke-dasharray="10 5" />
+  <circle cx="205" cy="155" r="75" fill="none" stroke="#6B7280" stroke-width="1" stroke-dasharray="2 4" />
+  <circle cx="205" cy="155" r="105" fill="none" stroke="#6B7280" stroke-width="0.75" stroke-dasharray="20 10" />
+  <circle cx="205" cy="155" r="135" fill="none" stroke="#6B7280" stroke-width="0.5" stroke-dasharray="5 15" />
+
+  <!-- Central Geographic Metaphor -->
+  <path d="M175,100 L235,100 L245,140 L210,230 L195,210 L165,150 Z" fill="#0D0D0F" stroke="#6B7280" stroke-width="2" />
+  
+  <!-- Shadow Crosshatch -->
+  <rect width="400" height="300" fill="url(#hatch)" clip-path="url(#africa-clip)" opacity="0.6" />
+  
+  <!-- Focal Point -->
+  <circle cx="205" cy="155" r="4" fill="#6B7280" />
+  
+  <!-- Conceptual Directional Lines -->
+  <line x1="205" y1="155" x2="270" y2="60" stroke="#6B7280" stroke-width="1" />
+  <line x1="205" y1="155" x2="310" y2="180" stroke="#6B7280" stroke-width="1" />
+  <line x1="205" y1="155" x2="110" y2="240" stroke="#6B7280" stroke-width="1" />
+  
+  <!-- Participation Nodes -->
+  <circle cx="270" cy="60" r="3" fill="#6B7280" />
+  <circle cx="310" cy="180" r="3" fill="#6B7280" />
+  <circle cx="110" cy="240" r="3" fill="#6B7280" />
+</svg>
