@@ -1,0 +1,41 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="4" height="4" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="0.8" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Shadow/Ground Hatching -->
+  <path d="M 50 260 L 350 260 L 380 300 L 20 300 Z" fill="url(#hatch)" opacity="0.5" />
+
+  <!-- Left Figure / Arm (Receiving) -->
+  <path d="M 0 240 L 160 170 L 185 195 L 40 280 Z" fill="#6B7280" />
+  
+  <!-- Right Figure / Arm (Giving) -->
+  <path d="M 400 240 L 240 170 L 215 195 L 360 280 Z" fill="url(#hatch)" stroke="#6B7280" stroke-width="1" />
+
+  <!-- The Torch Handle -->
+  <path d="M 185 185 L 215 185 L 220 110 L 180 110 Z" fill="#6B7280" />
+  
+  <!-- Torch Top Shadow -->
+  <path d="M 180 110 L 220 110 L 225 100 L 175 100 Z" fill="url(#hatch)" />
+
+  <!-- Flame (Geometric Shards) -->
+  <!-- Central Shard -->
+  <path d="M 200 30 L 215 90 L 185 90 Z" fill="#6B7280" />
+  
+  <!-- Left Shard -->
+  <path d="M 165 55 L 185 85 L 170 95 Z" fill="#6B7280" />
+  
+  <!-- Right Shard -->
+  <path d="M 235 55 L 215 85 L 230 95 Z" fill="url(#hatch)" stroke="#6B7280" stroke-width="0.5" />
+  
+  <!-- Small Spark -->
+  <rect x="195" y="95" width="10" height="10" transform="rotate(45 200 100)" fill="#6B7280" />
+
+  <!-- Connecting Line (Symbolizing capacity building) -->
+  <line x1="170" y1="180" x2="230" y2="180" stroke="#0D0D0F" stroke-width="2" />
+</svg>
