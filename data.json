@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-18 07:12 UTC",
-  "total_documents": 47,
+  "last_updated": "2026-05-21 07:06 UTC",
+  "total_documents": 48,
   "promise_counts": {
     "community_ownership": 12,
     "context_sensitivity": 22,
-    "participation": 17,
+    "participation": 18,
     "sustainability": 10,
     "equity": 15
   },
@@ -1496,6 +1496,36 @@
       "credibility_score": null,
       "review_flags": [
         "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "1fd0548d654f6803",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "evaluation",
+      "year": "2026",
+      "title": "Co-creating community-driven solutions and policy priorities to address antimicrobial resistance through Responsive Dialogues: A qualitative evaluation from Malawi.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13123971/",
+      "source": "Europe PMC",
+      "summary": "Local voices remain ignored. In 2026, an evaluation of Malawi's Responsive Dialogues showed that while bringing villagers and officials together to talk about drug-resistant infections sounds good on paper, these conversations rarely change how the government actually spends money or stops the misuse of life-saving medicines. Organizers promised that community ideas would drive national policy, yet the report shows little proof that these expensive meetings helped anything beyond making experts feel better about themselves. Power stayed at the top.",
+      "visual_type": "chart_reference",
+      "visual_path": "charts/promise_timeline.svg",
+      "promises": [
+        {
+          "quote": "The RDs toolkit uses a participatory approach to bring communities, policymakers, researchers, and civil society groups together to reflect on AMR and the evidence behind it, with the aim of galvanizing action and co-creating local solutions to reduce the burden of AMR.",
+          "category": "participation",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "While it specifies actors and methods, it describes the toolkit's design and general 'aim' rather than a concrete commitment to implement these actions in a specific timeframe or location."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 3.0,
+      "review_flags": [
+        "low_avg_credibility"
       ]
     }
   ]
