@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-21 07:06 UTC",
+  "last_updated": "2026-05-22 06:59 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -288,6 +288,12 @@
       "title": "Co-creating community-driven solutions and policy priorities to address antimicrobial resistance through Responsive Dialogues: A qualitative evaluation from Malawi.",
       "org": "Other",
       "added": "2026-05-21"
+    },
+    {
+      "id": "5b40c71133e98018",
+      "title": "Sports-based mental health promotion for adolescents in rural Nepal: A pilot cluster-randomised controlled trial.",
+      "org": "Other",
+      "added": "2026-05-22"
     }
   ],
   "flagged_low_credibility": [

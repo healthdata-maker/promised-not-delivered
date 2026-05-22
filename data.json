@@ -1,10 +1,10 @@
 {
-  "last_updated": "2026-05-21 07:06 UTC",
-  "total_documents": 48,
+  "last_updated": "2026-05-22 06:59 UTC",
+  "total_documents": 49,
   "promise_counts": {
     "community_ownership": 12,
     "context_sensitivity": 22,
-    "participation": 18,
+    "participation": 19,
     "sustainability": 10,
     "equity": 15
   },
@@ -1527,6 +1527,34 @@
       "review_flags": [
         "low_avg_credibility"
       ]
+    },
+    {
+      "id": "5b40c71133e98018",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": "2026",
+      "title": "Sports-based mental health promotion for adolescents in rural Nepal: A pilot cluster-randomised controlled trial.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13183228/",
+      "source": "Europe PMC",
+      "summary": "In 2026, the SMART project tried to help kids in rural Nepal through sports. It fell short. While researchers spoke to coaches and parents to shape the effort, the trial results feel like a collection of polite wishes rather than a clear path for saving lives in places that still lack even basic health clinics. Local leaders want real change. We still do not know if games can stop a crisis.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/5b40c71133e98018.svg",
+      "promises": [
+        {
+          "quote": "The SMART (Sports-based Mental heAlth pRomotion for adolescenTs) intervention was informed by qualitative research with adolescents, caregivers, teachers and sports coaches to identify community needs, preferences and priorities",
+          "category": "participation",
+          "credibility_score": 4,
+          "keep": true,
+          "adversarial_note": "Clearly identifies the specific stakeholders involved in the design process to ensure the intervention met community needs."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 4.0,
+      "review_flags": []
     }
   ]
 }
