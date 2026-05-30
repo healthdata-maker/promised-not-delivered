@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="0.8" />
+    </pattern>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Ground / Base Collective -->
+  <path d="M0 300 L120 220 L280 220 L400 300 Z" fill="#6B7280" opacity="0.3" />
+  <path d="M40 300 L140 200 L260 200 L360 300 Z" fill="url(#hatch)" />
+
+  <!-- Left Figure (Giver) - Abstract Shoulder/Arm -->
+  <polygon points="0,260 120,160 160,180 140,260" fill="#6B7280" />
+  <polygon points="120,160 185,155 190,165 130,185" fill="#6B7280" />
+  
+  <!-- Right Figure (Receiver) - Abstract Shoulder/Arm -->
+  <polygon points="400,260 280,160 240,180 260,260" fill="url(#hatch)" />
+  <polygon points="280,160 215,155 210,165 270,185" fill="#6B7280" />
+
+  <!-- The Torch Handle -->
+  <rect x="194" y="110" width="12" height="70" fill="#6B7280" />
+  <rect x="200" y="110" width="6" height="70" fill="url(#hatch)" />
+
+  <!-- The Hands (Conceptual Grips) -->
+  <path d="M185,150 L205,150 L205,175 L185,175 Z" fill="#6B7280" stroke="#0D0D0F" stroke-width="2" />
+  <path d="M195,140 L215,140 L215,165 L195,165 Z" fill="#6B7280" stroke="#0D0D0F" stroke-width="2" />
+
+  <!-- The Flame (Collective Action) -->
+  <polygon points="200,30 225,90 200,110 175,90" fill="#6B7280" />
+  <polygon points="200,50 215,95 200,110 185,95" fill="url(#hatch)" />
+  <polygon points="180,70 160,95 185,105" fill="#6B7280" />
+  <polygon points="220,70 240,95 215,105" fill="#6B7280" />
+
+  <!-- Geometric Accents (Reframing/Focus) -->
+  <line x1="200" y1="10" x2="200" y2="30" stroke="#6B7280" stroke-width="1" />
+  <line x1="150" y1="50" x2="170" y2="65" stroke="#6B7280" stroke-width="1" />
+  <line x1="250" y1="50" x2="230" y2="65" stroke="#6B7280" stroke-width="1" />
+</svg>
