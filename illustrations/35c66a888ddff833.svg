@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="0.8" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Ground Line -->
+  <line x1="50" y1="240" x2="350" y2="240" stroke="#6B7280" stroke-width="2" />
+
+  <!-- Left Figure (Giver) -->
+  <path d="M80 240 L110 140 L140 240 Z" fill="url(#hatch)" />
+  <circle cx="110" cy="125" r="12" fill="#6B7280" />
+  <path d="M115 170 L170 160" stroke="#6B7280" stroke-width="4" fill="none" />
+
+  <!-- Right Figure (Receiver) -->
+  <path d="M260 240 L290 140 L320 240 Z" fill="#6B7280" opacity="0.8" />
+  <circle cx="290" cy="125" r="12" fill="#6B7280" />
+  <path d="M285 170 L230 160" stroke="#6B7280" stroke-width="4" fill="none" />
+
+  <!-- The Torch -->
+  <rect x="195" y="145" width="10" height="40" fill="#6B7280" />
+  
+  <!-- Geometric Flame/Light -->
+  <path d="M200 100 L220 145 L180 145 Z" fill="#6B7280" />
+  <path d="M200 80 L210 105 L190 105 Z" fill="url(#hatch)" />
+  
+  <!-- Abstract Light Rays -->
+  <line x1="200" y1="70" x2="200" y2="50" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="170" y1="90" x2="150" y2="80" stroke="#6B7280" stroke-width="1.5" />
+  <line x1="230" y1="90" x2="250" y2="80" stroke="#6B7280" stroke-width="1.5" />
+
+  <!-- Evidence/Gaps indicators (Geometric fragments) -->
+  <rect x="180" y="210" width="8" height="8" fill="url(#hatch)" transform="rotate(15 180 210)" />
+  <rect x="215" y="220" width="6" height="6" fill="#6B7280" transform="rotate(-10 215 220)" />
+  <rect x="195" y="230" width="10" height="2" fill="#6B7280" />
+</svg>
