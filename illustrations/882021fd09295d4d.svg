@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="0.5" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Background Conceptual Aura (Sustainability/Unity) -->
+  <circle cx="200" cy="150" r="90" fill="url(#hatch)" opacity="0.4" />
+  
+  <!-- Torch Handle -->
+  <rect x="192" y="110" width="16" height="90" fill="#6B7280" />
+  
+  <!-- The Flame (Metaphorical/Geometric) -->
+  <polygon points="200,30 230,110 170,110" fill="#6B7280" />
+  <polygon points="200,60 215,110 185,110" fill="#0D0D0F" />
+  <path d="M190 110 L200 80 L210 110" fill="#6B7280" />
+
+  <!-- Hand Giving (Left) -->
+  <path d="M0 240 L150 210 L192 200 L192 185 L140 195 Z" fill="#6B7280" />
+  <!-- Thumb Giving -->
+  <path d="M165 190 L192 180 L192 175 L160 185 Z" fill="#6B7280" />
+  
+  <!-- Hand Receiving (Right) -->
+  <path d="M400 240 L250 210 L208 200 L208 145 L218 145 L218 190 L260 195 Z" fill="#6B7280" />
+  <!-- Thumb Receiving -->
+  <path d="M235 155 L208 140 L208 130 L245 150 Z" fill="#6B7280" />
+
+  <!-- Crosshatch detail on the hands to give Economist-style texture -->
+  <path d="M0 240 L120 216 L120 225 L0 250 Z" fill="url(#hatch)" />
+  <path d="M400 240 L280 216 L280 225 L400 250 Z" fill="url(#hatch)" />
+  
+  <!-- Ground Line for Stability -->
+  <rect x="80" y="260" width="240" height="2" fill="#6B7280" />
+</svg>
