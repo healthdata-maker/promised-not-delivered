@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#0D0D0F" stroke-width="1.5" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Figures (Marital Unit) -->
+  <path d="M 80,300 L 80,240 L 130,190 L 180,190 L 180,300 Z" fill="#6B7280" />
+  <circle cx="145" cy="155" r="30" fill="#6B7280" />
+  
+  <path d="M 320,300 L 320,240 L 270,190 L 220,190 L 220,300 Z" fill="#6B7280" />
+  <circle cx="255" cy="155" r="30" fill="#6B7280" />
+  
+  <!-- The Torch Handle -->
+  <rect x="190" y="160" width="20" height="100" fill="#6B7280" />
+  
+  <!-- Hands passing the torch -->
+  <rect x="150" y="210" width="50" height="15" fill="#6B7280" />
+  <rect x="200" y="230" width="50" height="15" fill="#6B7280" />
+  
+  <!-- The Flame (Metaphorical Diamond) -->
+  <path d="M 200,60 L 230,110 L 200,160 L 170,110 Z" fill="#6B7280" />
+  
+  <!-- Shadow/Crosshatch Overlays for depth and starkness -->
+  <path d="M 80,300 L 80,240 L 130,190 L 130,300 Z" fill="url(#hatch)" />
+  <path d="M 115,155 A 30,30 0 0 0 145,185 L 145,125 A 30,30 0 0 0 115,155 Z" fill="url(#hatch)" />
+  
+  <path d="M 220,300 L 220,190 L 270,190 L 270,300 Z" fill="url(#hatch)" />
+  <path d="M 225,155 A 30,30 0 0 0 255,185 L 255,125 A 30,30 0 0 0 225,155 Z" fill="url(#hatch)" />
+  
+  <path d="M 190,160 L 200,160 L 200,260 L 190,260 Z" fill="url(#hatch)" />
+  <path d="M 200,60 L 200,160 L 170,110 Z" fill="url(#hatch)" />
+  
+  <!-- Hard Line Accents -->
+  <line x1="200" y1="60" x2="200" y2="260" stroke="#0D0D0F" stroke-width="1" />
+</svg>

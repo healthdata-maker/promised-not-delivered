@@ -1,0 +1,30 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Figure 1 (Left - Passing) -->
+  <path d="M110 260 L160 260 L145 165 L130 165 Z" fill="#6B7280" />
+  <circle cx="138" cy="145" r="14" fill="#6B7280" />
+  <path d="M148 185 L200 185 L200 195 L145 195 Z" fill="#6B7280" />
+  
+  <!-- Figure 2 (Right - Receiving) -->
+  <path d="M290 260 L240 260 L255 165 L270 165 Z" fill="#6B7280" />
+  <circle cx="262" cy="145" r="14" fill="#6B7280" />
+  <path d="M252 185 L200 185 L200 195 L255 195 Z" fill="#6B7280" />
+  
+  <!-- Torch -->
+  <rect x="194" y="175" width="12" height="45" fill="#6B7280" />
+  <path d="M200 120 L218 170 L182 170 Z" fill="#6B7280" />
+  
+  <!-- Editorial Crosshatch Shading (Figure 1 Shadow) -->
+  <path d="M115 260 L125 250 M122 260 L132 250 M129 260 L139 250 M136 260 L146 250 M143 260 L153 250 M150 260 L160 250" stroke="#0D0D0F" stroke-width="1.5" />
+  
+  <!-- Editorial Crosshatch Shading (Figure 2 Shadow) -->
+  <path d="M240 260 L250 250 M247 260 L257 250 M254 260 L264 250 M261 260 L271 250 M268 260 L278 250 M275 260 L285 250" stroke="#0D0D0F" stroke-width="1.5" />
+  
+  <!-- Flame Detail Crosshatch -->
+  <path d="M188 165 L212 165 M191 160 L209 160 M194 155 L206 155 M197 150 L203 150" stroke="#0D0D0F" stroke-width="1.5" />
+  
+  <!-- Ground Baseline -->
+  <rect x="80" y="260" width="240" height="2" fill="#6B7280" />
+</svg>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="0.8" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Abstract Landscape/Horizon -->
+  <path d="M0 250 L100 220 L180 260 L300 210 L400 240 V300 H0 Z" fill="#6B7280" opacity="0.3" />
+  
+  <!-- Passing Figure Left (Arm/Hand) -->
+  <path d="M0 300 L160 180 L180 210 L50 300 Z" fill="#6B7280" />
+  <path d="M40 280 L140 200 L150 215 L60 300 Z" fill="url(#hatch)" />
+  
+  <!-- Receiving Figure Right (Arm/Hand) -->
+  <path d="M400 300 L240 180 L220 210 L350 300 Z" fill="none" stroke="#6B7280" stroke-width="2" />
+  <path d="M400 300 L240 180 L220 210 L350 300 Z" fill="url(#hatch)" />
+
+  <!-- The Torch Handle -->
+  <rect x="188" y="120" width="24" height="90" fill="#6B7280" />
+  <rect x="200" y="120" width="12" height="90" fill="url(#hatch)" />
+  
+  <!-- Torch Head -->
+  <path d="M175 120 L225 120 L215 140 L185 140 Z" fill="#0D0D0F" />
+  <path d="M175 120 L225 120 L215 125 L185 125 Z" fill="#6B7280" />
+
+  <!-- Geometric Flame -->
+  <path d="M200 20 L230 80 L200 110 L170 80 Z" fill="#6B7280" />
+  <path d="M200 45 L215 80 L200 95 L185 80 Z" fill="#0D0D0F" />
+  
+  <!-- Metaphorical Migration/Growth Lines -->
+  <line x1="0" y1="150" x2="120" y2="150" stroke="#6B7280" stroke-width="0.5" stroke-dasharray="10 5" />
+  <line x1="280" y1="100" x2="400" y2="100" stroke="#6B7280" stroke-width="0.5" stroke-dasharray="10 5" />
+  
+  <!-- Hatch Detail on Ground -->
+  <path d="M180 260 L300 210 L400 240 V250 L300 220 L180 270 Z" fill="url(#hatch)" />
+</svg>
