@@ -1,0 +1,38 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Left Hand/Arm (The Past/National) -->
+  <path d="M 0 140 L 140 140 L 160 170 L 160 210 L 0 210 Z" fill="#6B7280" />
+  
+  <!-- Right Hand/Arm (The Future/Global) -->
+  <path d="M 400 120 L 260 120 L 240 150 L 240 190 L 400 190 Z" fill="#6B7280" />
+  
+  <!-- The Torch Handle -->
+  <rect x="185" y="100" width="30" height="120" fill="#6B7280" />
+  
+  <!-- The Flame (Abstract/Geometric) -->
+  <path d="M 200 10 L 235 70 L 200 55 L 165 70 Z" fill="#6B7280" />
+  <path d="M 175 80 L 200 30 L 225 80 Z" fill="#6B7280" />
+  
+  <!-- Ground Horizon -->
+  <rect x="0" y="270" width="400" height="4" fill="#6B7280" />
+
+  <!-- Shadow Crosshatching on Left Arm (Using Background color to cut lines) -->
+  <path d="M 120 140 L 140 160 M 130 140 L 150 160 M 140 140 L 160 160 M 150 140 L 160 150 
+           M 140 180 L 160 200 M 130 180 L 150 200 M 120 180 L 140 200" 
+        stroke="#0D0D0F" stroke-width="2" />
+  
+  <!-- Shadow Crosshatching on Torch -->
+  <path d="M 185 130 L 215 160 M 185 150 L 215 180 M 185 170 L 215 200 M 185 190 L 215 220" 
+        stroke="#0D0D0F" stroke-width="2" />
+
+  <!-- Shadow Crosshatching on Right Arm -->
+  <path d="M 240 150 L 260 170 M 240 165 L 255 180 M 240 135 L 255 150" 
+        stroke="#0D0D0F" stroke-width="2" />
+
+  <!-- Abstract Progress Shards (Forecast to 2050) -->
+  <rect x="250" y="230" width="10" height="10" fill="#6B7280" />
+  <rect x="270" y="235" width="6" height="6" fill="#6B7280" />
+  <rect x="285" y="232" width="15" height="15" fill="#6B7280" />
+</svg>
