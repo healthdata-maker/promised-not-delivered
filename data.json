@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-05-22 06:59 UTC",
-  "total_documents": 49,
+  "last_updated": "2026-06-16 08:56 UTC",
+  "total_documents": 50,
   "promise_counts": {
     "community_ownership": 12,
-    "context_sensitivity": 22,
+    "context_sensitivity": 23,
     "participation": 19,
     "sustainability": 10,
     "equity": 15
@@ -1555,6 +1555,34 @@
       "reviewed": false,
       "credibility_score": 4.0,
       "review_flags": []
+    },
+    {
+      "id": "0f2805dec9f947fc",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "evaluation",
+      "year": "2024",
+      "title": "Evaluating an App-Based Intervention for Preventing Firearm Violence and Substance Use in Young Black Boys and Men: Usability Evaluation Study.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11632291/",
+      "source": "PubMed/PMC",
+      "summary": "Software rarely stops bullets. In 2024, researchers launched BrotherlyACT to help young Black men in high - violence neighborhoods manage mental health and avoid firearm injury through a nurse - led digital tool, yet the study focuses on how the app looks rather than if it actually saves lives in these neglected settings. This focus on buttons and screens alone feels small. We still do not know if code can replace real safety.",
+      "visual_type": "chart_reference",
+      "visual_path": "charts/promise_timeline.svg",
+      "promises": [
+        {
+          "quote": "To address these service and uptake issues, we developed BrotherlyACT—a nurse-led, culturally tailored, multicomponent app—to reduce the risk and effects of firearm injuries and homicides and to improve access to precrisis and mental health resources for young Black male individuals (aged 15-24 years) in low-resource and high-violence settings.",
+          "category": "context_sensitivity",
+          "approximate_position": "early"
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": null,
+      "review_flags": [
+        "adversarial_call_failed"
+      ]
     }
   ]
 }

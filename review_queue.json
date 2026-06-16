@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-05-22 06:59 UTC",
+  "last_updated": "2026-06-16 08:56 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -294,6 +294,12 @@
       "title": "Sports-based mental health promotion for adolescents in rural Nepal: A pilot cluster-randomised controlled trial.",
       "org": "Other",
       "added": "2026-05-22"
+    },
+    {
+      "id": "0f2805dec9f947fc",
+      "title": "Evaluating an App-Based Intervention for Preventing Firearm Violence and Substance Use in Young Black Boys and Men: Usability Evaluation Study.",
+      "org": "Other",
+      "added": "2026-06-16"
     }
   ],
   "flagged_low_credibility": [
