@@ -1,11 +1,11 @@
 {
-  "last_updated": "2026-06-16 08:56 UTC",
-  "total_documents": 50,
+  "last_updated": "2026-06-24 07:00 UTC",
+  "total_documents": 51,
   "promise_counts": {
     "community_ownership": 12,
-    "context_sensitivity": 23,
+    "context_sensitivity": 25,
     "participation": 19,
-    "sustainability": 10,
+    "sustainability": 11,
     "equity": 15
   },
   "documents": [
@@ -1582,6 +1582,50 @@
       "credibility_score": null,
       "review_flags": [
         "adversarial_call_failed"
+      ]
+    },
+    {
+      "id": "9fe1e825425f0475",
+      "org": "Other",
+      "org_color": "#6B7280",
+      "doc_type": "other",
+      "year": "2026",
+      "title": "Reframing preventive health communication: from individual compliance to collective action.",
+      "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC13253724/",
+      "source": "Europe PMC",
+      "summary": "The promises fail. Although this 2026 report by the Other organization claims it will replace old health rules with community - led stories to help people fight sickness, it mostly offers the same empty words that have stalled real progress for years. Using local groups to spread health news instead of forcing compliance might help, yet the authors provide no map for actually paying for these networks. Real trust stays missing.",
+      "visual_type": "illustration",
+      "visual_path": "illustrations/9fe1e825425f0475.svg",
+      "promises": [
+        {
+          "quote": "delivers context-specific messages based on an in-depth understanding of community barriers.",
+          "category": "context_sensitivity",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "Aspiration phrased as a functional description; lacks a specific actor and concrete delivery mechanism."
+        },
+        {
+          "quote": "generate actionable insights on leveraging community institutions as platforms to address several public health issues including communicable and non-communicable diseases to achieve scalable and sustainable behaviour change.",
+          "category": "sustainability",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "Broad strategic intent/objective rather than a specific programmatic action or 'who/how' commitment."
+        },
+        {
+          "quote": "The approach leverages multiple, context-specific channels of health promotion informed by community needs and lived experiences",
+          "category": "context_sensitivity",
+          "credibility_score": 3,
+          "keep": true,
+          "adversarial_note": "Descriptive methodology of the framework rather than a discrete commitment to a future action."
+        }
+      ],
+      "paired_evaluation_id": null,
+      "evaluation_findings": [],
+      "auto_added": true,
+      "reviewed": false,
+      "credibility_score": 3.0,
+      "review_flags": [
+        "low_avg_credibility"
       ]
     }
   ]

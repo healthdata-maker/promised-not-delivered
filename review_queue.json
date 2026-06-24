@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-16 08:56 UTC",
+  "last_updated": "2026-06-24 07:00 UTC",
   "pending_review": [
     {
       "id": "d2c2b1d5600e276c",
@@ -300,6 +300,12 @@
       "title": "Evaluating an App-Based Intervention for Preventing Firearm Violence and Substance Use in Young Black Boys and Men: Usability Evaluation Study.",
       "org": "Other",
       "added": "2026-06-16"
+    },
+    {
+      "id": "9fe1e825425f0475",
+      "title": "Reframing preventive health communication: from individual compliance to collective action.",
+      "org": "Other",
+      "added": "2026-06-24"
     }
   ],
   "flagged_low_credibility": [
@@ -350,6 +356,12 @@
       "title": "Co-creating community-driven solutions and policy priorities to address antimicrobial resistance through Responsive Dialogues: A qualitative evaluation from Malawi.",
       "org": "Other",
       "added": "2026-05-21"
+    },
+    {
+      "id": "9fe1e825425f0475",
+      "title": "Reframing preventive health communication: from individual compliance to collective action.",
+      "org": "Other",
+      "added": "2026-06-24"
     }
   ],
   "flagged_ambiguous_source": []
