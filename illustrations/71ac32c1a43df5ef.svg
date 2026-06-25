@@ -1,0 +1,37 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="4" height="4">
+      <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#0D0D0F" stroke-width="1.2" />
+    </pattern>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Right Arm (Receiving) -->
+  <path d="M400 250 L 240 160 L 220 190 L 380 280 Z" fill="#6B7280" />
+  <path d="M400 250 L 310 200 L 290 230 L 380 280 Z" fill="url(#hatch)" />
+
+  <!-- Left Arm (Giving) -->
+  <path d="M0 250 L 160 160 L 180 190 L 20 280 Z" fill="#6B7280" />
+  <path d="M0 250 L 90 200 L 70 230 L 20 280 Z" fill="url(#hatch)" />
+
+  <!-- Torch Handle (Capsule/Pharmacist Meta) -->
+  <rect x="188" y="130" width="24" height="70" rx="12" fill="#6B7280" />
+  <path d="M200 130 L 212 130 L 212 200 L 200 200 Z" fill="url(#hatch)" opacity="0.6" />
+
+  <!-- The Torch Flame (Conceptual Geometry) -->
+  <!-- Center Shard -->
+  <path d="M200 30 L 175 135 L 225 135 Z" fill="#6B7280" />
+  <!-- Left Shard -->
+  <path d="M185 60 L 160 135 L 195 135 Z" fill="#6B7280" />
+  <!-- Right Shard -->
+  <path d="M215 60 L 205 135 L 240 135 Z" fill="#6B7280" />
+  
+  <!-- Shadow/Hatch on Flame -->
+  <path d="M200 30 L 210 135 L 240 135 L 215 60 Z" fill="url(#hatch)" />
+
+  <!-- Connector/Ownership Ring -->
+  <circle cx="200" cy="165" r="35" stroke="#6B7280" stroke-width="2" fill="none" />
+  <path d="M165 165 A 35 35 0 0 1 235 165" stroke="#6B7280" stroke-width="8" fill="none" stroke-linecap="butt" />
+  <path d="M165 165 A 35 35 0 0 1 235 165" stroke="url(#hatch)" stroke-width="8" fill="none" stroke-linecap="butt" />
+</svg>
