@@ -1,0 +1,37 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+  
+  <!-- Torch Handle -->
+  <rect x="192" y="100" width="16" height="120" fill="#6B7280" />
+  
+  <!-- Flame Structure -->
+  <path d="M180 100 L220 100 L200 40 Z" fill="#6B7280" />
+  <path d="M190 90 L210 90 L200 60 Z" fill="#0D0D0F" />
+  
+  <!-- Left Hand/Arm (The Community Reaching) -->
+  <path d="M0 180 L160 180 L185 160 L185 200 L160 210 L0 210 Z" fill="#6B7280" />
+  <!-- Left Shadow Hatch -->
+  <path d="M160 180 L185 160 L185 200 L160 210 Z" fill="url(#hatch)" />
+  
+  <!-- Right Hand/Arm (The Handover) -->
+  <path d="M400 130 L240 130 L215 150 L215 110 L240 100 L400 100 Z" fill="#6B7280" />
+  <!-- Right Shadow Hatch -->
+  <path d="M240 130 L215 150 L215 110 L240 100 Z" fill="url(#hatch)" opacity="0.6"/>
+
+  <!-- Torch Geometric Details -->
+  <rect x="192" y="105" width="16" height="4" fill="#0D0D0F" />
+  <rect x="192" y="115" width="16" height="4" fill="#0D0D0F" />
+  
+  <!-- Abstract Community Ownership Marks -->
+  <rect x="40" y="220" width="80" height="4" fill="#6B7280" />
+  <rect x="280" y="80" width="80" height="4" fill="#6B7280" />
+  <polygon points="200,240 210,260 190,260" fill="url(#hatch)" />
+  <polygon points="200,20 215,45 185,45" fill="#6B7280" />
+</svg>

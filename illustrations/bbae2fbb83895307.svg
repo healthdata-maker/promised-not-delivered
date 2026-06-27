@@ -1,0 +1,40 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="1" />
+    </pattern>
+    <mask id="hatchMask">
+      <rect width="400" height="300" fill="white" />
+    </mask>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+
+  <!-- Left Arm (Passing) -->
+  <polygon points="0,280 180,190 195,210 20,300" fill="#6B7280" />
+  <polygon points="40,300 185,215 195,225 60,300" fill="url(#hatch)" />
+
+  <!-- Right Arm (Receiving) -->
+  <polygon points="400,280 220,190 205,210 380,300" fill="#6B7280" />
+  <polygon points="360,300 215,215 205,225 340,300" fill="url(#hatch)" />
+
+  <!-- The Torch / Blood Vial Metaphor -->
+  <rect x="192" y="120" width="16" height="100" fill="#6B7280" />
+  <rect x="200" y="120" width="8" height="100" fill="url(#hatch)" />
+
+  <!-- Hand Blocks (Grips) -->
+  <!-- Hand 1 -->
+  <rect x="175" y="185" width="30" height="15" fill="#6B7280" stroke="#0D0D0F" stroke-width="2" />
+  <!-- Hand 2 -->
+  <rect x="195" y="155" width="30" height="15" fill="#6B7280" stroke="#0D0D0F" stroke-width="2" />
+
+  <!-- The Flame / Blood Drop -->
+  <path d="M200,40 C200,40 175,85 175,105 A25,25 0 0,0 225,105 C225,85 200,40 200,40 Z" fill="#6B7280" />
+  
+  <!-- Geometric Shadow on Drop -->
+  <path d="M200,40 L200,130 A25,25 0 0,0 225,105 C225,85 200,40 200,40 Z" fill="url(#hatch)" />
+
+  <!-- Hard accent lines for structure -->
+  <line x1="175" y1="105" x2="225" y2="105" stroke="#0D0D0F" stroke-width="1.5" />
+</svg>
