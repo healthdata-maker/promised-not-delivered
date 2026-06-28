@@ -1,0 +1,39 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <pattern id="crosshatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="4" stroke="#6B7280" stroke-width="0.5" />
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="#0D0D0F" />
+
+  <!-- Left Arm (Giving) -->
+  <path d="M0 240 L160 240 L180 220 L170 200 L0 200 Z" fill="#6B7280" />
+  <path d="M0 240 L160 240 L180 220 L165 220 L0 225 Z" fill="url(#crosshatch)" />
+
+  <!-- Right Arm (Receiving) -->
+  <path d="M400 240 L240 240 L220 220 L230 200 L400 200 Z" fill="#6B7280" />
+  <path d="M400 240 L240 240 L220 220 L235 220 L400 225 Z" fill="url(#crosshatch)" />
+
+  <!-- The Torch Handle -->
+  <path d="M185 140 L215 140 L210 225 L190 225 Z" fill="#6B7280" />
+  <path d="M200 140 L215 140 L210 225 L200 225 Z" fill="url(#crosshatch)" />
+
+  <!-- The Flame (Geometric/Abstract) -->
+  <path d="M200 40 L230 130 L170 130 Z" fill="#6B7280" />
+  <path d="M200 70 L215 130 L185 130 Z" fill="#0D0D0F" />
+  
+  <!-- Small Geometric Flame Shards -->
+  <path d="M160 110 L175 125 L165 130 Z" fill="#6B7280" />
+  <path d="M240 110 L225 125 L235 130 Z" fill="#6B7280" />
+  <path d="M200 20 L208 50 L192 50 Z" fill="url(#crosshatch)" />
+
+  <!-- Connection Details (Circuit-like hard lines) -->
+  <line x1="170" y1="210" x2="230" y2="210" stroke="#0D0D0F" stroke-width="2" />
+  <line x1="185" y1="160" x2="215" y2="160" stroke="#0D0D0F" stroke-width="1" />
+  <line x1="185" y1="180" x2="215" y2="180" stroke="#0D0D0F" stroke-width="1" />
+  
+  <!-- Shadow cast by Torch -->
+  <path d="M160 240 L240 240 L200 280 Z" fill="url(#crosshatch)" opacity="0.5" />
+</svg>
